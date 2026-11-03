@@ -1,0 +1,34 @@
+{
+  "train": {
+    "n": 270,
+    "positive": 6,
+    "negative": 264,
+    "genes": [
+      "AGRN",
+      "KLHL17",
+      "LOC126805576",
+      "LOC129929077",
+      "LOC129929078"
+    ]
+  },
+  "val": {
+    "n": 27,
+    "positive": 1,
+    "negative": 26,
+    "genes": [
+      "ISG15",
+      "LOC129929066",
+      "NOC2L",
+      "PLEKHN1"
+    ]
+  },
+  "test": {
+    "n": 176,
+    "positive": 0,
+    "negative": 176,
+    "genes": [
+      "LOC129929063",
+      "SAMD11"
+    ]
+  }
+}

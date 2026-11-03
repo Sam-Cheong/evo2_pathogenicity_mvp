@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv*/
+work/
+outputs/
+*.pt
+*.fai
+*.gzi
+data/clinvar.vcf.gz
+data/GRCh38.fa*
+.env
+.env.*
+!.env.example
+

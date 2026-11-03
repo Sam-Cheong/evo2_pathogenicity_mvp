@@ -1,0 +1,35 @@
+{
+  "downloaded_at_utc": "2026-11-02T16:16:59Z",
+  "clinvar": {
+    "url": "https://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh38/clinvar.vcf.gz",
+    "scope": "official streamed prefix, first 5000 data rows only; NOT full ClinVar release",
+    "headers": {
+      "Date": "Mon, 02 Nov 2026 16:16:12 GMT",
+      "Last-Modified": "Mon, 02 Nov 2026 12:26:57 GMT",
+      "Content-Length": "201346922",
+      "Content-Type": "application/x-gzip"
+    },
+    "status": 200,
+    "rows": 5000,
+    "output": "work\\clinvar_official_prefix.vcf",
+    "saved_prefix_sha256": "7afa9d0e8966475219476917641df2a93fa6cf4544bdc6c27a2ef2c1ae883dcb"
+  },
+  "reference": {
+    "source_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_000001.11&seq_start=1&seq_stop=1212000&rettype=fasta&retmode=text",
+    "genome_build": "GRCh38",
+    "accession": "NC_000001.11",
+    "start": 1,
+    "end": 1212000,
+    "scope": "Only chr1 prefix; incomplete GRCh38 reference",
+    "status": 200,
+    "headers": {
+      "Date": "Mon, 02 Nov 2026 16:16:59 GMT",
+      "Content-Type": "text/plain"
+    },
+    "original_header": ">NC_000001.11:1-1212000 Homo sapiens chromosome 1, GRCh38.p14 Primary Assembly",
+    "original_sha256": "7dbd20d2f288a227b81a5b32265750784bdf528807f6ed88b72d4ed19d4f76ae",
+    "length": 1212000,
+    "saved_fasta_sha256": "39696896aa066748575f3e5c8b6184903cbdb686b61252ff0e9fedaf07b62886"
+  },
+  "research_use": "pipeline demonstration only; partial chromosome1 biased sample, no trained-model results"
+}

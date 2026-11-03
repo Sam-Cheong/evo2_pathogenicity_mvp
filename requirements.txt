@@ -1,0 +1,15 @@
+# Evo 2 CUDA runtime is installed separately: see requirements-evo2.txt and README.
+torch>=2.5,<2.8
+numpy>=1.26,<2.0
+pandas>=2.2,<3
+scikit-learn>=1.5,<1.7
+PyYAML>=6.0,<7
+pyfaidx==0.8.1.4
+huggingface-hub>=0.27,<1.0
+psutil>=6,<8
+matplotlib>=3.8,<3.11
+pytest>=8,<9
+requests>=2.32,<3
+python-dotenv>=1,<2
+filelock>=3.16,<5
+
