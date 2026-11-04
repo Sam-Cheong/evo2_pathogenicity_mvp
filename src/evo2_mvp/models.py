@@ -113,6 +113,9 @@ def build_student(checkpoint: dict, device="cpu") -> nn.Module:
     elif architecture == "hyenadna_d256":
         from .hyenadna import HyenaDNAStudent
         model = HyenaDNAStudent(**checkpoint["model_kwargs"])
+    elif architecture == "stripedhyena2_tiny":
+        from .stripedhyena2 import StripedHyena2Student
+        model = StripedHyena2Student(**checkpoint["model_kwargs"])
     else:
         raise ValueError(f"Unsupported student architecture: {architecture}")
     model.load_state_dict(checkpoint["model_state"])

@@ -14,6 +14,7 @@ def main():
     parser.add_argument("--notebook", default="HyenaDNA_d256_experiment.ipynb")
     parser.add_argument("--output", default="HyenaDNA_d256_experiment.executed.ipynb")
     parser.add_argument("--timeout", type=int, default=7200, help="Per-cell timeout in seconds")
+    parser.add_argument("--status", default="outputs/hyenadna_notebook_execution.json")
     args = parser.parse_args()
     root = Path(__file__).resolve().parents[1]
     os.chdir(root)
@@ -35,7 +36,7 @@ def main():
 
     notebook = nbformat.read(root / args.notebook, as_version=4)
     target = root / args.output
-    status = root / "outputs" / "hyenadna_notebook_execution.json"
+    status = root / args.status
     started = datetime.now(timezone.utc).isoformat()
     state = {"status": "starting", "started_at_utc": started, "notebook": str(root / args.notebook),
              "executed_notebook": str(target), "kernel_python": sys.executable, "successful_cells": []}
@@ -47,6 +48,7 @@ def main():
         save_json(status, state)
 
     def on_start(cell, cell_index, **kwargs):
+        faulthandler.cancel_dump_traceback_later()
         state.update(status="running", current_cell=cell_index, current_cell_id=cell.get("id"))
         print(f"CELL {cell_index} START {cell.get('id', '')}", flush=True)
         persist()

@@ -1,0 +1,31 @@
+seed: 42
+cpu_threads: 4
+genome_build: GRCh38
+window: 256
+model:
+  d_model: 192
+  ffn_dim: 384
+  num_heads: 6
+  window: 256
+  dropout: 0.1
+distillation:
+  epochs: 20
+  batch_size: 16
+  eval_batch_size: 32
+  lr: 0.0003
+  weight_decay: 0.01
+  patience: 5
+  grad_clip_norm: 1.0
+  std_floor: 0.0001
+  ref_weight: 0.5
+  alt_weight: 0.5
+  delta_weight: 1.0
+probe:
+  epochs: 20
+  batch_size: 32
+  feature_batch_size: 32
+  lr: 0.001
+  weight_decay: 0.01
+  patience: 5
+  grad_clip_norm: 1.0
+  std_floor: 0.000001

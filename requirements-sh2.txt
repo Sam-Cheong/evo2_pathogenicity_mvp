@@ -1,0 +1,3 @@
+# After requirements.txt. Official source parity tests use einops.
+# The tiny SH2 encoder itself requires PyTorch only; no CUDA/FlashAttention.
+einops==0.8.1

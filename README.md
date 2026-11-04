@@ -1,5 +1,10 @@
 # evo2_pathogenicity_mvp
 
+新增用户确认的两阶段小试：自定义小型 StripedHyena 2 reference 先蒸馏真实 Evo 2 中心表示，
+再冻结 encoder 训练线性/MLP 判别头。入口为根目录 `StripedHyena2_two_stage_experiment.ipynb`，
+独立输出 `outputs/sh2_two_stage_20261104`，不新增 Evo 2 API 请求。
+协议、CLI、真实执行状态与限制见 [SH2 两阶段实验](docs/SH2_TWO_STAGE_EXPERIMENT.md)。
+
 当前使用 **NVIDIA hosted Evo 2 40B API 提取 DNA 特征，在本机训练 Frozen Encoder + MLP**。新增学生实验为**真实预训练 HyenaDNA d256 + 变异中心表示**，分别进行仅监督训练与知识蒸馏；原 CNN 实验保留。Student 推理独立运行，不调用 NVIDIA API。
 
 项目根目录的 `HyenaDNA_d256_experiment.ipynb` 包含本轮完整实验指令和可执行单元格，
