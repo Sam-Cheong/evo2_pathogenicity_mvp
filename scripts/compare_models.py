@@ -10,16 +10,46 @@ from evo2_mvp.utils import save_json, sha256_file
 from evo2_mvp.models import load_checkpoint
 
 
-def main():
+def validate_student_comparison(supervised, distilled):
+    """Distinguish a controlled KD experiment from historical score tables."""
+    architecture = supervised.get("architecture", "cnn")
+    if architecture != distilled.get("architecture", "cnn"):
+        raise ValueError("Student architectures differ; this is not a controlled distillation comparison")
+    for field in ("model_kwargs", "seed", "window", "config"):
+        if supervised.get(field) != distilled.get(field):
+            raise ValueError("Student comparison configuration mismatch: " + field)
+    left, right = supervised.get("initialization"), distilled.get("initialization")
+    if not left and not right and architecture == "cnn":
+        return {"architecture": architecture, "matched": False, "status": "unverified_legacy_cnn",
+                "note": "Legacy CNN checkpoints lack complete initial-state fingerprints; scores are descriptive, not a verified initialization-controlled KD comparison."}
+    if not isinstance(left, dict) or not isinstance(right, dict):
+        raise ValueError("Student comparison requires initialization provenance for both checkpoints")
+    for initialization in (left, right):
+        digest = initialization.get("initial_model_state_sha256")
+        if not isinstance(digest, str) or len(digest) != 64 or any(c not in "0123456789abcdef" for c in digest.lower()):
+            raise ValueError("Student initialization is missing its complete initial-model SHA256")
+    if left != right:
+        raise ValueError("Student initialization revision/weight/config/tokenizer/state fingerprints differ")
+    left_protocol, right_protocol = supervised.get("initialization_protocol"), distilled.get("initialization_protocol")
+    if not isinstance(left_protocol, dict) or left_protocol != right_protocol:
+        raise ValueError("Student initialization protocols differ or are missing")
+    if supervised.get("training_settings") != distilled.get("training_settings"):
+        raise ValueError("Student optimization settings differ")
+    return {"architecture": architecture, "matched": True, "status": "verified_identical_initialization",
+            "initial_model_state_sha256": left["initial_model_state_sha256"],
+            "initialization": left, "initialization_protocol": left_protocol}
+
+
+def main(argv=None):
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--teacher", required=True, help="Teacher experiment output directory")
-    p.add_argument("--supervised", required=True, help="Supervised CNN experiment directory")
-    p.add_argument("--distilled", required=True, help="Distilled CNN experiment directory")
+    p.add_argument("--supervised", required=True, help="Supervised student experiment directory")
+    p.add_argument("--distilled", required=True, help="Distilled student experiment directory")
     p.add_argument("--teacher-e2e", help="Optional inference --benchmark-output JSON")
     p.add_argument("--supervised-e2e")
     p.add_argument("--distilled-e2e")
     p.add_argument("--output", default="outputs/comparison.json")
-    args = p.parse_args()
+    args = p.parse_args(argv)
     reports, signatures, provenance, checkpoints = {}, [], [], {}
     teacher_hash = sha256_file(Path(args.teacher) / "best_teacher.pt")
     for name in ("teacher", "supervised", "distilled"):
@@ -59,11 +89,14 @@ def main():
         raise ValueError("Models must have exactly the same dataset, labels, and held-out splits")
     if len({c["split_fingerprint"] for c in checkpoints.values()}) != 1:
         raise ValueError("Checkpoint split identities differ")
+    initialization_comparison = validate_student_comparison(checkpoints["supervised"], checkpoints["distilled"])
     full = [reports[name]["full_prediction_benchmark"] for name in reports]
     comparable = all(item is not None for item in full)
     if comparable:
         comparable = len({(x["variant_id"], x["window"], x["scope"], x["device"]) for x in full}) == 1
     output = {"models": reports, "same_independent_test_set": True,
+        "student_initialization_comparison": initialization_comparison,
+        "controlled_distillation_comparison": initialization_comparison["matched"],
         "latency_comparable": comparable,
         "latency_note": "Cached teacher head latency excludes Evo 2; use full warm prediction benchmarks for comparable inference cost.",
         "clinical_use": "research_only"}

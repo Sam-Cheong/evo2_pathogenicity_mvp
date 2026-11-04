@@ -124,12 +124,17 @@ def main():
     p.add_argument("--teacher")
     p.add_argument("--student")
     p.add_argument("--device", default="cpu")
+    p.add_argument("--cpu-threads", type=int, default=4, help="PyTorch CPU threads (default: 4)")
     p.add_argument("--local-checkpoint")
     p.add_argument("--download-dir", default="work/huggingface")
     p.add_argument("--output")
     p.add_argument("--calibration", help="Validation-only temperature artifact tied to this checkpoint")
     p.add_argument("--benchmark-output", help="Measure complete warm prediction incl. FASTA/one-hot/encoder/head")
     args = p.parse_args()
+    if args.cpu_threads < 1:
+        raise ValueError("--cpu-threads must be positive")
+    if args.device == "cpu":
+        torch.set_num_threads(args.cpu_threads)
     started = time.perf_counter()
     predictor = Predictor(args.fasta, args.teacher, args.student, args.device, args.local_checkpoint, args.download_dir, args.calibration)
     startup_seconds = time.perf_counter() - started

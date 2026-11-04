@@ -15,8 +15,11 @@ dependencies = {file = ["requirements.txt"]}
 [tool.setuptools.packages.find]
 where = ["src"]
 
+[tool.setuptools.package-data]
+"evo2_mvp.vendor.hyenadna" = ["*.md", "*.txt"]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["src"]
-markers = ["integration: requires a real NVIDIA Evo 2 API key and explicit opt-in"]
+markers = ["integration: requires a real NVIDIA Evo 2 API key and explicit opt-in", "hyenadna_integration: requires the real pinned HyenaDNA checkpoint and explicit opt-in"]
 

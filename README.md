@@ -1,8 +1,23 @@
 # evo2_pathogenicity_mvp
 
-当前默认使用 **NVIDIA hosted Evo 2 40B API 提取 DNA 特征，在本机训练 Frozen Encoder + MLP**，再进行轻量 CNN 蒸馏。Student 推理独立运行，不调用 NVIDIA API。
+当前使用 **NVIDIA hosted Evo 2 40B API 提取 DNA 特征，在本机训练 Frozen Encoder + MLP**。新增学生实验为**真实预训练 HyenaDNA d256 + 变异中心表示**，分别进行仅监督训练与知识蒸馏；原 CNN 实验保留。Student 推理独立运行，不调用 NVIDIA API。
 
-**真实 NVIDIA Evo 2 40B REF/ALT Phase 0 已通过。** 实测 token embedding 为 `[1,256,8192]`，REF/ALT 各为 `[8192]`，拼接特征为 `[24576]`；数值有限、重复结果一致、保存重载通过。真实 Teacher/Student 尚未训练，没有致病性测试指标。见 [真实 Phase 0 报告](outputs/phase0_api_verified/result.json) 和 `docs/DELIVERY_REPORT.md`。
+项目根目录的 `HyenaDNA_d256_experiment.ipynb` 包含本轮完整实验指令和可执行单元格，
+执行输出保存到 `HyenaDNA_d256_experiment.executed.ipynb`。从根目录 PowerShell 运行：
+
+```powershell
+.\.venv\Scripts\python.exe -m pip install -r requirements-hyenadna.txt -r requirements-notebook.txt
+.\.venv\Scripts\python.exe scripts/run_hyenadna_notebook.py
+```
+
+本轮 Notebook 的独立产物目录为 `outputs/hyenadna_notebook_run_20261104`。逐轮日志位于
+`supervised.log` / `distilled.log`，执行状态为 `outputs/hyenadna_notebook_execution.json`。
+出错会停止并保存部分 Notebook；修复后重跑，完成阶段必须通过输入/代码/产物 SHA256
+复核才能复用。中断中的模型训练会从固定初始化重新开始，不声称可恢复中途优化器状态。
+`run_report.json` 和执行状态均为 `completed` 才表示整个 Notebook 实验完成。
+交互查看：`.\.venv\Scripts\python.exe -m notebook HyenaDNA_d256_experiment.executed.ipynb`。
+
+**真实 NVIDIA Evo 2 40B REF/ALT Phase 0 已通过。** 实测 token embedding 为 `[1,256,8192]`，REF/ALT 各为 `[8192]`，拼接特征为 `[24576]`。现有 2,000 个真实 ClinVar 变异已完成缓存、Teacher 和旧 CNN 训练；Teacher 测试 AUROC 0.9371，旧蒸馏 CNN 为 0.5606。新 HyenaDNA Notebook 于 2026-11-04 真实执行完成：仅监督/蒸馏测试 AUROC 为 0.5676/0.5815，AUPRC 为 0.1718/0.1684；学生性能仍弱，未证实有效蒸馏收益。实际结果见 [HyenaDNA 实验说明](docs/HYENADNA_EXPERIMENT.md)；原 `docs/DELIVERY_REPORT.md` 是早期阶段的历史记录。
 
 此方案不需要本地下载 Evo 2 权重、安装 Transformer Engine/Flash Attention 或配备 Hopper GPU。远程服务模型为 **40B，不是原先的 1B**；服务未暴露可固定的权重 SHA/revision。原本地 1B 的历史核查保存在 `docs/official_model_audit.md`，不是当前默认安装流程。API、模型身份和新旧协议差异见 `docs/nvidia_api_audit.md`。
 
@@ -137,7 +152,7 @@ python -m evo2_mvp.train_teacher_head --variants data/variants.csv --splits data
 
 ## 8. Teacher 验收后训练两个 Student
 
-真实 Phase 0 已通过，**Teacher 训练与 Student 蒸馏仍未完成**。以下真实 CLI 还需要同一份真实数据/划分/cache 和已训练 Teacher，不能以 Phase 0 成功代替分类器训练验收。
+以下保留原 CNN 训练命令，现有训练结果位于 `outputs/teacher`、`outputs/student_supervised`、`outputs/student_distilled`。新的 HyenaDNA 命令与独立输出目录见 [HyenaDNA 实验说明](docs/HYENADNA_EXPERIMENT.md)。
 
 ```bash
 python -m evo2_mvp.distill_student --mode supervised --variants data/variants.csv --splits data/splits.json --cache outputs/nvidia_cache --fasta data/GRCh38.fa --teacher outputs/teacher/best_teacher.pt --phase0-report outputs/phase0_api_verified/result.json --config configs/mvp.yaml --output outputs/student_supervised --device cpu
@@ -151,7 +166,7 @@ Student 为共享 1D CNN + mean/max pooling + REF/ALT/delta 融合 + MLP，默�
 
 ## 9. 单个 GRCh38 SNV 预测 JSON
 
-以下命令依赖前面真实训练得到的 `.pt`；当前交付不含这样的权重。Teacher 使用 API 特征加本机 CPU MLP，key 仍需存在：
+以下命令使用真实训练得到的 `.pt`。Teacher 使用 API 特征加本机 CPU MLP，key 仍需存在：
 
 ```bash
 python -m evo2_mvp.inference --fasta data/GRCh38.fa --chrom 1 --pos 926029 --ref C --alt T --gene SAMD11 --teacher outputs/teacher/best_teacher.pt --student outputs/student_distilled/best_student.pt --device cpu --output outputs/prediction.json
@@ -172,7 +187,7 @@ python -m evo2_mvp.calibration --predictions outputs/student_distilled/predictio
 python -m evo2_mvp.inference --fasta data/GRCh38.fa --chrom 1 --pos 926029 --ref C --alt T --student outputs/student_distilled/best_student.pt --calibration outputs/student_distilled/calibration.json --device cpu --output outputs/student_prediction_calibrated.json
 ```
 
-只用 val 拟合温度，在未参与拟合的 test 报告前后指标；CSV/sidecar、checkpoint、标签与划分必须匹配。本次没有真实校准参数。
+只用 val 拟合温度，在未参与拟合的 test 报告前后指标；CSV/sidecar、checkpoint、标签与划分必须匹配。旧 CNN 的校准文件不能用于新 HyenaDNA。
 
 ## 11. 三模型比较与实测耗时
 
@@ -209,6 +224,6 @@ Bash：`RUN_EVO2_INTEGRATION=1 python -m pytest -q -m integration`。默认 skip
 
 主要文件：`configs/` 为默认/备选协议；`src/evo2_mvp/nvidia_encoder.py` 为 API 适配器；`sequence.py/data.py/cache.py` 为数据与缓存；`models.py/train_teacher_head.py/distill_student.py` 为训练；`inference.py/calibration.py` 为预测和研究性不确定性；`scripts/` 为实际 CLI；`data/real_demo/` 为公开真实数据演示；`outputs/` 为验证及后续实验结果。
 
-真实 API Phase 0 已完成。后续尚待代表性完整队列、批量真实特征、Teacher 训练、Student 蒸馏与独立测试。先完成 Teacher，再做 Student；Model A 不依赖 Model B 才能交付。详细已执行结果见 `docs/DELIVERY_REPORT.md`。
+真实 API Phase 0、2,000 变异特征缓存、Teacher 和旧 CNN 实验已完成。新增 HyenaDNA 实验复用 Teacher，不覆盖旧输出。后续仍需更大且更有代表性的队列及全新独立评估；当前模型仅供研究。
 
 研究依据：[Evo 2](https://github.com/ArcInstitute/evo2)、[Hinton et al.](https://arxiv.org/abs/1503.02531)、[GPN](https://pubmed.ncbi.nlm.nih.gov/37883436/)、[ACMG/AMP](https://pubmed.ncbi.nlm.nih.gov/25741868/)。本项目为研究性二分类，不实现临床 ACMG 判定。

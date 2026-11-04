@@ -1,0 +1,5 @@
+# Install in the same .venv as the experiment. No system kernelspec is needed.
+nbclient>=0.10,<0.11
+nbformat>=5.10,<6
+ipykernel>=6.29,<7
+notebook>=7.4,<8

@@ -1,6 +1,7 @@
 """Small, independently loadable PyTorch research models.
 
-This module never imports Evo 2. Student inference requires only PyTorch.
+This module never imports Evo 2. CNN inference requires only PyTorch;
+HyenaDNA dependencies are imported lazily for that architecture only.
 """
 from __future__ import annotations
 
@@ -103,9 +104,16 @@ def build_teacher(checkpoint: dict, device="cpu") -> TeacherMLP:
     return model.to(device).eval()
 
 
-def build_student(checkpoint: dict, device="cpu") -> TinyStudent:
+def build_student(checkpoint: dict, device="cpu") -> nn.Module:
     if checkpoint.get("kind") != "student":
         raise ValueError("A student checkpoint is required")
-    model = TinyStudent(**checkpoint["model_kwargs"])
+    architecture = checkpoint.get("architecture", "cnn")
+    if architecture == "cnn":
+        model = TinyStudent(**checkpoint["model_kwargs"])
+    elif architecture == "hyenadna_d256":
+        from .hyenadna import HyenaDNAStudent
+        model = HyenaDNAStudent(**checkpoint["model_kwargs"])
+    else:
+        raise ValueError(f"Unsupported student architecture: {architecture}")
     model.load_state_dict(checkpoint["model_state"])
     return model.to(device).eval()
