@@ -86,13 +86,15 @@ class ReferenceGenome:
         if not self._contigs:
             raise ValueError("FASTA has no recognizable autosomal contigs")
 
-    def context(self, variant: Variant, window: int = 256) -> ReferenceContext:
+    def context(self, variant: Variant, window: int = 256, *, variant_index: int | None = None) -> ReferenceContext:
         if not isinstance(window, int) or not 3 <= window <= 8192:
             raise ValueError("window must be an integer between 3 and 8192")
+        index = window // 2 if variant_index is None else variant_index
+        if type(index) is not int or not 0 <= index < window:
+            raise ValueError("variant_index must be an integer inside the context window")
         if variant.chrom not in self._contigs:
             raise ValueError(f"FASTA lacks chromosome {variant.chrom}")
         contig = self._fasta[self._contigs[variant.chrom]]
-        index = window // 2
         start = variant.pos - 1 - index
         end = start + window
         if start < 0 or end > len(contig):

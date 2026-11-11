@@ -1,5 +1,7 @@
 # evo2_pathogenicity_mvp
 
+EVEE 短視窗試驗使用 NVIDIA Evo 2 7B 的 `blocks.27` 擷取雙向 REF/ALT 特徵，在本機比較協方差探針與均值基線。執行方式見 [EVEE 短視窗探針試驗](docs/EVEE_SHORT_WINDOW.md)。
+
 新增用户确认的两阶段小试：自定义小型 StripedHyena 2 reference 先蒸馏真实 Evo 2 中心表示，
 再冻结 encoder 训练线性/MLP 判别头。入口为根目录 `StripedHyena2_two_stage_experiment.ipynb`，
 独立输出 `outputs/sh2_two_stage_20261104`，不新增 Evo 2 API 请求。

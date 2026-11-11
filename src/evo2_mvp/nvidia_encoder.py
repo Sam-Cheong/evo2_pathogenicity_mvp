@@ -261,16 +261,25 @@ class NvidiaEvo2Encoder:
         self.last_token_shape = list(normalized.shape)
         return normalized
 
+    def token_activations(self, sequence):
+        """Return raw activations (sequence length, hidden dimension) at the configured hook."""
+        self._validate_sequence(sequence)
+        return self._token_activations(sequence)
+
+    def _token_activations(self, sequence):
+        hidden = self._normalize_shape(self._request(sequence, self.layer), len(sequence))[0]
+        self._metadata["real_model_verified"] = True
+        return hidden
+
     def encode(self, sequence, variant_index):
         self._validate_sequence(sequence)
         if not 0 <= variant_index < len(sequence):
             raise ValueError("Variant token index outside sequence")
-        hidden = self._normalize_shape(self._request(sequence, self.layer), len(sequence))
+        hidden = self._token_activations(sequence)
         if self.pooling == "variant":
-            result = hidden[0, variant_index]
+            result = hidden[variant_index]
         else:
-            result = hidden[0, max(0, variant_index-self.local_radius):min(len(sequence), variant_index+self.local_radius+1)].mean(0)
-        self._metadata["real_model_verified"] = True
+            result = hidden[max(0, variant_index-self.local_radius):min(len(sequence), variant_index+self.local_radius+1)].mean(0)
         return result.astype(np.float32).copy()
 
     def encode_pair(self, ref_sequence, alt_sequence, variant_index):
