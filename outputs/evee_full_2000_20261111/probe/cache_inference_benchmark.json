@@ -1,0 +1,74 @@
+{
+  "n": 400,
+  "positives": 48,
+  "device": "CPU",
+  "cpu": "Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",
+  "torch_threads": 4,
+  "warmup": 30,
+  "batch_size": 1,
+  "scope": "both heads, excluding backbone, remote API and sequence preprocessing",
+  "covariance_parameters": 131329,
+  "head_only": {
+    "median_ms": 0.5561500001931563,
+    "p95_ms": 0.8200099997338837,
+    "variants_per_second": 1707.777860136688
+  },
+  "cache_plus_heads": {
+    "median_ms": 10.979350001434796,
+    "p95_ms": 14.253624990669774,
+    "variants_per_second": 87.63965954993655
+  },
+  "max_score_absolute_difference": 1.6072568098657314e-07,
+  "metrics": {
+    "covariance": {
+      "n": 400,
+      "positives": 48,
+      "auroc": 0.961233428030303,
+      "auprc": 0.8852386578901603,
+      "accuracy": 0.9225,
+      "precision": 0.6197183098591549,
+      "recall": 0.9166666666666666,
+      "f1": 0.7394957983193278,
+      "confusion_matrix": [
+        [
+          325,
+          27
+        ],
+        [
+          4,
+          44
+        ]
+      ],
+      "brier_score": 0.07348540128220375,
+      "classification_threshold": 0.5,
+      "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+      "undefined_metrics_reason": null,
+      "undefined_metrics": {}
+    },
+    "mean_pooled": {
+      "n": 400,
+      "positives": 48,
+      "auroc": 0.9452533143939394,
+      "auprc": 0.8487079053057967,
+      "accuracy": 0.9575,
+      "precision": 0.8444444444444444,
+      "recall": 0.7916666666666666,
+      "f1": 0.8172043010752689,
+      "confusion_matrix": [
+        [
+          345,
+          7
+        ],
+        [
+          10,
+          38
+        ]
+      ],
+      "brier_score": 0.04101769396125285,
+      "classification_threshold": 0.5,
+      "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+      "undefined_metrics_reason": null,
+      "undefined_metrics": {}
+    }
+  }
+}

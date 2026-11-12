@@ -66,3 +66,15 @@ $run = 'outputs/evee_learning_curve_20261111'
 ```
 
 輸出預設為 `outputs/evee_full_2000_20261111`。`job_status.json` 記錄目前階段，`features/extraction_status.json` 記錄當次擷取進度。擷取完成後會自動訓練與評估。若工作因網路或程序中斷而停止，可在確認原程序已退出後，重跑上面的 `run` 命令以沿用已完成的特徵。
+
+## 短 indel 評估
+
+使用現有 SNV 分類頭的權重，評估 GRCh38 上的簡單插入與缺失。每個方向各建立 256 bp 的 REF 和 ALT 視窗，從編輯之後配對相同參考位置，跳過插入或缺失的鹼基，再保留差異最大的 32 個位置。
+
+預設從本地公開 ClinVar VCF 選取 32 筆至少兩星、長 1–8 bp 的 indel，依插入／缺失及致病／良性平衡取樣，排除原 SNV 隊列的基因。執行 `run` 會準備隊列、透過 NVIDIA 擷取表徵，並在本機用凍結的協方差與均值池化分類頭評估。
+
+```powershell
+.\.venv\Scripts\python.exe -m evo2_mvp.evee_indel_evaluation run --output outputs/evee_indel_holdout_20261112 --workers 4
+```
+
+擷取中斷時，可用 `extract` 和同一輸出目錄接續，再用 `evaluate` 讀取快取並重新計算。`run_summary.json` 記錄整體與按 indel 類型計算的 AUROC 和 AP。`predictions.csv` 保存逐筆結果。

@@ -1,0 +1,241 @@
+{
+  "status": "complete",
+  "method": "evee_style_covariance_pilot",
+  "config": {
+    "device": "cpu",
+    "batch_size": 8,
+    "epochs": 8,
+    "seed": 42,
+    "input_shape": [
+      2,
+      32,
+      4096
+    ],
+    "projection_dim": 16,
+    "optimizer": "AdamW",
+    "learning_rate": 0.005,
+    "weight_decay": 0.1,
+    "covariance_pooling": "uncentered_cross_moment_shared_projections_over_both_directions",
+    "mean_pooled_input": "mean_of_retained_positions",
+    "mean_pooled_l2_C": 1.0,
+    "checkpoint_selection": "validation_bce"
+  },
+  "parameter_count": 131329,
+  "selected_epoch": 1,
+  "history": [
+    {
+      "epoch": 1,
+      "train_bce": 0.7611607107147574,
+      "val_bce": 0.4150425317561858
+    },
+    {
+      "epoch": 2,
+      "train_bce": 1.9841878070053944,
+      "val_bce": 1.0344936729389211
+    },
+    {
+      "epoch": 3,
+      "train_bce": 2.056751989141757,
+      "val_bce": 5.4149946220440475
+    },
+    {
+      "epoch": 4,
+      "train_bce": 0.8915235639856579,
+      "val_bce": 1.6593526627708712
+    },
+    {
+      "epoch": 5,
+      "train_bce": 0.1146327597170626,
+      "val_bce": 1.4795315859326217
+    },
+    {
+      "epoch": 6,
+      "train_bce": 0.06648453081415823,
+      "val_bce": 0.90961826235592
+    },
+    {
+      "epoch": 7,
+      "train_bce": 0.009067093584987257,
+      "val_bce": 0.7503229414825402
+    },
+    {
+      "epoch": 8,
+      "train_bce": 0.009130757234694708,
+      "val_bce": 0.6203609510911431
+    }
+  ],
+  "metrics": {
+    "covariance": {
+      "train": {
+        "n": 1200,
+        "positives": 183,
+        "auroc": 0.9914996964177292,
+        "auprc": 0.9534167920672344,
+        "accuracy": 0.9491666666666667,
+        "precision": 0.7541666666666667,
+        "recall": 0.9890710382513661,
+        "f1": 0.8557919621749409,
+        "confusion_matrix": [
+          [
+            958,
+            59
+          ],
+          [
+            2,
+            181
+          ]
+        ],
+        "brier_score": 0.04449462998655495,
+        "classification_threshold": 0.5,
+        "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+        "undefined_metrics_reason": null,
+        "undefined_metrics": {}
+      },
+      "val": {
+        "n": 400,
+        "positives": 74,
+        "auroc": 0.9867352014591279,
+        "auprc": 0.9646715408288761,
+        "accuracy": 0.945,
+        "precision": 0.776595744680851,
+        "recall": 0.9864864864864865,
+        "f1": 0.8690476190476191,
+        "confusion_matrix": [
+          [
+            305,
+            21
+          ],
+          [
+            1,
+            73
+          ]
+        ],
+        "brier_score": 0.0514828055922081,
+        "classification_threshold": 0.5,
+        "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+        "undefined_metrics_reason": null,
+        "undefined_metrics": {}
+      },
+      "test": {
+        "n": 400,
+        "positives": 48,
+        "auroc": 0.961233428030303,
+        "auprc": 0.8852386578901603,
+        "accuracy": 0.9225,
+        "precision": 0.6197183098591549,
+        "recall": 0.9166666666666666,
+        "f1": 0.7394957983193278,
+        "confusion_matrix": [
+          [
+            325,
+            27
+          ],
+          [
+            4,
+            44
+          ]
+        ],
+        "brier_score": 0.07348540314874097,
+        "classification_threshold": 0.5,
+        "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+        "undefined_metrics_reason": null,
+        "undefined_metrics": {}
+      }
+    },
+    "mean_pooled": {
+      "train": {
+        "n": 1200,
+        "positives": 183,
+        "auroc": 1.0,
+        "auprc": 1.0,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "confusion_matrix": [
+          [
+            1017,
+            0
+          ],
+          [
+            0,
+            183
+          ]
+        ],
+        "brier_score": 3.978900410711501e-07,
+        "classification_threshold": 0.5,
+        "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+        "undefined_metrics_reason": null,
+        "undefined_metrics": {}
+      },
+      "val": {
+        "n": 400,
+        "positives": 74,
+        "auroc": 0.970029845796717,
+        "auprc": 0.9499428615239873,
+        "accuracy": 0.9725,
+        "precision": 0.9436619718309859,
+        "recall": 0.9054054054054054,
+        "f1": 0.9241379310344827,
+        "confusion_matrix": [
+          [
+            322,
+            4
+          ],
+          [
+            7,
+            67
+          ]
+        ],
+        "brier_score": 0.0275477399344516,
+        "classification_threshold": 0.5,
+        "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+        "undefined_metrics_reason": null,
+        "undefined_metrics": {}
+      },
+      "test": {
+        "n": 400,
+        "positives": 48,
+        "auroc": 0.9452533143939394,
+        "auprc": 0.8487079053057967,
+        "accuracy": 0.9575,
+        "precision": 0.8444444444444444,
+        "recall": 0.7916666666666666,
+        "f1": 0.8172043010752689,
+        "confusion_matrix": [
+          [
+            345,
+            7
+          ],
+          [
+            10,
+            38
+          ]
+        ],
+        "brier_score": 0.04101769411782344,
+        "classification_threshold": 0.5,
+        "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+        "undefined_metrics_reason": null,
+        "undefined_metrics": {}
+      }
+    }
+  },
+  "split_counts": {
+    "train": {
+      "variants": 1200,
+      "positives": 183,
+      "gene_groups": 717
+    },
+    "val": {
+      "variants": 400,
+      "positives": 74,
+      "gene_groups": 233
+    },
+    "test": {
+      "variants": 400,
+      "positives": 48,
+      "gene_groups": 219
+    }
+  },
+  "split_fingerprint": "d1a043913eaeb16d3880f540775592584bff7dd331464002b4ef55aca1b9b15a"
+}

@@ -1,4 +1,4 @@
-"""Short-window, bidirectional Evo 2 7B features for public ClinVar SNVs."""
+"""Short-window, bidirectional Evo 2 7B features for public ClinVar variants."""
 from __future__ import annotations
 
 from concurrent.futures import FIRST_COMPLETED, ThreadPoolExecutor, wait
@@ -14,6 +14,7 @@ from filelock import FileLock, Timeout
 import numpy as np
 
 from .data import genes_of
+from .evee_indel import IndelContext, IndelVariant, indel_contexts, reverse_complement
 from .nvidia_encoder import NvidiaAPIError, validate_endpoint
 from .sequence import ReferenceContext, ReferenceGenome, Variant
 from .two_stage_data import _atomic_npz
@@ -23,7 +24,7 @@ from .utils import fingerprint, save_json, sha256_file
 ORIENTATIONS = ("forward", "reverse_complement")
 FEATURE_DIM = 4096
 METHOD = "evee_style_short_window_v1"
-_COMPLEMENT = str.maketrans("ACGT", "TGCA")
+INDEL_METHOD = "evee_style_short_window_indel_v1"
 _ADAPTER_FIELDS = (
     "model", "endpoint", "api_schema", "model_revision", "service_revision",
     "layer", "tensor_key", "tokenizer", "adapter_version",
@@ -40,11 +41,13 @@ def _variant_index(window):
 def variant_contexts(genome, variant, window):
     """Get a strand-relative 3:1 window ending with the variant and its downstream context."""
     index = _variant_index(window)
+    if isinstance(variant, IndelVariant):
+        return indel_contexts(genome, variant, window, index)
     forward = genome.context(variant, window, variant_index=index)
     backward = genome.context(variant, window, variant_index=window - 1 - index)
     reverse = ReferenceContext(
-        backward.ref_sequence.translate(_COMPLEMENT)[::-1],
-        backward.alt_sequence.translate(_COMPLEMENT)[::-1],
+        reverse_complement(backward.ref_sequence),
+        reverse_complement(backward.alt_sequence),
         index,
     )
     return forward, reverse
@@ -54,9 +57,14 @@ def _sequence_hash(sequence):
     return hashlib.sha256(sequence.encode("ascii")).hexdigest()
 
 
-def _direction_arrays(ref, alt, variant_index, top_k):
+def _direction_arrays(ref, alt, variant_index, top_k, *, alt_index=None):
     """Select the most cosine-divergent paired positions, breaking ties by position."""
-    ref, alt = ref[variant_index:], alt[variant_index:]
+    alt_index = variant_index if alt_index is None else alt_index
+    aligned_count = min(len(ref) - variant_index, len(alt) - alt_index)
+    if aligned_count < top_k:
+        raise ValueError("Too few aligned positions for the configured EVEE top-k")
+    ref = ref[variant_index:variant_index + aligned_count]
+    alt = alt[alt_index:alt_index + aligned_count]
     delta = alt - ref
     ref_norm, alt_norm = np.linalg.norm(ref, axis=1), np.linalg.norm(alt, axis=1)
     if any(not np.isfinite(norm).all() or (norm <= 0).any() for norm in (ref_norm, alt_norm)):
@@ -73,7 +81,7 @@ def _direction_arrays(ref, alt, variant_index, top_k):
     }
 
 
-def _metadata(encoder, window, top_k, reference_sha256):
+def _metadata(encoder, window, top_k, reference_sha256, *, indels=False):
     index = _variant_index(window)
     if type(top_k) is not int or not 1 <= top_k <= window - index:
         raise ValueError("top_k must be between 1 and the number of variant/downstream positions")
@@ -94,7 +102,7 @@ def _metadata(encoder, window, top_k, reference_sha256):
         raise ValueError("Expected one aligned activation per base without special tokens")
     protocol = {
         **remote,
-        "method": METHOD,
+        "method": INDEL_METHOD if indels else METHOD,
         "genome_build": "GRCh38",
         "reference_sha256": reference_sha256,
         "window": window,
@@ -108,6 +116,10 @@ def _metadata(encoder, window, top_k, reference_sha256):
         "delta": "alt_minus_ref_float32",
         "mean": "full_effect_region_delta_float32",
     }
+    if indels:
+        protocol["alignment"] = "shared_downstream_offsets_after_vcf_anchor_and_edit"
+        protocol["effect_region"] = "aligned_downstream_after_indel"
+        protocol["position_semantics"] = "zero_based_reference_orientation_token_offset"
     return {**protocol, "feature_identity": fingerprint(protocol)}
 
 
@@ -126,7 +138,7 @@ class EVEEFeatureCache:
         protocol = {key: value for key, value in self.metadata.items() if key != "feature_identity"}
         if (
             self.manifest.get("schema_version") != 1
-            or self.metadata.get("method") != METHOD
+            or self.metadata.get("method") not in (METHOD, INDEL_METHOD)
             or self.metadata.get("feature_identity") != fingerprint(protocol)
             or not isinstance(self.manifest.get("records"), dict)
         ):
@@ -191,7 +203,8 @@ def _fetch_direction(encoder, context, top_k):
             raise NvidiaAPIError("Expected finite, base-aligned Evo 2 7B activations with width 4096")
         states.append(hidden)
         request_ids.append((encoder.last_request_info or {}).get("request_id"))
-    return _direction_arrays(*states, context.variant_index, top_k), request_ids
+    alt_index = context.alt_index if isinstance(context, IndelContext) else None
+    return _direction_arrays(*states, context.variant_index, top_k, alt_index=alt_index), request_ids
 
 
 def _missing_directions(cache, variant_id, contexts):
@@ -212,7 +225,10 @@ def _extract_parallel(cache, variants, genome, window, top_k, workers, encoder_f
     def fetch(context):
         if not hasattr(thread, "encoder"):
             encoder = encoder_factory()
-            if _metadata(encoder, window, top_k, cache.metadata["reference_sha256"]) != cache.metadata:
+            if _metadata(
+                encoder, window, top_k, cache.metadata["reference_sha256"],
+                indels=cache.metadata["method"] == INDEL_METHOD,
+            ) != cache.metadata:
                 raise ValueError("Parallel encoder identity differs from the cache")
             session = getattr(encoder, "session", None)
             with encoder_lock:
@@ -285,25 +301,34 @@ def _extract_parallel(cache, variants, genome, window, top_k, workers, encoder_f
 
 
 def extract_features(encoder, variants, fasta_path, output, *, window=256, top_k=32,
-                     reference_sha256=None, progress=None, workers=1, encoder_factory=None):
-    """Cache features for caller-verified public ClinVar SNVs and resume committed directions.
+                     reference_sha256=None, progress=None, workers=1, encoder_factory=None,
+                     indels=False):
+    """Cache features for public ClinVar variants and resume committed directions.
 
     Supply reference_sha256 only when the caller has already hashed the FASTA.
     The optional progress callback receives the variant ID and counts after each record.
     Parallel workers each use a separate encoder from the zero-argument encoder_factory.
+    Indel caches use their own protocol because they align REF/ALT offsets across the edit.
     """
     if type(workers) is not int or workers < 1 or (workers > 1 and not callable(encoder_factory)):
         raise ValueError("workers must be a positive integer with an encoder_factory for parallel extraction")
     variants = list(variants)
+    variant_class = IndelVariant if indels else Variant
     if not variants or any(
-        not isinstance(variant, Variant) or variant.label not in (0, 1) or not genes_of(variant)
+        not isinstance(variant, variant_class) or variant.label not in (0, 1) or not genes_of(variant)
         for variant in variants
     ):
-        raise ValueError("Expected public ClinVar autosomal SNVs with binary labels and gene annotations")
+        kind = "indels" if indels else "SNVs"
+        raise ValueError(f"Expected public ClinVar autosomal {kind} with binary labels and gene annotations")
     if len({variant.id for variant in variants}) != len(variants):
         raise ValueError("Duplicate variant ID")
     reference_sha256 = sha256_file(fasta_path) if reference_sha256 is None else reference_sha256
-    metadata = _metadata(encoder, window, top_k, reference_sha256)
+    metadata = _metadata(encoder, window, top_k, reference_sha256, indels=indels)
+    if indels and any(
+        abs(len(variant.ref) - len(variant.alt)) + top_k > window - metadata["variant_index"]
+        for variant in variants
+    ):
+        raise ValueError("Indel leaves fewer aligned positions than the configured EVEE top-k")
     output = Path(output)
     output.mkdir(parents=True, exist_ok=True)
     counts = {"processed": 0, "skipped": 0, "failed": 0}

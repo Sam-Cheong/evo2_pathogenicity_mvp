@@ -1,0 +1,14 @@
+{
+  "captured_at": "2026-11-12T18:11:56+08:00",
+  "source": "D:\\Users\\60152\\learning materials\\CISC7021\\Report\\evo2_pathogenicity_mvp\\outputs\\evee_full_2000_20261111",
+  "original_split_counts": {
+    "train": 1200,
+    "val": 400,
+    "test": 400
+  },
+  "snapshot_split_counts": {
+    "train": 1200,
+    "val": 13,
+    "test": 32
+  }
+}

@@ -1,7 +1,6 @@
 {
-  "state": "failed",
-  "updated_at": "2026-11-12T10:37:45+08:00",
-  "error_type": "NvidiaAPIError",
-  "started_at": "2026-11-11T20:52:44+08:00",
+  "state": "complete",
+  "updated_at": "2026-11-12T21:43:45+08:00",
+  "started_at": "2026-11-12T18:26:57+08:00",
   "total_variants": 2000
 }

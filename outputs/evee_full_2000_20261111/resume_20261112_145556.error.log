@@ -1,0 +1,23 @@
+Traceback (most recent call last):
+  File "D:\Users\60152\learning materials\CISC7021\Report\evo2_pathogenicity_mvp\scripts\run_evee_full.py", line 124, in <module>
+    main()
+  File "D:\Users\60152\learning materials\CISC7021\Report\evo2_pathogenicity_mvp\scripts\run_evee_full.py", line 120, in main
+    run(args.output)
+  File "D:\Users\60152\learning materials\CISC7021\Report\evo2_pathogenicity_mvp\scripts\run_evee_full.py", line 84, in run
+    run_phase(["extract", "--output", str(output), "--workers", "4"])
+  File "D:\Users\60152\learning materials\CISC7021\Report\evo2_pathogenicity_mvp\src\evo2_mvp\evee_short_window.py", line 220, in main
+    run_extraction(args, args.output, cohort, variants)
+  File "D:\Users\60152\learning materials\CISC7021\Report\evo2_pathogenicity_mvp\src\evo2_mvp\evee_short_window.py", line 151, in run_extraction
+    stats = extract_features(make_encoder(), variants, args.fasta, output / "features", window=cohort["window"],
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Users\60152\learning materials\CISC7021\Report\evo2_pathogenicity_mvp\src\evo2_mvp\evee_features.py", line 322, in extract_features
+    _extract_parallel(cache, variants, genome, window, top_k, workers, encoder_factory, report)
+  File "D:\Users\60152\learning materials\CISC7021\Report\evo2_pathogenicity_mvp\src\evo2_mvp\evee_features.py", line 284, in _extract_parallel
+    raise exc
+  File "D:\Users\60152\learning materials\CISC7021\Report\evo2_pathogenicity_mvp\src\evo2_mvp\evee_features.py", line 266, in _extract_parallel
+    report(variant.id, "skipped")
+  File "D:\Users\60152\learning materials\CISC7021\Report\evo2_pathogenicity_mvp\src\evo2_mvp\evee_features.py", line 314, in report
+    save_json(output / "extraction_status.json", status)
+  File "D:\Users\60152\learning materials\CISC7021\Report\evo2_pathogenicity_mvp\src\evo2_mvp\utils.py", line 40, in save_json
+    os.replace(temporary, path)
+PermissionError: [WinError 5] 拒绝访问。: 'D:\\Users\\60152\\learning materials\\CISC7021\\Report\\evo2_pathogenicity_mvp\\outputs\\evee_full_2000_20261111\\features\\extraction_status.json.oj2pktvf.tmp' -> 'outputs\\evee_full_2000_20261111\\features\\extraction_status.json'

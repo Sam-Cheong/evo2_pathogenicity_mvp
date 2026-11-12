@@ -5,6 +5,7 @@ import json
 import os
 import random
 import tempfile
+import time
 from pathlib import Path
 
 import numpy as np
@@ -37,7 +38,15 @@ def save_json(path, value):
             handle.flush()
             os.fsync(handle.fileno())
         # Close the file before replacement: Windows cannot replace an open temp file.
-        os.replace(temporary, path)
+        for delay in (0.025, 0.05, 0.1, 0.2, 0.4, None):
+            try:
+                os.replace(temporary, path)
+                break
+            except PermissionError as exc:
+                # Windows readers can briefly block replacement of the destination.
+                if delay is None or getattr(exc, "winerror", None) not in (5, 32, 33):
+                    raise
+                time.sleep(delay)
     finally:
         if temporary is not None:
             try:

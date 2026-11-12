@@ -86,6 +86,19 @@ class ReferenceGenome:
         if not self._contigs:
             raise ValueError("FASTA has no recognizable autosomal contigs")
 
+    def reference_segment(self, chrom: str, start: int, end: int) -> str:
+        """Read an unambiguous zero-based, half-open autosomal interval."""
+        chrom = normalize_chrom(chrom)
+        if chrom not in self._contigs:
+            raise ValueError(f"FASTA lacks chromosome {chrom}")
+        contig = self._fasta[self._contigs[chrom]]
+        if not 0 <= start < end <= len(contig):
+            raise ValueError(f"Reference interval outside chromosome {chrom}: {start}-{end}")
+        sequence = str(contig[start:end]).upper()
+        if len(sequence) != end - start or set(sequence) - set("ACGT"):
+            raise ValueError(f"Reference interval is incomplete or contains ambiguous bases: {chrom}:{start}-{end}")
+        return sequence
+
     def context(self, variant: Variant, window: int = 256, *, variant_index: int | None = None) -> ReferenceContext:
         if not isinstance(window, int) or not 3 <= window <= 8192:
             raise ValueError("window must be an integer between 3 and 8192")

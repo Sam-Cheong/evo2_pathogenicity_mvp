@@ -1,0 +1,109 @@
+{
+  "status": "complete",
+  "scope": "partial_cache_ClinVar_SNVs_original_gene_split",
+  "cohort_sha256": "70e48f2670a8700143cbf0ce8383da769af0874f070005f3605f7483260c75a1",
+  "feature_manifest_sha256": "213ac9b22192c92f38fae19856776888b701d5d051b266d64b4074e11c64d304",
+  "feature_protocol": {
+    "model": "arc/evo2-7b",
+    "endpoint": "https://health.api.nvidia.com/v1/biology/arc/evo2-7b/forward",
+    "api_schema": "nim_v1",
+    "model_revision": "not_exposed_by_provider",
+    "service_revision": "nvidia-hosted-7b-block27-v1",
+    "layer": "blocks.27",
+    "tensor_key": null,
+    "tokenizer": "character_level_no_bos",
+    "adapter_version": "nvidia-forward-v1",
+    "method": "evee_style_short_window_v1",
+    "genome_build": "GRCh38",
+    "reference_sha256": "df6e4918316e05a9cc1fd29c352841d3678b607d7a436819cd43371b52c814c0",
+    "window": 256,
+    "top_k": 32,
+    "variant_index": 192,
+    "feature_dim": 4096,
+    "orientations": [
+      "forward",
+      "reverse_complement"
+    ],
+    "position_semantics": "zero_based_orientation_token_offset",
+    "effect_region": "variant_and_downstream",
+    "selection": "top_cosine_divergence_stable_ties_sorted_by_position",
+    "delta": "alt_minus_ref_float32",
+    "mean": "full_effect_region_delta_float32",
+    "feature_identity": "cb5059a5c05a95911d6576cf310570fdf1707ed575f529f461679aa343f560a3"
+  },
+  "device": "cpu",
+  "split_counts": {
+    "train": {
+      "variants": 1200,
+      "positives": 183,
+      "gene_groups": 717
+    },
+    "val": {
+      "variants": 13,
+      "positives": 4,
+      "gene_groups": 13
+    },
+    "test": {
+      "variants": 32,
+      "positives": 16,
+      "gene_groups": 32
+    }
+  },
+  "test": {
+    "covariance": {
+      "n": 32,
+      "positives": 16,
+      "auroc": 0.8828125,
+      "auprc": 0.9166527598942803,
+      "accuracy": 0.78125,
+      "precision": 0.8461538461538461,
+      "recall": 0.6875,
+      "f1": 0.7586206896551724,
+      "confusion_matrix": [
+        [
+          14,
+          2
+        ],
+        [
+          5,
+          11
+        ]
+      ],
+      "brier_score": 0.21868670397661566,
+      "classification_threshold": 0.5,
+      "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+      "undefined_metrics_reason": null,
+      "undefined_metrics": {}
+    },
+    "mean_pooled": {
+      "n": 32,
+      "positives": 16,
+      "auroc": 0.87890625,
+      "auprc": 0.9138030474427533,
+      "accuracy": 0.78125,
+      "precision": 0.9090909090909091,
+      "recall": 0.625,
+      "f1": 0.7407407407407407,
+      "confusion_matrix": [
+        [
+          15,
+          1
+        ],
+        [
+          6,
+          10
+        ]
+      ],
+      "brier_score": 0.21308186780503616,
+      "classification_threshold": 0.5,
+      "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+      "undefined_metrics_reason": null,
+      "undefined_metrics": {}
+    }
+  },
+  "selected_epoch": 4,
+  "test_overlap_with_prior_pilots": {
+    "evee_short_window_20261111": 8,
+    "evee_learning_curve_20261111": 24
+  }
+}
