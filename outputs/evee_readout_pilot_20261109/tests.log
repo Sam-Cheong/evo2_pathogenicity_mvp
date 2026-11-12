@@ -1,0 +1,9 @@
+...........                                                              [100%]
+============================== warnings summary ===============================
+tests/test_evee_readout_pilot.py: 558 warnings
+  D:\Users\60152\learning materials\CISC7021\Report\evo2_pathogenicity_mvp\.venv\Lib\site-packages\sklearn\linear_model\_logistic.py:451: DeprecationWarning: scipy.optimize: The `disp` and `iprint` options of the L-BFGS-B solver are deprecated and will be removed in SciPy 1.18.0.
+    opt_res = optimize.minimize(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: D:\Users\60152\learning materials\CISC7021\Report\evo2_pathogenicity_mvp\outputs\evee_readout_pilot_20261109\junit.xml -
+11 passed, 558 warnings in 13.04s

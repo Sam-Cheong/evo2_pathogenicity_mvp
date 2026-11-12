@@ -1,0 +1,22 @@
+{
+  "status": "completed",
+  "started_at_utc": "2026-11-03T16:49:32.180707+00:00",
+  "notebook": "D:\\Users\\60152\\learning materials\\CISC7021\\Report\\evo2_pathogenicity_mvp\\HyenaDNA_d256_experiment.ipynb",
+  "executed_notebook": "D:\\Users\\60152\\learning materials\\CISC7021\\Report\\evo2_pathogenicity_mvp\\HyenaDNA_d256_experiment.executed.ipynb",
+  "kernel_python": "D:\\Users\\60152\\learning materials\\CISC7021\\Report\\evo2_pathogenicity_mvp\\.venv\\Scripts\\python.exe",
+  "successful_cells": [
+    1,
+    2,
+    4,
+    5,
+    6,
+    8,
+    9,
+    10,
+    12,
+    13
+  ],
+  "current_cell": 13,
+  "current_cell_id": "final-report",
+  "completed_at_utc": "2026-11-03T17:04:52.811989+00:00"
+}

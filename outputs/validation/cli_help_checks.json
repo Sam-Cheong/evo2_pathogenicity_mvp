@@ -1,0 +1,46 @@
+[
+  {
+    "command": "python scripts/check_environment.py --help",
+    "returncode": 0
+  },
+  {
+    "command": "python scripts/test_evo2.py --help",
+    "returncode": 0
+  },
+  {
+    "command": "python scripts/prepare_clinvar.py --help",
+    "returncode": 0
+  },
+  {
+    "command": "python scripts/create_toy_dataset.py --help",
+    "returncode": 0
+  },
+  {
+    "command": "python scripts/compare_models.py --help",
+    "returncode": 0
+  },
+  {
+    "command": "python -m evo2_mvp.data --help",
+    "returncode": 0
+  },
+  {
+    "command": "python -m evo2_mvp.cache --help",
+    "returncode": 0
+  },
+  {
+    "command": "python -m evo2_mvp.train_teacher_head --help",
+    "returncode": 0
+  },
+  {
+    "command": "python -m evo2_mvp.distill_student --help",
+    "returncode": 0
+  },
+  {
+    "command": "python -m evo2_mvp.inference --help",
+    "returncode": 0
+  },
+  {
+    "command": "python -m evo2_mvp.calibration --help",
+    "returncode": 0
+  }
+]

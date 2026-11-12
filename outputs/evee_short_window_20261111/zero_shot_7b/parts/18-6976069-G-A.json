@@ -1,0 +1,14 @@
+{
+  "variant_id": "18-6976069-G-A",
+  "gene": "LAMA1",
+  "label": 0,
+  "forward_ref_mean_log_likelihood": -1.2313184130044454,
+  "forward_alt_mean_log_likelihood": -1.22759704227854,
+  "reverse_ref_mean_log_likelihood": -1.3149732606169924,
+  "reverse_alt_mean_log_likelihood": -1.3093233423656134,
+  "forward_delta": 0.003721370725905393,
+  "reverse_delta": 0.005649918251378949,
+  "zero_shot_score": -0.004685644488642171,
+  "mean_pooled_score": 0.002659953718046938,
+  "covariance_score": 0.16413948704794493
+}

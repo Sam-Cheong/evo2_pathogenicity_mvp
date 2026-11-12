@@ -1,0 +1,27 @@
+{
+  "stage": "frozen_probes",
+  "status": "completed",
+  "prepared_metadata_sha256": "a724bd473999a8b3d799366a9a6603fea6ead38842747ed56f4e6f75007ae886",
+  "configuration_sha256": "b2d1414d5ef33f048733a38620cdd58d629f422af235a67c95955d99f1fb8016",
+  "predefined_probes": [
+    "random_linear",
+    "distilled_linear",
+    "random_mlp",
+    "distilled_mlp"
+  ],
+  "completed": [
+    "random_linear",
+    "distilled_linear",
+    "random_mlp",
+    "distilled_mlp"
+  ],
+  "clinical_test_opened": false,
+  "common_initial_encoder_sha256": "824f3d0c8bf6648066e569650d1d959018f617b9256802a8c0d94475f8c713e8",
+  "all_probes_trained_before_test": true,
+  "checkpoints_sha256": {
+    "random_linear": "c70ab761e078152f383f0f03bf39a41a92cc8543a4c53f7468b2b8a035ee1f94",
+    "distilled_linear": "bcbdce7a3ac5a686c58dfe75c8adfa615bf29fd95c0cbbb6f1734bf04de833e9",
+    "random_mlp": "f6b7c7af8ee16d8e976770d96ada07a8883acf44816818bd707027ee249872db",
+    "distilled_mlp": "dd296b077d9d52600c5e24c647521a7a54541a416b6dd0c9988f5cc6a8de5717"
+  }
+}

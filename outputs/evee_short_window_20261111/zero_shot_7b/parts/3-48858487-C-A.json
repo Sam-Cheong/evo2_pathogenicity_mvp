@@ -1,0 +1,14 @@
+{
+  "variant_id": "3-48858487-C-A",
+  "gene": "SLC25A20",
+  "label": 0,
+  "forward_ref_mean_log_likelihood": -1.2089887974341391,
+  "forward_alt_mean_log_likelihood": -1.2094326053342412,
+  "reverse_ref_mean_log_likelihood": -1.0544537649142887,
+  "reverse_alt_mean_log_likelihood": -1.0551481970522314,
+  "forward_delta": -0.00044380790010212223,
+  "reverse_delta": -0.0006944321379427354,
+  "zero_shot_score": 0.0005691200190224288,
+  "mean_pooled_score": 0.003146312161250864,
+  "covariance_score": 0.24638837787942142
+}

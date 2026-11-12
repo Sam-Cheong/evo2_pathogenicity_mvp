@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "architecture": "custom_small_StripedHyena2_reference_variant",
+  "reference_revision": "7b819b8609ce0b29deff79358a294b59d8299d07",
+  "initialization": "seeded_random_not_pretrained",
+  "teacher_cache_used_in_structural_test": false,
+  "pathogenicity_score": null,
+  "window": 256,
+  "variant_index": 128,
+  "embedding_shape": [
+    192
+  ],
+  "fused_shape": [
+    576
+  ],
+  "encoder_parameters": 1504704,
+  "linear_student_parameters": 1505281,
+  "mlp_student_parameters": 1582721,
+  "finite": true,
+  "backward_finite_nonzero": true,
+  "save_reload_bitwise_equal": true,
+  "npy_reload_equal": true,
+  "forward_seconds": 0.04512569999496918,
+  "device": "cpu",
+  "cpu_threads": 4,
+  "new_evo2_api_calls": 0,
+  "clinical_use": "research_only"
+}

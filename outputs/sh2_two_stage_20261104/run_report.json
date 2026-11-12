@@ -1,0 +1,106 @@
+{
+  "status": "completed",
+  "completed_at_utc": "2026-11-04T01:47:09.595369+00:00",
+  "experiment_identity": "706b915d195b7f940189efa8cb1b746c0986302424be505deef5546777176777",
+  "architecture": "custom_small_SH2_reference_variant",
+  "initialization": "random_then_real_representation_distillation",
+  "counts": {
+    "outer_train": 1200,
+    "outer_val": 400,
+    "outer_test": 400,
+    "excluded_train_context_overlap": 0,
+    "stage1_retained_train_only": 1200,
+    "representation_train": 960,
+    "representation_val": 240,
+    "probe_train": 1200,
+    "probe_val": 400,
+    "probe_test": 400,
+    "connected_representation_groups": 717
+  },
+  "models": {
+    "random_linear": {
+      "checkpoint_sha256": "c70ab761e078152f383f0f03bf39a41a92cc8543a4c53f7468b2b8a035ee1f94",
+      "parameters": 1505281,
+      "encoder_sha256": "824f3d0c8bf6648066e569650d1d959018f617b9256802a8c0d94475f8c713e8"
+    },
+    "distilled_linear": {
+      "checkpoint_sha256": "bcbdce7a3ac5a686c58dfe75c8adfa615bf29fd95c0cbbb6f1734bf04de833e9",
+      "parameters": 1505281,
+      "encoder_sha256": "c803719d7adefc6a152794f682c725ee7e7b33eedf67c4831826208cba01b76e"
+    },
+    "random_mlp": {
+      "checkpoint_sha256": "f6b7c7af8ee16d8e976770d96ada07a8883acf44816818bd707027ee249872db",
+      "parameters": 1582721,
+      "encoder_sha256": "824f3d0c8bf6648066e569650d1d959018f617b9256802a8c0d94475f8c713e8"
+    },
+    "distilled_mlp": {
+      "checkpoint_sha256": "dd296b077d9d52600c5e24c647521a7a54541a416b6dd0c9988f5cc6a8de5717",
+      "parameters": 1582721,
+      "encoder_sha256": "c803719d7adefc6a152794f682c725ee7e7b33eedf67c4831826208cba01b76e"
+    }
+  },
+  "test_metrics": [
+    {
+      "model": "random_linear",
+      "auroc": 0.5810250946969697,
+      "auprc": 0.21375609964057893,
+      "f1": 0.13114754098360656,
+      "recall": 0.08333333333333333,
+      "brier_score": 0.1713339010579583,
+      "n": 400,
+      "positives": 48
+    },
+    {
+      "model": "distilled_linear",
+      "auroc": 0.6697443181818181,
+      "auprc": 0.22153528183645407,
+      "f1": 0.27906976744186046,
+      "recall": 0.25,
+      "brier_score": 0.15850127731953362,
+      "n": 400,
+      "positives": 48
+    },
+    {
+      "model": "random_mlp",
+      "auroc": 0.6515151515151516,
+      "auprc": 0.22032047020382034,
+      "f1": 0.0,
+      "recall": 0.0,
+      "brier_score": 0.1057680450323294,
+      "n": 400,
+      "positives": 48
+    },
+    {
+      "model": "distilled_mlp",
+      "auroc": 0.7001065340909092,
+      "auprc": 0.23233392373213027,
+      "f1": 0.07017543859649122,
+      "recall": 0.041666666666666664,
+      "brier_score": 0.10425935230161869,
+      "n": 400,
+      "positives": 48
+    }
+  ],
+  "standalone_prediction": {
+    "variant_id": "1-926029-C-T",
+    "genome_build": "GRCh38",
+    "teacher_score": null,
+    "student_score": 0.291105717420578,
+    "student_predictive_entropy": 0.603138757614597,
+    "ensemble_std": null,
+    "calibrated_score": null,
+    "calibration_status": "not_calibrated",
+    "clinical_use": "research_only"
+  },
+  "independent_reload_predictions_identical": true,
+  "teacher_unchanged": true,
+  "new_evo2_api_calls": 0,
+  "limitations": [
+    "single seed",
+    "only 960 representation-training pairs",
+    "center-only teacher targets",
+    "historically examined test cohort",
+    "custom SH2 scale/schedule, not official pretrained weights"
+  ],
+  "clinical_use": "research_only"
+}

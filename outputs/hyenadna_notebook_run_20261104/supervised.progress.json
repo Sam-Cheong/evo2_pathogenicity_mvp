@@ -1,0 +1,43 @@
+{
+  "status": "completed",
+  "signature": {
+    "experiment_identity": "96ebfc7fad4467fd12eb75f2facba8b01dac254e522f6f0094a241ace856c72d",
+    "arguments": [
+      "-m",
+      "evo2_mvp.distill_student",
+      "--mode",
+      "supervised",
+      "--variants",
+      "data/variants.csv",
+      "--splits",
+      "data/splits.json",
+      "--cache",
+      "outputs/nvidia_cache",
+      "--fasta",
+      "data/GRCh38.fa",
+      "--teacher",
+      "outputs/teacher/best_teacher.pt",
+      "--phase0-report",
+      "outputs/phase0_api_verified/result.json",
+      "--config",
+      "configs/hyenadna_d256.yaml",
+      "--device",
+      "cpu",
+      "--output",
+      "outputs\\hyenadna_notebook_run_20261104\\supervised"
+    ]
+  },
+  "started_at_utc": "2026-11-03T16:51:14.048943+00:00",
+  "completed_at_utc": "2026-11-03T16:57:37.296152+00:00",
+  "returncode": 0,
+  "artifacts_sha256": {
+    "outputs/hyenadna_notebook_run_20261104/supervised/best_student.pt": "7db00d61ebe68d0ac3ca600788fe84b6b3e37c47633cf396c5bfeb4c4f207dd6",
+    "outputs/hyenadna_notebook_run_20261104/supervised/metrics.json": "9a1627d7f3cdff987314ca3d0bd6e52336b42089c5ed0a9ae4de375250fdcdd8",
+    "outputs/hyenadna_notebook_run_20261104/supervised/predictions.csv": "750b639b770b9a8ab51961b7da619444dc6cebf19a1f26515b640bd7c5c80d16",
+    "outputs/hyenadna_notebook_run_20261104/supervised/prediction_metadata.json": "b444ce00926e2332cfaf5acaa9d7f6c422164eff82a1173608784a765dc28b1a",
+    "outputs/hyenadna_notebook_run_20261104/supervised/benchmark.json": "3fa7042f3a7a8d774db4e9080b55f912eb864aaae94ce9280e2d1b34b160ed54",
+    "outputs/hyenadna_notebook_run_20261104/supervised/training_curve.csv": "cab3a3a8483872ac08273b69604b6b269a5bbdbd733a5062611edf01187fa41f",
+    "outputs/hyenadna_notebook_run_20261104/supervised/training_curve.png": "e26c92795286d491f69d6e58b558521ea9a050f789aca739ec3dce51fc1d7742",
+    "outputs/hyenadna_notebook_run_20261104/supervised/config.json": "499221315817e402617b565b361ccd68568d68f5e623affa9100e149f4b6f07a"
+  }
+}

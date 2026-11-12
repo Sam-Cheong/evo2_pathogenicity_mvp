@@ -1,0 +1,15 @@
+{
+  "tests": 110,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 1,
+  "passed": 109,
+  "scope": "mocked_NVIDIA_API_tests_weight_free_unit_tests_and_synthetic_teacher_CLI_smoke_only",
+  "real_evo2_integration": "passed_real_API_Phase0_CLI",
+  "pytest_live_integration_flag": "not_enabled; real Phase0 CLI verified separately",
+  "real_student_training": "not_started",
+  "real_teacher_training": "not_completed",
+  "python_version_tested": "3.10.6",
+  "python_3_11_tested": true,
+  "python_3_11_scope": "real_API_Phase0_CLI"
+}

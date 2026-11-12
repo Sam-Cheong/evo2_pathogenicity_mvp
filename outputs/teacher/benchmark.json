@@ -1,0 +1,12 @@
+{
+  "device": "cpu",
+  "repeats": 5,
+  "warmup": 1,
+  "seconds_mean": 0.0013147400022717193,
+  "seconds_std": 7.271123052594011e-05,
+  "process_rss_before_bytes": 879284224,
+  "process_rss_max_observed_bytes": 879284224,
+  "cpu_memory_measurement": "process RSS sampled between calls, not a transient peak",
+  "gpu_peak_allocated_bytes": null,
+  "scope": "classification_head_only_cached_features_excludes_Evo2_encoder"
+}

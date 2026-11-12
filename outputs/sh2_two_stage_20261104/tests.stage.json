@@ -1,0 +1,21 @@
+{
+  "status": "completed",
+  "signature": {
+    "experiment_identity": "706b915d195b7f940189efa8cb1b746c0986302424be505deef5546777176777",
+    "arguments": [
+      "-m",
+      "pytest",
+      "-q",
+      "--basetemp",
+      "work/pytest_sh2_full",
+      "--junitxml",
+      "outputs\\sh2_two_stage_20261104\\junit.xml"
+    ]
+  },
+  "started_at_utc": "2026-11-04T01:25:30.351709+00:00",
+  "completed_at_utc": "2026-11-04T01:26:47.876235+00:00",
+  "returncode": 0,
+  "artifacts_sha256": {
+    "outputs/sh2_two_stage_20261104/junit.xml": "ccad9cde50a1560a052546efec9be662ad66f3d3fee6c3d5168dbbcc15661090"
+  }
+}

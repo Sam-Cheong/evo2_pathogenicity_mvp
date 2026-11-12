@@ -1,0 +1,13 @@
+{
+  "device": "cpu",
+  "repeats": 5,
+  "warmup": 1,
+  "seconds_mean": 0.0012937799998326226,
+  "seconds_std": 4.271539503299564e-05,
+  "process_rss_before_bytes": 768299008,
+  "process_rss_max_observed_bytes": 768299008,
+  "cpu_memory_measurement": "process RSS sampled between calls, not a transient peak",
+  "gpu_peak_allocated_bytes": null,
+  "scope": "student_encoder_and_head_preencoded_one_hot_excludes_FASTA_and_one_hot_preprocessing",
+  "parameter_count": 83265
+}

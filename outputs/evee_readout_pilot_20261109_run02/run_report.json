@@ -1,0 +1,22 @@
+{
+  "status": "completed",
+  "completed_at_utc": "2026-11-09T06:30:26.023710+00:00",
+  "experiment_identity": "460138445e214ae75e1ff92f8450c7b845e178f0b256b0e148040c0d299b04bd",
+  "paper_sha256": "e91d2ea398365ddb92f9aa614dbd4ac69acc43297b80b368e59a509dc9d93e87",
+  "validation_report_sha256": "063580130db488cf1947368b442549a61ae121e234c9cddcfbd06af0f95f576a",
+  "candidate_lock_sha256": "197ececfa5f12599c5bbac05073161e65ef315336a2dd3dfde559d3109e49999",
+  "historical_test_report_sha256": "dae6ccc17f0180ca93d73447bf84887965370943a3c893f93c90e1443d1fddd8",
+  "standalone_prediction": {
+    "variant_id": "1-926029-C-T",
+    "genome_build": "GRCh38",
+    "student_score": 0.11841541122857892,
+    "student_predictive_entropy": 0.36375587447108165,
+    "model": "distilled_gram_r16",
+    "calibration_status": "not_calibrated",
+    "reload_logits_identical": true,
+    "clinical_use": "research_only"
+  },
+  "new_evo2_api_calls": 0,
+  "evaluation_scope": "exploratory_validation_and_locked_historical_test",
+  "clinical_use": "research_only"
+}

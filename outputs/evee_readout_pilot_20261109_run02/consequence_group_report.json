@@ -1,0 +1,201 @@
+{
+  "status": "completed",
+  "scope": "exploratory_within_existing_clinvar_mc_terms",
+  "method": "Descriptive stratification of locked prediction scores by existing ClinVar MC Sequence Ontology IDs.",
+  "relation_to_evee": "Within-term AUROC and average precision are descriptive subgroup estimands. EVEE consequence deconfounding is a separate adjustment procedure.",
+  "historical_scope": "previously_examined_test_set_descriptive_only",
+  "test_used_for_selection": false,
+  "minimum_positives_and_negatives_per_group": 10,
+  "annotation_rule": "Exact chrom, pos, ref, alt and source accession match. Every matched source record must give one distinct SO ID and agree with the other source records.",
+  "source": {
+    "name": "ClinVar",
+    "release_date": "2026-11-01",
+    "build": "GRCh38",
+    "vcf_sha256": "0f0f848b8c23c3d994f572c91d84674aec5d8206269aec6605dc09ca88b4a3b4",
+    "mc_header": "##INFO=<ID=MC,Number=.,Type=String,Description=\"comma separated list of molecular consequence in the form of Sequence Ontology ID|molecular_consequence\">",
+    "vcf_scan_seconds": 10.625837399988086
+  },
+  "validation_lock_fingerprint": "fe49c600690da45bc0f8c18a06bd99544e72e019cb5c91d55c86fcbe2fb13ee4",
+  "validation": {
+    "n": 400,
+    "coverage": {
+      "missing_mc": 2,
+      "multiple_so_terms": 91,
+      "usable_single_so_term": 307
+    },
+    "groups": {
+      "SO:0001574": {
+        "vcf_mc_names": [
+          "splice_acceptor_variant"
+        ],
+        "n": 7,
+        "positives": 7,
+        "negatives": 0
+      },
+      "SO:0001575": {
+        "vcf_mc_names": [
+          "splice_donor_variant"
+        ],
+        "n": 5,
+        "positives": 5,
+        "negatives": 0
+      },
+      "SO:0001583": {
+        "vcf_mc_names": [
+          "missense_variant"
+        ],
+        "n": 43,
+        "positives": 20,
+        "negatives": 23,
+        "models": {
+          "distilled_center_r16": {
+            "auroc": 0.5478260869565218,
+            "average_precision": 0.4874164510776768
+          },
+          "distilled_gram_r16": {
+            "auroc": 0.5108695652173914,
+            "average_precision": 0.4879760562672112
+          },
+          "distilled_mean_r16": {
+            "auroc": 0.4739130434782609,
+            "average_precision": 0.5158872125091811
+          },
+          "random_center_r16": {
+            "auroc": 0.5043478260869565,
+            "average_precision": 0.4683592664304786
+          },
+          "random_gram_r16": {
+            "auroc": 0.4543478260869565,
+            "average_precision": 0.5103851743531491
+          },
+          "random_mean_r16": {
+            "auroc": 0.5326086956521738,
+            "average_precision": 0.4680440383907142
+          }
+        }
+      },
+      "SO:0001587": {
+        "vcf_mc_names": [
+          "nonsense"
+        ],
+        "n": 22,
+        "positives": 22,
+        "negatives": 0
+      },
+      "SO:0001623": {
+        "vcf_mc_names": [
+          "5_prime_UTR_variant"
+        ],
+        "n": 3,
+        "positives": 0,
+        "negatives": 3
+      },
+      "SO:0001624": {
+        "vcf_mc_names": [
+          "3_prime_UTR_variant"
+        ],
+        "n": 7,
+        "positives": 0,
+        "negatives": 7
+      },
+      "SO:0001627": {
+        "vcf_mc_names": [
+          "intron_variant"
+        ],
+        "n": 84,
+        "positives": 0,
+        "negatives": 84
+      },
+      "SO:0001819": {
+        "vcf_mc_names": [
+          "synonymous_variant"
+        ],
+        "n": 136,
+        "positives": 0,
+        "negatives": 136
+      }
+    }
+  },
+  "historical_test": {
+    "n": 400,
+    "coverage": {
+      "multiple_so_terms": 97,
+      "usable_single_so_term": 303
+    },
+    "groups": {
+      "SO:0001574": {
+        "vcf_mc_names": [
+          "splice_acceptor_variant"
+        ],
+        "n": 3,
+        "positives": 3,
+        "negatives": 0
+      },
+      "SO:0001575": {
+        "vcf_mc_names": [
+          "splice_donor_variant"
+        ],
+        "n": 1,
+        "positives": 1,
+        "negatives": 0
+      },
+      "SO:0001583": {
+        "vcf_mc_names": [
+          "missense_variant"
+        ],
+        "n": 40,
+        "positives": 9,
+        "negatives": 31
+      },
+      "SO:0001587": {
+        "vcf_mc_names": [
+          "nonsense"
+        ],
+        "n": 15,
+        "positives": 15,
+        "negatives": 0
+      },
+      "SO:0001623": {
+        "vcf_mc_names": [
+          "5_prime_UTR_variant"
+        ],
+        "n": 2,
+        "positives": 0,
+        "negatives": 2
+      },
+      "SO:0001624": {
+        "vcf_mc_names": [
+          "3_prime_UTR_variant"
+        ],
+        "n": 7,
+        "positives": 0,
+        "negatives": 7
+      },
+      "SO:0001627": {
+        "vcf_mc_names": [
+          "intron_variant"
+        ],
+        "n": 91,
+        "positives": 2,
+        "negatives": 89
+      },
+      "SO:0001819": {
+        "vcf_mc_names": [
+          "synonymous_variant"
+        ],
+        "n": 143,
+        "positives": 0,
+        "negatives": 143
+      },
+      "SO:0002153": {
+        "vcf_mc_names": [
+          "genic_upstream_transcript_variant"
+        ],
+        "n": 1,
+        "positives": 0,
+        "negatives": 1
+      }
+    }
+  },
+  "clinical_use": "research_only"
+}

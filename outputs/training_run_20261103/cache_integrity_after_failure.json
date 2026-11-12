@@ -1,0 +1,12 @@
+{
+  "manifest_records": 497,
+  "valid_records": 497,
+  "invalid_records": [],
+  "unknown_variant_ids": [],
+  "unindexed_npz_files": 0,
+  "unindexed_npz_names": [],
+  "active_cache_processes": [],
+  "directory_unique_temp_write": "passed",
+  "teacher_training_completed": false,
+  "student_training_completed": false
+}

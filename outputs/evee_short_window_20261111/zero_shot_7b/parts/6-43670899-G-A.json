@@ -1,0 +1,14 @@
+{
+  "variant_id": "6-43670899-G-A",
+  "gene": "RSPH9",
+  "label": 0,
+  "forward_ref_mean_log_likelihood": -0.6992456998587301,
+  "forward_alt_mean_log_likelihood": -0.6876081167474388,
+  "reverse_ref_mean_log_likelihood": -0.9517800667125463,
+  "reverse_alt_mean_log_likelihood": -0.939285969460173,
+  "forward_delta": 0.011637583111291261,
+  "reverse_delta": 0.012494097252373382,
+  "zero_shot_score": -0.012065840181832321,
+  "mean_pooled_score": 0.0011157474786209506,
+  "covariance_score": 0.40165993602640826
+}

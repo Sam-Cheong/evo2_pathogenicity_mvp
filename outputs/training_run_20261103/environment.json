@@ -1,0 +1,33 @@
+{
+  "timestamp_utc": "2026-11-03T06:11:44.207540+00:00",
+  "os": "Windows-10-10.0.26200-SP0",
+  "system": "Windows",
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "executable": "D:\\Users\\60152\\learning materials\\CISC7021\\Report\\evo2_pathogenicity_mvp\\.venv\\Scripts\\python.exe",
+  "torch": "2.7.1+cpu",
+  "torch_cuda_runtime": null,
+  "cudnn_version": null,
+  "cuda_available": false,
+  "gpus": [],
+  "packages": {
+    "evo2": null,
+    "vtx": null,
+    "transformer-engine": null,
+    "flash-attn": null,
+    "numpy": "1.26.4",
+    "pyfaidx": "0.8.1.4"
+  },
+  "official_model": "nvidia/arc/evo2-40b",
+  "official_requirements_source": "https://docs.nvidia.com/nim/bionemo/evo2/endpoints",
+  "nvidia_smi": "NVIDIA GeForce RTX 3050 Ti Laptop GPU, 4096 MiB, 2680 MiB, 621.01\n",
+  "nvcc": "nvcc: NVIDIA (R) Cuda compiler driver\nCopyright (c) 2005-2025 NVIDIA Corporation\nBuilt on Wed_Aug_20_13:58:20_Pacific_Daylight_Time_2025\nCuda compilation tools, release 13.0, V13.0.88\nBuild cuda_13.0.r13.0/compiler.36424714_0\n",
+  "note": "Hosted Evo 2 requires no local CUDA/Evo 2 weights. Key presence is not successful authentication; run Phase 0.",
+  "selected_backend": "nvidia_api",
+  "api_key_present": true,
+  "selected_backend_blockers": [],
+  "ready_for_selected_backend_attempt": true,
+  "api_authentication_verified": false,
+  "local_gpu_required": false,
+  "local_evo2_installation_required": false,
+  "api_network_check": "not_invoked; Phase 0 performs authenticated forward requests"
+}

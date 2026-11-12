@@ -1,0 +1,14 @@
+{
+  "variant_id": "1-25563693-G-T",
+  "gene": "LDLRAP1",
+  "label": 1,
+  "forward_ref_mean_log_likelihood": -1.0679142138666433,
+  "forward_alt_mean_log_likelihood": -1.2695519480726867,
+  "reverse_ref_mean_log_likelihood": -1.0660960758783318,
+  "reverse_alt_mean_log_likelihood": -1.2272175366375653,
+  "forward_delta": -0.20163773420604336,
+  "reverse_delta": -0.1611214607592335,
+  "zero_shot_score": 0.18137959748263843,
+  "mean_pooled_score": 0.9999997863628628,
+  "covariance_score": 1.0
+}

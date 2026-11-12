@@ -1,0 +1,34 @@
+{
+  "status": "completed",
+  "signature": {
+    "experiment_identity": "460138445e214ae75e1ff92f8450c7b845e178f0b256b0e148040c0d299b04bd",
+    "arguments": [
+      "-m",
+      "evo2_mvp.evee_readout_pilot",
+      "--stage",
+      "fit",
+      "--data-dir",
+      "outputs\\sh2_two_stage_20261104\\data",
+      "--encoders",
+      "outputs\\sh2_two_stage_20261104\\training",
+      "--variants",
+      "data\\variants.csv",
+      "--encoder-config",
+      "configs\\stripedhyena2_two_stage.yaml",
+      "--output",
+      "outputs\\evee_readout_pilot_20261109_run02",
+      "--seed",
+      "42",
+      "--device",
+      "cpu"
+    ]
+  },
+  "started_at_utc": "2026-11-09T06:29:03.143541+00:00",
+  "completed_at_utc": "2026-11-09T06:30:02.894157+00:00",
+  "returncode": 0,
+  "artifacts_sha256": {
+    "outputs/evee_readout_pilot_20261109_run02/pilot_validation.json": "063580130db488cf1947368b442549a61ae121e234c9cddcfbd06af0f95f576a",
+    "outputs/evee_readout_pilot_20261109_run02/pilot_lock.json": "197ececfa5f12599c5bbac05073161e65ef315336a2dd3dfde559d3109e49999",
+    "outputs/evee_readout_pilot_20261109_run02/validation_predictions.csv": "b655b7f1749a9aceedb73381340daa3834c85568aac126bb12610d35e10e4205"
+  }
+}

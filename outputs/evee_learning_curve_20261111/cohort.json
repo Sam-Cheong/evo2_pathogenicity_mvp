@@ -1,0 +1,746 @@
+{
+  "schema_version": 1,
+  "seed": 42,
+  "window": 256,
+  "top_k": 32,
+  "model": "arc/evo2-7b",
+  "endpoint": "https://health.api.nvidia.com/v1/biology/arc/evo2-7b/forward",
+  "layer": "blocks.27",
+  "genome_build": "GRCh38",
+  "reference_sha256": "df6e4918316e05a9cc1fd29c352841d3678b607d7a436819cd43371b52c814c0",
+  "clinvar_release": "2026-11-01",
+  "variants_sha256": "b49c81a5d5e18f4230d34f51870a44fab514e976c54635388c4bf3b8abd8f848",
+  "source_splits_sha256": "6d29ba79da9ebf42e14f064a4198863b48504f3182dcfcc9348b2a08644afaaa",
+  "eligible_records": 2000,
+  "valid_windows": 2000,
+  "selection": "extended_7b_pilot_excludes_previous_7b_test_genes",
+  "partitions": {
+    "train": [
+      {
+        "variant_id": "19-4816229-G-A",
+        "chrom": "19",
+        "pos": 4816229,
+        "ref": "G",
+        "alt": "A",
+        "gene": "TICAM1",
+        "group": "TICAM1",
+        "label": 0
+      },
+      {
+        "variant_id": "9-34649479-C-T",
+        "chrom": "9",
+        "pos": 34649479,
+        "ref": "C",
+        "alt": "T",
+        "gene": "GALT",
+        "group": "GALT",
+        "label": 1
+      },
+      {
+        "variant_id": "5-149004910-C-T",
+        "chrom": "5",
+        "pos": 149004910,
+        "ref": "C",
+        "alt": "T",
+        "gene": "SH3TC2",
+        "group": "SH3TC2",
+        "label": 1
+      },
+      {
+        "variant_id": "15-90271712-A-G",
+        "chrom": "15",
+        "pos": 90271712,
+        "ref": "A",
+        "alt": "G",
+        "gene": "NGRN",
+        "group": "NGRN",
+        "label": 0
+      },
+      {
+        "variant_id": "1-94043317-T-C",
+        "chrom": "1",
+        "pos": 94043317,
+        "ref": "T",
+        "alt": "C",
+        "gene": "ABCA4",
+        "group": "ABCA4",
+        "label": 0
+      },
+      {
+        "variant_id": "10-70598553-G-A",
+        "chrom": "10",
+        "pos": 70598553,
+        "ref": "G",
+        "alt": "A",
+        "gene": "PRF1",
+        "group": "PRF1",
+        "label": 1
+      },
+      {
+        "variant_id": "1-160142417-T-A",
+        "chrom": "1",
+        "pos": 160142417,
+        "ref": "T",
+        "alt": "A",
+        "gene": "ATP1A2",
+        "group": "ATP1A2",
+        "label": 0
+      },
+      {
+        "variant_id": "6-157180967-A-G",
+        "chrom": "6",
+        "pos": 157180967,
+        "ref": "A",
+        "alt": "G",
+        "gene": "ARID1B",
+        "group": "ARID1B",
+        "label": 1
+      },
+      {
+        "variant_id": "18-31087948-G-A",
+        "chrom": "18",
+        "pos": 31087948,
+        "ref": "G",
+        "alt": "A",
+        "gene": "DSC2",
+        "group": "DSC2",
+        "label": 0
+      },
+      {
+        "variant_id": "17-80389254-G-A",
+        "chrom": "17",
+        "pos": 80389254,
+        "ref": "G",
+        "alt": "A",
+        "gene": "RNF213;RNF213-AS1",
+        "group": "RNF213|RNF213-AS1",
+        "label": 0
+      },
+      {
+        "variant_id": "2-38689764-T-C",
+        "chrom": "2",
+        "pos": 38689764,
+        "ref": "T",
+        "alt": "C",
+        "gene": "GALM",
+        "group": "GALM",
+        "label": 0
+      },
+      {
+        "variant_id": "3-120652589-T-G",
+        "chrom": "3",
+        "pos": 120652589,
+        "ref": "T",
+        "alt": "G",
+        "gene": "HGD",
+        "group": "HGD",
+        "label": 1
+      },
+      {
+        "variant_id": "17-5433147-T-C",
+        "chrom": "17",
+        "pos": 5433147,
+        "ref": "T",
+        "alt": "C",
+        "gene": "C1QBP",
+        "group": "C1QBP",
+        "label": 0
+      },
+      {
+        "variant_id": "1-197434829-T-C",
+        "chrom": "1",
+        "pos": 197434829,
+        "ref": "T",
+        "alt": "C",
+        "gene": "CRB1",
+        "group": "CRB1",
+        "label": 1
+      },
+      {
+        "variant_id": "20-49374931-G-A",
+        "chrom": "20",
+        "pos": 49374931,
+        "ref": "G",
+        "alt": "A",
+        "gene": "KCNB1",
+        "group": "KCNB1",
+        "label": 1
+      },
+      {
+        "variant_id": "14-24082697-G-A",
+        "chrom": "14",
+        "pos": 24082697,
+        "ref": "G",
+        "alt": "A",
+        "gene": "NRL",
+        "group": "NRL",
+        "label": 1
+      },
+      {
+        "variant_id": "2-241744765-G-A",
+        "chrom": "2",
+        "pos": 241744765,
+        "ref": "G",
+        "alt": "A",
+        "gene": "D2HGDH",
+        "group": "D2HGDH",
+        "label": 0
+      },
+      {
+        "variant_id": "3-38016993-G-C",
+        "chrom": "3",
+        "pos": 38016993,
+        "ref": "G",
+        "alt": "C",
+        "gene": "PLCD1",
+        "group": "PLCD1",
+        "label": 0
+      },
+      {
+        "variant_id": "5-1815884-T-C",
+        "chrom": "5",
+        "pos": 1815884,
+        "ref": "T",
+        "alt": "C",
+        "gene": "NDUFS6",
+        "group": "NDUFS6",
+        "label": 1
+      },
+      {
+        "variant_id": "2-165354603-G-T",
+        "chrom": "2",
+        "pos": 165354603,
+        "ref": "G",
+        "alt": "T",
+        "gene": "SCN2A",
+        "group": "SCN2A",
+        "label": 1
+      },
+      {
+        "variant_id": "10-19450384-G-C",
+        "chrom": "10",
+        "pos": 19450384,
+        "ref": "G",
+        "alt": "C",
+        "gene": "MALRD1",
+        "group": "MALRD1",
+        "label": 0
+      },
+      {
+        "variant_id": "1-155291891-C-T",
+        "chrom": "1",
+        "pos": 155291891,
+        "ref": "C",
+        "alt": "T",
+        "gene": "PKLR",
+        "group": "PKLR",
+        "label": 1
+      },
+      {
+        "variant_id": "8-19961011-G-A",
+        "chrom": "8",
+        "pos": 19961011,
+        "ref": "G",
+        "alt": "A",
+        "gene": "LPL",
+        "group": "LPL",
+        "label": 1
+      },
+      {
+        "variant_id": "6-64822806-T-G",
+        "chrom": "6",
+        "pos": 64822806,
+        "ref": "T",
+        "alt": "G",
+        "gene": "EYS",
+        "group": "EYS",
+        "label": 0
+      },
+      {
+        "variant_id": "19-7167940-T-G",
+        "chrom": "19",
+        "pos": 7167940,
+        "ref": "T",
+        "alt": "G",
+        "gene": "INSR",
+        "group": "INSR",
+        "label": 0
+      },
+      {
+        "variant_id": "9-115029451-G-A",
+        "chrom": "9",
+        "pos": 115029451,
+        "ref": "G",
+        "alt": "A",
+        "gene": "TNC",
+        "group": "TNC",
+        "label": 0
+      },
+      {
+        "variant_id": "16-29813807-G-A",
+        "chrom": "16",
+        "pos": 29813807,
+        "ref": "G",
+        "alt": "A",
+        "gene": "MVP-DT;PRRT2",
+        "group": "MVP-DT|PRRT2",
+        "label": 0
+      },
+      {
+        "variant_id": "14-20295764-G-A",
+        "chrom": "14",
+        "pos": 20295764,
+        "ref": "G",
+        "alt": "A",
+        "gene": "LOC126861878;TTC5",
+        "group": "LOC126861878|TTC5",
+        "label": 1
+      },
+      {
+        "variant_id": "10-124405545-C-G",
+        "chrom": "10",
+        "pos": 124405545,
+        "ref": "C",
+        "alt": "G",
+        "gene": "OAT",
+        "group": "OAT",
+        "label": 1
+      },
+      {
+        "variant_id": "11-2160847-A-G",
+        "chrom": "11",
+        "pos": 2160847,
+        "ref": "A",
+        "alt": "G",
+        "gene": "INS;INS-IGF2",
+        "group": "INS|INS-IGF2",
+        "label": 1
+      },
+      {
+        "variant_id": "22-36877700-G-A",
+        "chrom": "22",
+        "pos": 36877700,
+        "ref": "G",
+        "alt": "A",
+        "gene": "NCF4",
+        "group": "NCF4",
+        "label": 0
+      },
+      {
+        "variant_id": "7-44145617-G-C",
+        "chrom": "7",
+        "pos": 44145617,
+        "ref": "G",
+        "alt": "C",
+        "gene": "GCK",
+        "group": "GCK",
+        "label": 1
+      },
+      {
+        "variant_id": "2-47804966-C-T",
+        "chrom": "2",
+        "pos": 47804966,
+        "ref": "C",
+        "alt": "T",
+        "gene": "MSH6",
+        "group": "MSH6",
+        "label": 0
+      },
+      {
+        "variant_id": "14-88385821-G-A",
+        "chrom": "14",
+        "pos": 88385821,
+        "ref": "G",
+        "alt": "A",
+        "gene": "LOC130056226;SPATA7",
+        "group": "LOC130056226|SPATA7",
+        "label": 1
+      },
+      {
+        "variant_id": "2-26191619-G-A",
+        "chrom": "2",
+        "pos": 26191619,
+        "ref": "G",
+        "alt": "A",
+        "gene": "GAREM2;HADHA",
+        "group": "GAREM2|HADHA",
+        "label": 0
+      },
+      {
+        "variant_id": "2-219418809-A-G",
+        "chrom": "2",
+        "pos": 219418809,
+        "ref": "A",
+        "alt": "G",
+        "gene": "DES",
+        "group": "DES",
+        "label": 1
+      },
+      {
+        "variant_id": "12-56181739-G-A",
+        "chrom": "12",
+        "pos": 56181739,
+        "ref": "G",
+        "alt": "A",
+        "gene": "SMARCC2",
+        "group": "SMARCC2",
+        "label": 1
+      },
+      {
+        "variant_id": "1-3186487-G-A",
+        "chrom": "1",
+        "pos": 3186487,
+        "ref": "G",
+        "alt": "A",
+        "gene": "PRDM16",
+        "group": "PRDM16",
+        "label": 0
+      },
+      {
+        "variant_id": "4-88038399-G-A",
+        "chrom": "4",
+        "pos": 88038399,
+        "ref": "G",
+        "alt": "A",
+        "gene": "PKD2",
+        "group": "PKD2",
+        "label": 1
+      },
+      {
+        "variant_id": "2-227247456-A-G",
+        "chrom": "2",
+        "pos": 227247456,
+        "ref": "A",
+        "alt": "G",
+        "gene": "COL4A3;MFF-DT",
+        "group": "COL4A3|MFF-DT",
+        "label": 0
+      }
+    ],
+    "val": [
+      {
+        "variant_id": "7-33021317-T-A",
+        "chrom": "7",
+        "pos": 33021317,
+        "ref": "T",
+        "alt": "A",
+        "gene": "NT5C3A",
+        "group": "NT5C3A",
+        "label": 1
+      },
+      {
+        "variant_id": "2-162273913-C-A",
+        "chrom": "2",
+        "pos": 162273913,
+        "ref": "C",
+        "alt": "A",
+        "gene": "IFIH1",
+        "group": "IFIH1",
+        "label": 1
+      },
+      {
+        "variant_id": "1-171652309-T-C",
+        "chrom": "1",
+        "pos": 171652309,
+        "ref": "T",
+        "alt": "C",
+        "gene": "MYOC",
+        "group": "MYOC",
+        "label": 0
+      },
+      {
+        "variant_id": "6-72250315-C-T",
+        "chrom": "6",
+        "pos": 72250315,
+        "ref": "C",
+        "alt": "T",
+        "gene": "RIMS1",
+        "group": "RIMS1",
+        "label": 0
+      },
+      {
+        "variant_id": "11-5248354-T-G",
+        "chrom": "11",
+        "pos": 5248354,
+        "ref": "T",
+        "alt": "G",
+        "gene": "HBG1",
+        "group": "HBG1",
+        "label": 0
+      },
+      {
+        "variant_id": "4-177437432-C-A",
+        "chrom": "4",
+        "pos": 177437432,
+        "ref": "C",
+        "alt": "A",
+        "gene": "AGA",
+        "group": "AGA",
+        "label": 1
+      },
+      {
+        "variant_id": "17-81528871-A-G",
+        "chrom": "17",
+        "pos": 81528871,
+        "ref": "A",
+        "alt": "G",
+        "gene": "FSCN2",
+        "group": "FSCN2",
+        "label": 0
+      },
+      {
+        "variant_id": "2-222221388-C-T",
+        "chrom": "2",
+        "pos": 222221388,
+        "ref": "C",
+        "alt": "T",
+        "gene": "PAX3",
+        "group": "PAX3",
+        "label": 1
+      }
+    ],
+    "test": [
+      {
+        "variant_id": "20-3230813-C-G",
+        "chrom": "20",
+        "pos": 3230813,
+        "ref": "C",
+        "alt": "G",
+        "gene": "SLC4A11",
+        "group": "SLC4A11",
+        "label": 1
+      },
+      {
+        "variant_id": "8-60823864-A-G",
+        "chrom": "8",
+        "pos": 60823864,
+        "ref": "A",
+        "alt": "G",
+        "gene": "CHD7",
+        "group": "CHD7",
+        "label": 1
+      },
+      {
+        "variant_id": "10-133366002-G-A",
+        "chrom": "10",
+        "pos": 133366002,
+        "ref": "G",
+        "alt": "A",
+        "gene": "ECHS1",
+        "group": "ECHS1",
+        "label": 1
+      },
+      {
+        "variant_id": "9-132902658-T-A",
+        "chrom": "9",
+        "pos": 132902658,
+        "ref": "T",
+        "alt": "A",
+        "gene": "TSC1",
+        "group": "TSC1",
+        "label": 1
+      },
+      {
+        "variant_id": "9-136503340-C-T",
+        "chrom": "9",
+        "pos": 136503340,
+        "ref": "C",
+        "alt": "T",
+        "gene": "NOTCH1",
+        "group": "NOTCH1",
+        "label": 0
+      },
+      {
+        "variant_id": "1-226891600-G-C",
+        "chrom": "1",
+        "pos": 226891600,
+        "ref": "G",
+        "alt": "C",
+        "gene": "PSEN2",
+        "group": "PSEN2",
+        "label": 0
+      },
+      {
+        "variant_id": "5-53055607-C-T",
+        "chrom": "5",
+        "pos": 53055607,
+        "ref": "C",
+        "alt": "T",
+        "gene": "ITGA2",
+        "group": "ITGA2",
+        "label": 0
+      },
+      {
+        "variant_id": "2-27477684-C-T",
+        "chrom": "2",
+        "pos": 27477684,
+        "ref": "C",
+        "alt": "T",
+        "gene": "IFT172",
+        "group": "IFT172",
+        "label": 0
+      },
+      {
+        "variant_id": "5-161848407-C-T",
+        "chrom": "5",
+        "pos": 161848407,
+        "ref": "C",
+        "alt": "T",
+        "gene": "GABRA1",
+        "group": "GABRA1",
+        "label": 0
+      },
+      {
+        "variant_id": "4-186280334-G-A",
+        "chrom": "4",
+        "pos": 186280334,
+        "ref": "G",
+        "alt": "A",
+        "gene": "F11",
+        "group": "F11",
+        "label": 1
+      },
+      {
+        "variant_id": "4-3476490-C-A",
+        "chrom": "4",
+        "pos": 3476490,
+        "ref": "C",
+        "alt": "A",
+        "gene": "DOK7",
+        "group": "DOK7",
+        "label": 1
+      },
+      {
+        "variant_id": "2-72887433-A-C",
+        "chrom": "2",
+        "pos": 72887433,
+        "ref": "A",
+        "alt": "C",
+        "gene": "LOC129934069;SPR",
+        "group": "LOC129934069|SPR",
+        "label": 1
+      },
+      {
+        "variant_id": "3-4658252-G-C",
+        "chrom": "3",
+        "pos": 4658252,
+        "ref": "G",
+        "alt": "C",
+        "gene": "ITPR1",
+        "group": "ITPR1",
+        "label": 0
+      },
+      {
+        "variant_id": "15-80180172-G-A",
+        "chrom": "15",
+        "pos": 80180172,
+        "ref": "G",
+        "alt": "A",
+        "gene": "FAH",
+        "group": "FAH",
+        "label": 1
+      },
+      {
+        "variant_id": "11-119078567-C-G",
+        "chrom": "11",
+        "pos": 119078567,
+        "ref": "C",
+        "alt": "G",
+        "gene": "VPS11",
+        "group": "VPS11",
+        "label": 0
+      },
+      {
+        "variant_id": "16-28894763-G-C",
+        "chrom": "16",
+        "pos": 28894763,
+        "ref": "G",
+        "alt": "C",
+        "gene": "ATP2A1",
+        "group": "ATP2A1",
+        "label": 0
+      },
+      {
+        "variant_id": "18-31592968-G-A",
+        "chrom": "18",
+        "pos": 31592968,
+        "ref": "G",
+        "alt": "A",
+        "gene": "TTR",
+        "group": "TTR",
+        "label": 1
+      },
+      {
+        "variant_id": "2-10043776-C-G",
+        "chrom": "2",
+        "pos": 10043776,
+        "ref": "C",
+        "alt": "G",
+        "gene": "KLF11",
+        "group": "KLF11",
+        "label": 0
+      },
+      {
+        "variant_id": "9-106928521-C-T",
+        "chrom": "9",
+        "pos": 106928521,
+        "ref": "C",
+        "alt": "T",
+        "gene": "ZNF462",
+        "group": "ZNF462",
+        "label": 1
+      },
+      {
+        "variant_id": "10-47350353-G-A",
+        "chrom": "10",
+        "pos": 47350353,
+        "ref": "G",
+        "alt": "A",
+        "gene": "RBP3",
+        "group": "RBP3",
+        "label": 0
+      },
+      {
+        "variant_id": "2-32154386-C-T",
+        "chrom": "2",
+        "pos": 32154386,
+        "ref": "C",
+        "alt": "T",
+        "gene": "SPAST",
+        "group": "SPAST",
+        "label": 1
+      },
+      {
+        "variant_id": "16-8801912-T-G",
+        "chrom": "16",
+        "pos": 8801912,
+        "ref": "T",
+        "alt": "G",
+        "gene": "PMM2",
+        "group": "PMM2",
+        "label": 1
+      },
+      {
+        "variant_id": "2-61048369-T-C",
+        "chrom": "2",
+        "pos": 61048369,
+        "ref": "T",
+        "alt": "C",
+        "gene": "PEX13",
+        "group": "PEX13",
+        "label": 0
+      },
+      {
+        "variant_id": "6-135404967-C-T",
+        "chrom": "6",
+        "pos": 135404967,
+        "ref": "C",
+        "alt": "T",
+        "gene": "AHI1",
+        "group": "AHI1",
+        "label": 0
+      }
+    ]
+  },
+  "prior_cohort_sha256": "77b937c2f8cf50e166543a0111ae61704ba279b00aee11f21011adb9b551907e"
+}

@@ -1,0 +1,27 @@
+{
+  "n": 400,
+  "positives": 48,
+  "auroc": 0.6515151515151516,
+  "auprc": 0.22032047020382034,
+  "accuracy": 0.88,
+  "precision": null,
+  "recall": 0.0,
+  "f1": 0.0,
+  "confusion_matrix": [
+    [
+      352,
+      0
+    ],
+    [
+      48,
+      0
+    ]
+  ],
+  "brier_score": 0.1057680450323294,
+  "classification_threshold": 0.5,
+  "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+  "undefined_metrics_reason": null,
+  "undefined_metrics": {
+    "precision": "No positive predictions are present"
+  }
+}

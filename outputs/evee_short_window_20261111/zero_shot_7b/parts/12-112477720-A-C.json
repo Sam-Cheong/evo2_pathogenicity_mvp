@@ -1,0 +1,14 @@
+{
+  "variant_id": "12-112477720-A-C",
+  "gene": "PTPN11",
+  "label": 1,
+  "forward_ref_mean_log_likelihood": -1.2260089488323898,
+  "forward_alt_mean_log_likelihood": -1.2780019040422397,
+  "reverse_ref_mean_log_likelihood": -1.1211212424016577,
+  "reverse_alt_mean_log_likelihood": -1.16640827303404,
+  "forward_delta": -0.05199295520984992,
+  "reverse_delta": -0.045287030632382264,
+  "zero_shot_score": 0.04863999292111609,
+  "mean_pooled_score": 0.7850665048709469,
+  "covariance_score": 0.9097482361334737
+}

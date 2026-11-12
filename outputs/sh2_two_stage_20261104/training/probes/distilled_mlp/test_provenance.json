@@ -1,0 +1,14 @@
+{
+  "checkpoint_sha256": "dd296b077d9d52600c5e24c647521a7a54541a416b6dd0c9988f5cc6a8de5717",
+  "provenance": {
+    "variants_sha256": "b49c81a5d5e18f4230d34f51870a44fab514e976c54635388c4bf3b8abd8f848",
+    "variant_label_fingerprint": "1138fbfbe6f18b6de0b46b877e9b9cf0e7c40bcb76f8248b1987bbcb2d55051a",
+    "n_variants": 2000,
+    "synthetic": false,
+    "sources": [
+      "ClinVar"
+    ],
+    "performance_scope": "research_dataset"
+  },
+  "test_used_for_selection": false
+}

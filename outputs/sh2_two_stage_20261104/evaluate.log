@@ -1,0 +1,138 @@
+{
+  "status": "evaluated_all_predefined_probes",
+  "models": {
+    "random_linear": {
+      "test": {
+        "n": 400,
+        "positives": 48,
+        "auroc": 0.5810250946969697,
+        "auprc": 0.21375609964057893,
+        "accuracy": 0.8675,
+        "precision": 0.3076923076923077,
+        "recall": 0.08333333333333333,
+        "f1": 0.13114754098360656,
+        "confusion_matrix": [
+          [
+            343,
+            9
+          ],
+          [
+            44,
+            4
+          ]
+        ],
+        "brier_score": 0.1713339010579583,
+        "classification_threshold": 0.5,
+        "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+        "undefined_metrics_reason": null,
+        "undefined_metrics": {}
+      },
+      "encoder_frozen": true,
+      "head_kind": "linear",
+      "probe_arm": "random",
+      "checkpoint_sha256": "c70ab761e078152f383f0f03bf39a41a92cc8543a4c53f7468b2b8a035ee1f94"
+    },
+    "distilled_linear": {
+      "test": {
+        "n": 400,
+        "positives": 48,
+        "auroc": 0.6697443181818181,
+        "auprc": 0.22153528183645407,
+        "accuracy": 0.845,
+        "precision": 0.3157894736842105,
+        "recall": 0.25,
+        "f1": 0.27906976744186046,
+        "confusion_matrix": [
+          [
+            326,
+            26
+          ],
+          [
+            36,
+            12
+          ]
+        ],
+        "brier_score": 0.15850127731953362,
+        "classification_threshold": 0.5,
+        "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+        "undefined_metrics_reason": null,
+        "undefined_metrics": {}
+      },
+      "encoder_frozen": true,
+      "head_kind": "linear",
+      "probe_arm": "distilled",
+      "checkpoint_sha256": "bcbdce7a3ac5a686c58dfe75c8adfa615bf29fd95c0cbbb6f1734bf04de833e9"
+    },
+    "random_mlp": {
+      "test": {
+        "n": 400,
+        "positives": 48,
+        "auroc": 0.6515151515151516,
+        "auprc": 0.22032047020382034,
+        "accuracy": 0.88,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "confusion_matrix": [
+          [
+            352,
+            0
+          ],
+          [
+            48,
+            0
+          ]
+        ],
+        "brier_score": 0.1057680450323294,
+        "classification_threshold": 0.5,
+        "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+        "undefined_metrics_reason": null,
+        "undefined_metrics": {
+          "precision": "No positive predictions are present"
+        }
+      },
+      "encoder_frozen": true,
+      "head_kind": "mlp",
+      "probe_arm": "random",
+      "checkpoint_sha256": "f6b7c7af8ee16d8e976770d96ada07a8883acf44816818bd707027ee249872db"
+    },
+    "distilled_mlp": {
+      "test": {
+        "n": 400,
+        "positives": 48,
+        "auroc": 0.7001065340909092,
+        "auprc": 0.23233392373213027,
+        "accuracy": 0.8675,
+        "precision": 0.2222222222222222,
+        "recall": 0.041666666666666664,
+        "f1": 0.07017543859649122,
+        "confusion_matrix": [
+          [
+            345,
+            7
+          ],
+          [
+            46,
+            2
+          ]
+        ],
+        "brier_score": 0.10425935230161869,
+        "classification_threshold": 0.5,
+        "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+        "undefined_metrics_reason": null,
+        "undefined_metrics": {}
+      },
+      "encoder_frozen": true,
+      "head_kind": "mlp",
+      "probe_arm": "distilled",
+      "checkpoint_sha256": "dd296b077d9d52600c5e24c647521a7a54541a416b6dd0c9988f5cc6a8de5717"
+    }
+  },
+  "same_independent_test_set": true,
+  "test_ids_sha256": "6b21d824b808bb0ab164e5ef5f883eff2e96719637e6401535d37beeadfafe9f",
+  "prepared_metadata_sha256": "a724bd473999a8b3d799366a9a6603fea6ead38842747ed56f4e6f75007ae886",
+  "representation_training_ids_only": true,
+  "test_used_for_selection": false,
+  "selection": "no_selection_between_the_four_models_using_test",
+  "clinical_use": "research_only"
+}

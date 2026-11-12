@@ -1,0 +1,207 @@
+{
+  "models": {
+    "teacher": {
+      "test": {
+        "n": 400,
+        "positives": 48,
+        "auroc": 0.9370857007575757,
+        "auprc": 0.7797588929309942,
+        "accuracy": 0.9225,
+        "precision": 0.673469387755102,
+        "recall": 0.6875,
+        "f1": 0.6804123711340206,
+        "confusion_matrix": [
+          [
+            336,
+            16
+          ],
+          [
+            15,
+            33
+          ]
+        ],
+        "brier_score": 0.06389405909497196,
+        "classification_threshold": 0.5,
+        "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+        "undefined_metrics_reason": null,
+        "undefined_metrics": {}
+      },
+      "component_benchmark": {
+        "device": "cpu",
+        "repeats": 5,
+        "warmup": 1,
+        "seconds_mean": 0.0013147400022717193,
+        "seconds_std": 7.271123052594011e-05,
+        "process_rss_before_bytes": 879284224,
+        "process_rss_max_observed_bytes": 879284224,
+        "cpu_memory_measurement": "process RSS sampled between calls, not a transient peak",
+        "gpu_peak_allocated_bytes": null,
+        "scope": "classification_head_only_cached_features_excludes_Evo2_encoder"
+      },
+      "full_prediction_benchmark": null
+    },
+    "supervised": {
+      "test": {
+        "n": 400,
+        "positives": 48,
+        "auroc": 0.5676491477272728,
+        "auprc": 0.17175377914354042,
+        "accuracy": 0.88,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "confusion_matrix": [
+          [
+            352,
+            0
+          ],
+          [
+            48,
+            0
+          ]
+        ],
+        "brier_score": 0.1080852016173854,
+        "classification_threshold": 0.5,
+        "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+        "undefined_metrics_reason": null,
+        "undefined_metrics": {
+          "precision": "No positive predictions are present"
+        }
+      },
+      "component_benchmark": {
+        "device": "cpu",
+        "repeats": 5,
+        "warmup": 1,
+        "seconds_mean": 0.01716073999996297,
+        "seconds_std": 0.000684678179731623,
+        "process_rss_before_bytes": 1452191744,
+        "process_rss_max_observed_bytes": 1452191744,
+        "cpu_memory_measurement": "process RSS sampled between calls, not a transient peak",
+        "gpu_peak_allocated_bytes": null,
+        "scope": "student_encoder_and_head_preencoded_one_hot_excludes_FASTA_and_one_hot_preprocessing",
+        "parameter_count": 1854465
+      },
+      "full_prediction_benchmark": null
+    },
+    "distilled": {
+      "test": {
+        "n": 400,
+        "positives": 48,
+        "auroc": 0.5814985795454546,
+        "auprc": 0.16838625877392197,
+        "accuracy": 0.88,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "confusion_matrix": [
+          [
+            352,
+            0
+          ],
+          [
+            48,
+            0
+          ]
+        ],
+        "brier_score": 0.10501958555092061,
+        "classification_threshold": 0.5,
+        "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+        "undefined_metrics_reason": null,
+        "undefined_metrics": {
+          "precision": "No positive predictions are present"
+        }
+      },
+      "component_benchmark": {
+        "device": "cpu",
+        "repeats": 5,
+        "warmup": 1,
+        "seconds_mean": 0.016301379998913033,
+        "seconds_std": 0.0019402221397548031,
+        "process_rss_before_bytes": 1469513728,
+        "process_rss_max_observed_bytes": 1469513728,
+        "cpu_memory_measurement": "process RSS sampled between calls, not a transient peak",
+        "gpu_peak_allocated_bytes": null,
+        "scope": "student_encoder_and_head_preencoded_one_hot_excludes_FASTA_and_one_hot_preprocessing",
+        "parameter_count": 1854465
+      },
+      "full_prediction_benchmark": null
+    }
+  },
+  "same_independent_test_set": true,
+  "student_initialization_comparison": {
+    "architecture": "hyenadna_d256",
+    "matched": true,
+    "status": "verified_identical_initialization",
+    "initial_model_state_sha256": "b3ae37f74b367090c7c271befb2eca6ab45142cca02c6a4e544ae332e93560fc",
+    "initialization": {
+      "repo_id": "LongSafari/hyenadna-tiny-1k-seqlen-d256-hf",
+      "revision": "6036d4e144922b44470294f510cbfd2539ba3b7e",
+      "files_sha256": {
+        "model.safetensors": "81c15c4042d5fae646f00b429b76c65644cdbe88aa7e98b61aa781c84ff09031",
+        "config.json": "2b3209dc6d176d0cf573e0cdadbedb4ab0c5f7456136474200c5d827a126d336",
+        "configuration_hyena.py": "29cb6cae67f5010e279d67349e688663043f0bd6791a09c36d96da8cac3668a6",
+        "modeling_hyena.py": "d78029cacea2c9259f1293fdb50b60f90872089469185e27d5c769086c475607",
+        "tokenization_hyena.py": "d424da2f794958b0360e033bbf5edc9ee4e3e3126e883093621348f07761e408",
+        "tokenizer_config.json": "b1a98c1d2f4e1a5582feffeaccfe46e160f2f8e927009b49d4676dd79e7a9694",
+        "special_tokens_map.json": "026831cec9f2ac5e501aa9d3a8b3a93c021aebe55813574c493e40b49ad28582",
+        "README.md": "18ee2eeab45dd561dfd266e8756d267389cef724839e4250f093acfb7c9c57b8"
+      },
+      "bundled_sources_sha256": {
+        "configuration_hyena.py": "29cb6cae67f5010e279d67349e688663043f0bd6791a09c36d96da8cac3668a6",
+        "modeling_hyena.py": "d78029cacea2c9259f1293fdb50b60f90872089469185e27d5c769086c475607",
+        "tokenization_hyena.py": "d424da2f794958b0360e033bbf5edc9ee4e3e3126e883093621348f07761e408"
+      },
+      "token_policy": {
+        "base_to_id": {
+          "A": 7,
+          "C": 8,
+          "G": 9,
+          "T": 10
+        },
+        "add_special_tokens": false,
+        "padding": false,
+        "truncation": false,
+        "representation": "last_hidden_state_at_variant_index",
+        "orientation": "forward_reference_causal",
+        "variant_index": "window//2"
+      },
+      "max_length": 1024,
+      "pretrained_encoder_loaded": true,
+      "encoder_finetuned": true,
+      "parameter_count": 1854465,
+      "encoder_parameter_count": 1641088,
+      "model_card_license": "bsd-3-clause",
+      "strict_load": true,
+      "restored_shared_aliases": {
+        "backbone.layers.0.mixer.filter_fn.implicit_filter.3.freq": "backbone.layers.0.mixer.filter_fn.implicit_filter.1.freq",
+        "backbone.layers.0.mixer.filter_fn.implicit_filter.5.freq": "backbone.layers.0.mixer.filter_fn.implicit_filter.1.freq",
+        "backbone.layers.1.mixer.filter_fn.implicit_filter.3.freq": "backbone.layers.1.mixer.filter_fn.implicit_filter.1.freq",
+        "backbone.layers.1.mixer.filter_fn.implicit_filter.5.freq": "backbone.layers.1.mixer.filter_fn.implicit_filter.1.freq"
+      },
+      "discarded_pretrained_tensors": [
+        "lm_head.weight"
+      ],
+      "encoder_initial_state_sha256": "41077a18f5c0885ffac3af4e9b052618300bad7dacce647d9dfe1ad35485c711",
+      "initial_model_state_sha256": "b3ae37f74b367090c7c271befb2eca6ab45142cca02c6a4e544ae332e93560fc"
+    },
+    "initialization_protocol": {
+      "architecture": "hyenadna_d256",
+      "student_config": {
+        "architecture": "hyenadna_d256",
+        "pretrained_dir": "work/hyenadna_d256_pretrained",
+        "dropout": 0.2,
+        "head_dims": [
+          256,
+          64
+        ],
+        "pooling": "variant_center"
+      },
+      "seed": 42,
+      "window": 256
+    }
+  },
+  "controlled_distillation_comparison": true,
+  "latency_comparable": false,
+  "latency_note": "Cached teacher head latency excludes Evo 2; use full warm prediction benchmarks for comparable inference cost.",
+  "clinical_use": "research_only"
+}

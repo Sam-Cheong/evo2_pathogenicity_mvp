@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "repo_id": "LongSafari/hyenadna-tiny-1k-seqlen-d256-hf",
+  "revision": "6036d4e144922b44470294f510cbfd2539ba3b7e",
+  "parameter_count": 1854465,
+  "encoder_parameter_count": 1641088,
+  "embedding_ref_shape": [
+    256
+  ],
+  "variant_features_shape": [
+    768
+  ],
+  "delta_l2_norm": 10.493605613708496,
+  "encoder_backward_finite_nonzero": true,
+  "save_reload_features_bitwise_equal": true,
+  "official_implementation_comparison": {
+    "requested": true,
+    "status": "passed",
+    "local_files_only": true,
+    "all_pinned_source_digests_rechecked": true,
+    "token_ids_equal": true,
+    "ref_and_alt_hidden_bitwise_equal": true,
+    "max_abs_difference": 0.0
+  }
+}
+Saved D:\Users\60152\learning materials\CISC7021\Report\evo2_pathogenicity_mvp\outputs\hyenadna_notebook_run_20261104\phase0\result.json

@@ -1,0 +1,23 @@
+{
+  "status": "completed",
+  "signature": {
+    "experiment_identity": "460138445e214ae75e1ff92f8450c7b845e178f0b256b0e148040c0d299b04bd",
+    "arguments": [
+      "-m",
+      "pytest",
+      "-q",
+      "tests\\test_evee_pilot_data.py",
+      "tests\\test_evee_readout_pilot.py",
+      "--basetemp",
+      "work/pytest_evee_readout",
+      "--junitxml",
+      "outputs\\evee_readout_pilot_20261109_run02\\junit.xml"
+    ]
+  },
+  "started_at_utc": "2026-11-09T06:28:45.074155+00:00",
+  "completed_at_utc": "2026-11-09T06:29:00.959329+00:00",
+  "returncode": 0,
+  "artifacts_sha256": {
+    "outputs/evee_readout_pilot_20261109_run02/junit.xml": "d02056343c1e3745fce70584a0d361fb8e15349dd7b8772669f792e65089e9db"
+  }
+}

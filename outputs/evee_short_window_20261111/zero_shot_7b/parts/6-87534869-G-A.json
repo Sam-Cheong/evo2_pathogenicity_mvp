@@ -1,0 +1,14 @@
+{
+  "variant_id": "6-87534869-G-A",
+  "gene": "RARS2",
+  "label": 1,
+  "forward_ref_mean_log_likelihood": -1.3115851429138714,
+  "forward_alt_mean_log_likelihood": -1.3098961448873596,
+  "reverse_ref_mean_log_likelihood": -1.3466386777071742,
+  "reverse_alt_mean_log_likelihood": -1.3451498049776973,
+  "forward_delta": 0.0016889980265117899,
+  "reverse_delta": 0.0014888727294768422,
+  "zero_shot_score": -0.001588935377994316,
+  "mean_pooled_score": 0.0028709902846151586,
+  "covariance_score": 0.0231537723858435
+}

@@ -1,0 +1,38 @@
+{"event": "student_epoch", "mode": "supervised", "epoch": 1, "train_loss": 0.44767736275990805, "val_loss": 0.4761832356452942, "train_supervised": 0.44767736275990805, "train_feature": 0.0, "train_prediction_kd": 0.0, "gradient_norm_before_clip": 1.7658249004681905, "encoder_lr": 2e-05, "head_lr": 0.001, "epoch_seconds": 52.540837299995474}
+{"event": "student_epoch", "mode": "supervised", "epoch": 2, "train_loss": 0.4160093809167544, "val_loss": 0.4920766055583954, "train_supervised": 0.4160093809167544, "train_feature": 0.0, "train_prediction_kd": 0.0, "gradient_norm_before_clip": 4.5106350255012515, "encoder_lr": 2e-05, "head_lr": 0.001, "epoch_seconds": 51.76739569999336}
+{"event": "student_epoch", "mode": "supervised", "epoch": 3, "train_loss": 0.3135012904802958, "val_loss": 0.5598188638687134, "train_supervised": 0.3135012904802958, "train_feature": 0.0, "train_prediction_kd": 0.0, "gradient_norm_before_clip": 11.114123090108235, "encoder_lr": 2e-05, "head_lr": 0.001, "epoch_seconds": 51.48445949998859}
+{"event": "student_epoch", "mode": "supervised", "epoch": 4, "train_loss": 0.15325991176689666, "val_loss": 0.8153259754180908, "train_supervised": 0.15325991176689666, "train_feature": 0.0, "train_prediction_kd": 0.0, "gradient_norm_before_clip": 21.25401008605957, "encoder_lr": 2e-05, "head_lr": 0.001, "epoch_seconds": 52.17142349999631}
+{"event": "student_epoch", "mode": "supervised", "epoch": 5, "train_loss": 0.07314803170583521, "val_loss": 1.1713051795959473, "train_supervised": 0.07314803170583521, "train_feature": 0.0, "train_prediction_kd": 0.0, "gradient_norm_before_clip": 16.852270185450713, "encoder_lr": 2e-05, "head_lr": 0.001, "epoch_seconds": 51.055589199997485}
+{"event": "student_epoch", "mode": "supervised", "epoch": 6, "train_loss": 0.029001211762273063, "val_loss": 1.4883934259414673, "train_supervised": 0.029001211762273063, "train_feature": 0.0, "train_prediction_kd": 0.0, "gradient_norm_before_clip": 6.976131243531903, "encoder_lr": 2e-05, "head_lr": 0.001, "epoch_seconds": 50.71848809999938}
+{
+  "status": "trained",
+  "mode": "supervised",
+  "test": {
+    "n": 400,
+    "positives": 48,
+    "auroc": 0.5676491477272728,
+    "auprc": 0.17175377914354042,
+    "accuracy": 0.88,
+    "precision": null,
+    "recall": 0.0,
+    "f1": 0.0,
+    "confusion_matrix": [
+      [
+        352,
+        0
+      ],
+      [
+        48,
+        0
+      ]
+    ],
+    "brier_score": 0.1080852016173854,
+    "classification_threshold": 0.5,
+    "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+    "undefined_metrics_reason": null,
+    "undefined_metrics": {
+      "precision": "No positive predictions are present"
+    }
+  },
+  "performance_scope": "research_dataset"
+}

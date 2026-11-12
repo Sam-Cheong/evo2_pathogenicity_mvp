@@ -1,0 +1,14 @@
+{
+  "variant_id": "5-173234823-G-A",
+  "gene": "NKX2-5",
+  "label": 0,
+  "forward_ref_mean_log_likelihood": -1.220838036663406,
+  "forward_alt_mean_log_likelihood": -1.2234495409188257,
+  "reverse_ref_mean_log_likelihood": -1.1659199821778417,
+  "reverse_alt_mean_log_likelihood": -1.1709370546962594,
+  "forward_delta": -0.002611504255419783,
+  "reverse_delta": -0.0050170725184177645,
+  "zero_shot_score": 0.003814288386918774,
+  "mean_pooled_score": 0.003806162395645147,
+  "covariance_score": 0.4311442664826148
+}

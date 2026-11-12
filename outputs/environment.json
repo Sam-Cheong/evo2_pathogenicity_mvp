@@ -1,0 +1,47 @@
+{
+  "timestamp_utc": "2026-11-02T16:29:57.121109+00:00",
+  "os": "Windows-10-10.0.26200-SP0",
+  "system": "Windows",
+  "python": "3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]",
+  "executable": "C:\\Users\\60152\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+  "torch": "2.5.1+cu121",
+  "torch_cuda_runtime": "12.1",
+  "cudnn_version": 90100,
+  "cuda_available": true,
+  "gpus": [
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 3050 Ti Laptop GPU",
+      "compute_capability": [
+        8,
+        6
+      ],
+      "total_bytes": 4294443008,
+      "free_bytes": 3455791924
+    }
+  ],
+  "packages": {
+    "evo2": null,
+    "vtx": null,
+    "transformer-engine": null,
+    "flash-attn": null,
+    "numpy": "1.26.4",
+    "pyfaidx": "0.8.1.4"
+  },
+  "official_model": "arcinstitute/evo2_1b_base",
+  "official_requirements_source": "https://github.com/ArcInstitute/evo2#requirements",
+  "nvidia_smi": "Tue Nov  3 00:29:57 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 621.01                 KMD Version: 621.01        CUDA UMD Version: 13.5     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                  Driver-Model | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA GeForce RTX 3050 ...  WDDM  |   00000000:01:00.0  On |                  N/A |\n| N/A   58C    P0              9W /   89W |     906MiB /   4096MiB |      0%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|    0   N/A  N/A           35564      C   ...s\\Python\\Python310\\python.exe      N/A      |\n+-----------------------------------------------------------------------------------------+\n",
+  "nvcc": "nvcc: NVIDIA (R) Cuda compiler driver\nCopyright (c) 2005-2025 NVIDIA Corporation\nBuilt on Wed_Aug_20_13:58:20_Pacific_Daylight_Time_2025\nCuda compilation tools, release 13.0, V13.0.88\nBuild cuda_13.0.r13.0/compiler.36424714_0\n",
+  "official_1b_preflight_blockers": [
+    "Official runtime requires Linux; WSL2 has limited support. Native Windows is unsupported.",
+    "Official Evo 2 requires Python 3.11 or 3.12.",
+    "Evo 2 1B requires Hopper-class FP8/Transformer Engine; this GPU is below compute capability 9.0.",
+    "Official Evo 2 runtime requires cuDNN 9.3 or newer.",
+    "evo2 is not installed.",
+    "Transformer Engine is not installed.",
+    "Flash Attention is not installed."
+  ],
+  "ready_for_official_1b_attempt": false,
+  "measured_1b_peak_memory_bytes": null,
+  "note": "Preflight readiness does not establish successful inference or a VRAM requirement."
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "checkpoint_sha256": "71e56ae18b2510010239583c44087d0fdef2affe6528438617ac7076f05ee63a",
+  "predictions_sha256": "8db3916546ccb09f31632232dd979703d608fd7182f2bbbc99e6e263ff220947",
+  "data_provenance": {
+    "variants_sha256": "b49c81a5d5e18f4230d34f51870a44fab514e976c54635388c4bf3b8abd8f848",
+    "variant_label_fingerprint": "1138fbfbe6f18b6de0b46b877e9b9cf0e7c40bcb76f8248b1987bbcb2d55051a",
+    "n_variants": 2000,
+    "synthetic": false,
+    "sources": [
+      "ClinVar"
+    ],
+    "performance_scope": "research_dataset"
+  },
+  "split_fingerprint": "d1a043913eaeb16d3880f540775592584bff7dd331464002b4ef55aca1b9b15a",
+  "label_split_fingerprint": "f2c26c8f1fd0ac06b4a5e24a5dcbeb66f6c86f98659b3157614f87a9363def6f",
+  "n_predictions": 2000
+}

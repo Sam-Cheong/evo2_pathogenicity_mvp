@@ -1,0 +1,188 @@
+{
+  "models": {
+    "teacher": {
+      "test": {
+        "n": 400,
+        "positives": 48,
+        "auroc": 0.9370857007575757,
+        "auprc": 0.7797588929309942,
+        "accuracy": 0.9225,
+        "precision": 0.673469387755102,
+        "recall": 0.6875,
+        "f1": 0.6804123711340206,
+        "confusion_matrix": [
+          [
+            336,
+            16
+          ],
+          [
+            15,
+            33
+          ]
+        ],
+        "brier_score": 0.06389405909497196,
+        "classification_threshold": 0.5,
+        "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+        "undefined_metrics_reason": null,
+        "undefined_metrics": {}
+      },
+      "component_benchmark": {
+        "device": "cpu",
+        "repeats": 5,
+        "warmup": 1,
+        "seconds_mean": 0.0013147400022717193,
+        "seconds_std": 7.271123052594011e-05,
+        "process_rss_before_bytes": 879284224,
+        "process_rss_max_observed_bytes": 879284224,
+        "cpu_memory_measurement": "process RSS sampled between calls, not a transient peak",
+        "gpu_peak_allocated_bytes": null,
+        "scope": "classification_head_only_cached_features_excludes_Evo2_encoder"
+      },
+      "full_prediction_benchmark": {
+        "device": "cpu",
+        "repeats": 5,
+        "warmup": 1,
+        "seconds_mean": 58.09440317999979,
+        "seconds_std": 2.7222362114690997,
+        "process_rss_before_bytes": 353398784,
+        "process_rss_max_observed_bytes": 353882112,
+        "cpu_memory_measurement": "process RSS sampled between calls, not a transient peak",
+        "gpu_peak_allocated_bytes": null,
+        "scope": "warm_full_SNV_prediction_FASTA_encoder_head_and_uncertainty",
+        "model": "teacher",
+        "model_hashes": {
+          "teacher": "703775b1ac3fc72449f090ee801c800959e3d9bac84a670f1ea3e699b4a73393"
+        },
+        "variant_id": "1-926029-C-T",
+        "window": 256,
+        "startup_seconds": 9.093395000003511
+      }
+    },
+    "supervised": {
+      "test": {
+        "n": 400,
+        "positives": 48,
+        "auroc": 0.5614938446969697,
+        "auprc": 0.19701726494582014,
+        "accuracy": 0.88,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "confusion_matrix": [
+          [
+            352,
+            0
+          ],
+          [
+            48,
+            0
+          ]
+        ],
+        "brier_score": 0.10709825381395216,
+        "classification_threshold": 0.5,
+        "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+        "undefined_metrics_reason": null,
+        "undefined_metrics": {
+          "precision": "No positive predictions are present"
+        }
+      },
+      "component_benchmark": {
+        "device": "cpu",
+        "repeats": 5,
+        "warmup": 1,
+        "seconds_mean": 0.0013326200045412407,
+        "seconds_std": 0.00020586980509353157,
+        "process_rss_before_bytes": 771592192,
+        "process_rss_max_observed_bytes": 771592192,
+        "cpu_memory_measurement": "process RSS sampled between calls, not a transient peak",
+        "gpu_peak_allocated_bytes": null,
+        "scope": "student_encoder_and_head_preencoded_one_hot_excludes_FASTA_and_one_hot_preprocessing",
+        "parameter_count": 83265
+      },
+      "full_prediction_benchmark": {
+        "device": "cpu",
+        "repeats": 5,
+        "warmup": 1,
+        "seconds_mean": 0.0013272999989567325,
+        "seconds_std": 6.474099101898551e-05,
+        "process_rss_before_bytes": 291741696,
+        "process_rss_max_observed_bytes": 291745792,
+        "cpu_memory_measurement": "process RSS sampled between calls, not a transient peak",
+        "gpu_peak_allocated_bytes": null,
+        "scope": "warm_full_SNV_prediction_FASTA_encoder_head_and_uncertainty",
+        "model": "student",
+        "model_hashes": {
+          "student": "397b04dcca9668a52dae40ea2220079263c7c5eb233e7c21d6c2b8121e2ad035"
+        },
+        "variant_id": "1-926029-C-T",
+        "window": 256,
+        "startup_seconds": 8.216682199999923
+      }
+    },
+    "distilled": {
+      "test": {
+        "n": 400,
+        "positives": 48,
+        "auroc": 0.5606060606060607,
+        "auprc": 0.17380722618635724,
+        "accuracy": 0.88,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "confusion_matrix": [
+          [
+            352,
+            0
+          ],
+          [
+            48,
+            0
+          ]
+        ],
+        "brier_score": 0.10743970794598943,
+        "classification_threshold": 0.5,
+        "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+        "undefined_metrics_reason": null,
+        "undefined_metrics": {
+          "precision": "No positive predictions are present"
+        }
+      },
+      "component_benchmark": {
+        "device": "cpu",
+        "repeats": 5,
+        "warmup": 1,
+        "seconds_mean": 0.0012937799998326226,
+        "seconds_std": 4.271539503299564e-05,
+        "process_rss_before_bytes": 768299008,
+        "process_rss_max_observed_bytes": 768299008,
+        "cpu_memory_measurement": "process RSS sampled between calls, not a transient peak",
+        "gpu_peak_allocated_bytes": null,
+        "scope": "student_encoder_and_head_preencoded_one_hot_excludes_FASTA_and_one_hot_preprocessing",
+        "parameter_count": 83265
+      },
+      "full_prediction_benchmark": {
+        "device": "cpu",
+        "repeats": 5,
+        "warmup": 1,
+        "seconds_mean": 0.0013075400027446448,
+        "seconds_std": 5.96622636361518e-05,
+        "process_rss_before_bytes": 291700736,
+        "process_rss_max_observed_bytes": 291704832,
+        "cpu_memory_measurement": "process RSS sampled between calls, not a transient peak",
+        "gpu_peak_allocated_bytes": null,
+        "scope": "warm_full_SNV_prediction_FASTA_encoder_head_and_uncertainty",
+        "model": "student",
+        "model_hashes": {
+          "student": "71e56ae18b2510010239583c44087d0fdef2affe6528438617ac7076f05ee63a"
+        },
+        "variant_id": "1-926029-C-T",
+        "window": 256,
+        "startup_seconds": 8.20958990001236
+      }
+    }
+  },
+  "same_independent_test_set": true,
+  "latency_comparable": true,
+  "latency_note": "Cached teacher head latency excludes Evo 2; use full warm prediction benchmarks for comparable inference cost.",
+  "clinical_use": "research_only"
+}

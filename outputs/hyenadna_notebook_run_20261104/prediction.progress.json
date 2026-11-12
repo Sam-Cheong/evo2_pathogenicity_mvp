@@ -1,0 +1,34 @@
+{
+  "status": "completed",
+  "signature": {
+    "experiment_identity": "96ebfc7fad4467fd12eb75f2facba8b01dac254e522f6f0094a241ace856c72d",
+    "arguments": [
+      "-m",
+      "evo2_mvp.inference",
+      "--fasta",
+      "data/GRCh38.fa",
+      "--chrom",
+      "1",
+      "--pos",
+      "926029",
+      "--ref",
+      "C",
+      "--alt",
+      "T",
+      "--student",
+      "outputs\\hyenadna_notebook_run_20261104\\distilled\\best_student.pt",
+      "--device",
+      "cpu",
+      "--cpu-threads",
+      "4",
+      "--output",
+      "outputs\\hyenadna_notebook_run_20261104\\prediction.json"
+    ]
+  },
+  "started_at_utc": "2026-11-03T17:04:20.279547+00:00",
+  "completed_at_utc": "2026-11-03T17:04:35.913568+00:00",
+  "returncode": 0,
+  "artifacts_sha256": {
+    "outputs/hyenadna_notebook_run_20261104/prediction.json": "f2de1dec781416e84da4568b7763ce468e5ac9ea5369dd0d044521c79a0329e4"
+  }
+}

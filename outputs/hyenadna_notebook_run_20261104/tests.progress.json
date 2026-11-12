@@ -1,0 +1,21 @@
+{
+  "status": "completed",
+  "signature": {
+    "experiment_identity": "96ebfc7fad4467fd12eb75f2facba8b01dac254e522f6f0094a241ace856c72d",
+    "arguments": [
+      "-m",
+      "pytest",
+      "-q",
+      "--basetemp",
+      "work/pytest_notebook_run",
+      "--junitxml",
+      "outputs\\hyenadna_notebook_run_20261104\\junit.xml"
+    ]
+  },
+  "started_at_utc": "2026-11-03T16:50:00.184632+00:00",
+  "completed_at_utc": "2026-11-03T16:51:13.986433+00:00",
+  "returncode": 0,
+  "artifacts_sha256": {
+    "outputs/hyenadna_notebook_run_20261104/junit.xml": "ef7a88875e81bd6599e74cb09d2dc99d071fd36b44e8105dab7bbfaae9cd3f13"
+  }
+}

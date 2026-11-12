@@ -1,0 +1,19 @@
+{
+  "device": "cpu",
+  "repeats": 5,
+  "warmup": 1,
+  "seconds_mean": 58.09440317999979,
+  "seconds_std": 2.7222362114690997,
+  "process_rss_before_bytes": 353398784,
+  "process_rss_max_observed_bytes": 353882112,
+  "cpu_memory_measurement": "process RSS sampled between calls, not a transient peak",
+  "gpu_peak_allocated_bytes": null,
+  "scope": "warm_full_SNV_prediction_FASTA_encoder_head_and_uncertainty",
+  "model": "teacher",
+  "model_hashes": {
+    "teacher": "703775b1ac3fc72449f090ee801c800959e3d9bac84a670f1ea3e699b4a73393"
+  },
+  "variant_id": "1-926029-C-T",
+  "window": 256,
+  "startup_seconds": 9.093395000003511
+}

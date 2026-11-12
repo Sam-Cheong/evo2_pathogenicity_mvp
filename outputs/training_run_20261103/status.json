@@ -1,0 +1,16 @@
+{
+  "stage": "paused_after_error_file_write_fix_verified",
+  "feature_extraction_complete": false,
+  "cache_valid_records": 497,
+  "total_variants": 2000,
+  "errors": [
+    "PermissionError writing extraction_status.json.tmp reported by user",
+    "NVIDIA request failed or timed out in agent run"
+  ],
+  "failed_variant": "4-54288779-T-C",
+  "teacher_training_started": false,
+  "student_training_started": false,
+  "file_write_conflict_fix_verified": true,
+  "network_failure_retried": false,
+  "real_training_completed": false
+}

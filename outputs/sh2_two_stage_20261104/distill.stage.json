@@ -1,0 +1,31 @@
+{
+  "status": "completed",
+  "signature": {
+    "experiment_identity": "706b915d195b7f940189efa8cb1b746c0986302424be505deef5546777176777",
+    "arguments": [
+      "-m",
+      "evo2_mvp.two_stage_student",
+      "--stage",
+      "distill",
+      "--data-dir",
+      "outputs\\sh2_two_stage_20261104\\data",
+      "--config",
+      "configs/stripedhyena2_two_stage.yaml",
+      "--output",
+      "outputs\\sh2_two_stage_20261104\\training",
+      "--device",
+      "cpu",
+      "--resume"
+    ]
+  },
+  "started_at_utc": "2026-11-04T01:26:47.947594+00:00",
+  "completed_at_utc": "2026-11-04T01:45:21.370392+00:00",
+  "returncode": 0,
+  "artifacts_sha256": {
+    "outputs/sh2_two_stage_20261104/training/initial_encoder.pt": "05c6f659152b77db3c5c24c13de4945f7a49a61dabd1125df6eff3d030e245b1",
+    "outputs/sh2_two_stage_20261104/training/best_encoder.pt": "78084965508bc0ed84462262065c2b626d722ce0b5707217fb4a7ae270cac19a",
+    "outputs/sh2_two_stage_20261104/training/last_distillation.pt": "40d150ad9d34ad5827da78c9b6de7b5ef269ed4f9005425528dc2f8de5d6ce4e",
+    "outputs/sh2_two_stage_20261104/training/distillation_curve.csv": "2807b5cf6dfdd0aeeeac2e74fc53c301b022c7bb6bd4450a25e80f0c66d66cb6",
+    "outputs/sh2_two_stage_20261104/training/distillation_status.json": "608ad564a353556b4e3046bcacc0e6aa64b68cfd3592fa38c1117e153f0b52ce"
+  }
+}

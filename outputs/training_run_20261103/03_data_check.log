@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "n": 2000,
+  "labels": {
+    "0": 1695,
+    "1": 305
+  },
+  "unique_variants": 2000,
+  "all_contexts_ref_checked": 2000,
+  "variants_sha256": "b49c81a5d5e18f4230d34f51870a44fab514e976c54635388c4bf3b8abd8f848",
+  "release": "2026-11-01"
+}

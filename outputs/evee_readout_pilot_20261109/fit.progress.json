@@ -1,0 +1,7 @@
+{
+  "status": "failed",
+  "started_at_utc": "2026-11-09T06:25:45.862782+00:00",
+  "failed_at_utc": "2026-11-09T06:26:43.087752+00:00",
+  "error": "CalledProcessError: Command '['D:\\\\Users\\\\60152\\\\learning materials\\\\CISC7021\\\\Report\\\\evo2_pathogenicity_mvp\\\\.venv\\\\Scripts\\\\python.exe', '-u', '-m', 'evo2_mvp.evee_readout_pilot', '--stage', 'fit', '--data-dir', 'outputs\\\\sh2_two_stage_20261104\\\\data', '--encoders', 'outputs\\\\sh2_two_stage_20261104\\\\training', '--variants', 'data\\\\variants.csv', '--encoder-config', 'configs\\\\stripedhyena2_two_stage.yaml', '--output', 'outputs\\\\evee_readout_pilot_20261109', '--seed', '42', '--device', 'cpu']' returned non-zero exit status 1.",
+  "log": "D:\\Users\\60152\\learning materials\\CISC7021\\Report\\evo2_pathogenicity_mvp\\outputs\\evee_readout_pilot_20261109\\fit.log"
+}

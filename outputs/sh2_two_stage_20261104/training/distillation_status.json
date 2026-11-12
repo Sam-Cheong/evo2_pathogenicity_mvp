@@ -1,0 +1,55 @@
+{
+  "stage": "representation_distillation",
+  "protocol": {
+    "configuration_sha256": "b2d1414d5ef33f048733a38620cdd58d629f422af235a67c95955d99f1fb8016",
+    "prepared_metadata_sha256": "a724bd473999a8b3d799366a9a6603fea6ead38842747ed56f4e6f75007ae886",
+    "representation_files_sha256": {
+      "representation_train.npz": "d6820bc5afb939ef5087670b8a54c1514bff837bc4dbcd87c6f8c6d33cefcd04",
+      "representation_val.npz": "7b4eb1b02bc86e2f205e676cefb0263a9f2e24907c1b08aba0a48fb93bbe7ae7"
+    },
+    "train_ids_sha256": "b503db493d56b2beff58bcd30de949e650e634db5da96e1869d1001819af84c1",
+    "val_ids_sha256": "8034b359c1c092c90c6f7b242983e597ac0b583649fc1702836df2d7928a1024"
+  },
+  "labels_used": false,
+  "clinical_validation_test_used": false,
+  "n_train": 960,
+  "n_val": 240,
+  "teacher_dim": 8192,
+  "projector_count": 2,
+  "training_only_projection_parameters": 3162112,
+  "total_training_parameters": 4666816,
+  "inference_student_parameters": 1505281,
+  "constant_mean_baseline": {
+    "train": {
+      "ref": 1.0493961572647095,
+      "alt": 0.9506037831306458,
+      "delta": 1.0,
+      "total": 1.9999999701976776,
+      "protocol": "constant_training_mean_in_each_teacher_target_space"
+    },
+    "val": {
+      "ref": 1.1030256748199463,
+      "alt": 0.9845699667930603,
+      "delta": 1.0292179584503174,
+      "total": 2.0730157792568207,
+      "protocol": "constant_training_mean_in_each_teacher_target_space"
+    }
+  },
+  "status": "completed",
+  "epochs_run": 15,
+  "best_epoch": 10,
+  "best_validation": {
+    "ref": 1.057991357644399,
+    "alt": 0.9228796521822612,
+    "delta": 0.8797558585802714,
+    "total": 1.8701913833618165,
+    "embedding_mean_std": 0.4800540506839752,
+    "embedding_mean_variance": 0.24730990827083588,
+    "embedding_mean_norm": 13.268766403198242,
+    "delta_embedding_mean_std": 0.6712923645973206,
+    "delta_embedding_mean_norm": 9.784990310668945
+  },
+  "initial_encoder_sha256": "824f3d0c8bf6648066e569650d1d959018f617b9256802a8c0d94475f8c713e8",
+  "best_encoder_sha256": "c803719d7adefc6a152794f682c725ee7e7b33eedf67c4831826208cba01b76e",
+  "best_encoder_file_sha256": "78084965508bc0ed84462262065c2b626d722ce0b5707217fb4a7ae270cac19a"
+}

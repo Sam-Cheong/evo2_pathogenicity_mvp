@@ -1,0 +1,122 @@
+{
+  "status": "completed",
+  "completed_at_utc": "2026-11-03T17:04:51.911664+00:00",
+  "experiment_identity": "96ebfc7fad4467fd12eb75f2facba8b01dac254e522f6f0094a241ace856c72d",
+  "data": {
+    "provenance": {
+      "variants_sha256": "b49c81a5d5e18f4230d34f51870a44fab514e976c54635388c4bf3b8abd8f848",
+      "variant_label_fingerprint": "1138fbfbe6f18b6de0b46b877e9b9cf0e7c40bcb76f8248b1987bbcb2d55051a",
+      "n_variants": 2000,
+      "synthetic": false,
+      "sources": [
+        "ClinVar"
+      ],
+      "performance_scope": "research_dataset"
+    },
+    "splits": {
+      "train": {
+        "n": 1200,
+        "positives": 183
+      },
+      "val": {
+        "n": 400,
+        "positives": 74
+      },
+      "test": {
+        "n": 400,
+        "positives": 48
+      }
+    },
+    "experiment_identity": "96ebfc7fad4467fd12eb75f2facba8b01dac254e522f6f0094a241ace856c72d",
+    "new_api_calls_required": 0
+  },
+  "epochs": {
+    "supervised": {
+      "epochs_run": 6,
+      "best_epoch": 1,
+      "checkpoint_sha256": "7db00d61ebe68d0ac3ca600788fe84b6b3e37c47633cf396c5bfeb4c4f207dd6"
+    },
+    "distilled": {
+      "epochs_run": 6,
+      "best_epoch": 1,
+      "checkpoint_sha256": "1e7595afa1817a8c921f2740583a70eb59bb9865695315e98fc03ee68b0d6fdc"
+    }
+  },
+  "student_parameter_count": 1854465,
+  "embedding_dim": 256,
+  "fused_feature_dim": 768,
+  "test_comparison": [
+    {
+      "model": "Evo 2 + MLP",
+      "auroc": 0.9370857007575757,
+      "auprc": 0.7797588929309942,
+      "f1": 0.6804123711340206,
+      "recall": 0.6875,
+      "brier_score": 0.06389405909497196,
+      "n": 400,
+      "positives": 48
+    },
+    {
+      "model": "历史 CNN 监督",
+      "auroc": 0.5614938446969697,
+      "auprc": 0.19701726494582014,
+      "f1": 0.0,
+      "recall": 0.0,
+      "brier_score": 0.10709825381395216,
+      "n": 400,
+      "positives": 48
+    },
+    {
+      "model": "历史 CNN 蒸馏",
+      "auroc": 0.5606060606060607,
+      "auprc": 0.17380722618635724,
+      "f1": 0.0,
+      "recall": 0.0,
+      "brier_score": 0.10743970794598943,
+      "n": 400,
+      "positives": 48
+    },
+    {
+      "model": "HyenaDNA 监督",
+      "auroc": 0.5676491477272728,
+      "auprc": 0.17175377914354042,
+      "f1": 0.0,
+      "recall": 0.0,
+      "brier_score": 0.1080852016173854,
+      "n": 400,
+      "positives": 48
+    },
+    {
+      "model": "HyenaDNA 蒸馏",
+      "auroc": 0.5814985795454546,
+      "auprc": 0.16838625877392197,
+      "f1": 0.0,
+      "recall": 0.0,
+      "brier_score": 0.10501958555092061,
+      "n": 400,
+      "positives": 48
+    }
+  ],
+  "same_initialization_verified": true,
+  "standalone_prediction": {
+    "variant_id": "1-926029-C-T",
+    "genome_build": "GRCh38",
+    "teacher_score": null,
+    "student_score": 0.11535679548978806,
+    "student_predictive_entropy": 0.35757049022074805,
+    "ensemble_std": null,
+    "calibrated_score": null,
+    "calibration_status": "not_calibrated",
+    "clinical_use": "research_only"
+  },
+  "standalone_reload_prediction_identical": true,
+  "new_nvidia_api_calls": 0,
+  "limitations": [
+    "single seed",
+    "only 1200 labeled training variants",
+    "previously examined internal test cohort",
+    "causal center does not see downstream context",
+    "research_only; not clinical validation"
+  ],
+  "clinical_use": "research_only"
+}

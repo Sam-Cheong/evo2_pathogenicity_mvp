@@ -1,0 +1,17 @@
+{
+  "status": "completed",
+  "signature": {
+    "experiment_identity": "706b915d195b7f940189efa8cb1b746c0986302424be505deef5546777176777",
+    "arguments": [
+      "scripts/prepare_sh2_reference.py",
+      "--self-check"
+    ]
+  },
+  "started_at_utc": "2026-11-04T01:25:18.853755+00:00",
+  "completed_at_utc": "2026-11-04T01:25:25.857300+00:00",
+  "returncode": 0,
+  "artifacts_sha256": {
+    "work/sh2_reference/manifest.json": "bab16f027e049ca7f70dd4a46a6adaad3a66764d2df4f50c71f17b17771aaa5f",
+    "work/sh2_reference/reference_checks.json": "ec5b783d5a00cf9399dbaf78a133216a0e5a8b9705aea2fab776b67f760debc5"
+  }
+}

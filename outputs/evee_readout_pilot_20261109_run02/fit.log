@@ -1,0 +1,1 @@
+{"status": "validation_complete", "primary": {"candidate": "distilled_gram_r16", "baseline": "distilled_mean_r16", "split": "validation", "delta_auprc": -0.0033026934031527566, "delta_auprc_95_ci": [-0.09587364964918411, 0.08740525482937714], "rule": "delta_auprc_positive_and_paired_group_bootstrap_95_ci_lower_bound_positive", "passed": false}, "rank32_triggered": false}

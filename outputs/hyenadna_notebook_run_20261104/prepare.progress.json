@@ -1,0 +1,24 @@
+{
+  "status": "completed",
+  "signature": {
+    "experiment_identity": "96ebfc7fad4467fd12eb75f2facba8b01dac254e522f6f0094a241ace856c72d",
+    "arguments": [
+      "scripts/prepare_hyenadna.py",
+      "--output",
+      "work/hyenadna_d256_pretrained"
+    ]
+  },
+  "started_at_utc": "2026-11-03T16:49:51.089528+00:00",
+  "completed_at_utc": "2026-11-03T16:49:51.695406+00:00",
+  "returncode": 0,
+  "artifacts_sha256": {
+    "work/hyenadna_d256_pretrained/model.safetensors": "81c15c4042d5fae646f00b429b76c65644cdbe88aa7e98b61aa781c84ff09031",
+    "work/hyenadna_d256_pretrained/config.json": "2b3209dc6d176d0cf573e0cdadbedb4ab0c5f7456136474200c5d827a126d336",
+    "work/hyenadna_d256_pretrained/configuration_hyena.py": "29cb6cae67f5010e279d67349e688663043f0bd6791a09c36d96da8cac3668a6",
+    "work/hyenadna_d256_pretrained/modeling_hyena.py": "d78029cacea2c9259f1293fdb50b60f90872089469185e27d5c769086c475607",
+    "work/hyenadna_d256_pretrained/tokenization_hyena.py": "d424da2f794958b0360e033bbf5edc9ee4e3e3126e883093621348f07761e408",
+    "work/hyenadna_d256_pretrained/tokenizer_config.json": "b1a98c1d2f4e1a5582feffeaccfe46e160f2f8e927009b49d4676dd79e7a9694",
+    "work/hyenadna_d256_pretrained/special_tokens_map.json": "026831cec9f2ac5e501aa9d3a8b3a93c021aebe55813574c493e40b49ad28582",
+    "work/hyenadna_d256_pretrained/README.md": "18ee2eeab45dd561dfd266e8756d267389cef724839e4250f093acfb7c9c57b8"
+  }
+}

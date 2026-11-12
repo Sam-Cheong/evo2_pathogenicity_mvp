@@ -1,0 +1,76 @@
+{
+  "calibration_status": "validation_temperature_scaling",
+  "fit_split": "val",
+  "evaluation_split": "test",
+  "temperature": 1.107815601173886,
+  "checkpoint_sha256": "71e56ae18b2510010239583c44087d0fdef2affe6528438617ac7076f05ee63a",
+  "split_fingerprint": "d1a043913eaeb16d3880f540775592584bff7dd331464002b4ef55aca1b9b15a",
+  "model_kind": "student",
+  "data_provenance": {
+    "variants_sha256": "b49c81a5d5e18f4230d34f51870a44fab514e976c54635388c4bf3b8abd8f848",
+    "variant_label_fingerprint": "1138fbfbe6f18b6de0b46b877e9b9cf0e7c40bcb76f8248b1987bbcb2d55051a",
+    "n_variants": 2000,
+    "synthetic": false,
+    "sources": [
+      "ClinVar"
+    ],
+    "performance_scope": "research_dataset"
+  },
+  "predictions_sha256": "8db3916546ccb09f31632232dd979703d608fd7182f2bbbc99e6e263ff220947",
+  "prediction_metadata_sha256": "8fe894eb02bcf765deb9bf8d03fd34af225f4d78fd3706d567505efd1466d445",
+  "test_uncalibrated": {
+    "n": 400,
+    "positives": 48,
+    "auroc": 0.5606060606060607,
+    "auprc": 0.17380722618635724,
+    "accuracy": 0.88,
+    "precision": null,
+    "recall": 0.0,
+    "f1": 0.0,
+    "confusion_matrix": [
+      [
+        352,
+        0
+      ],
+      [
+        48,
+        0
+      ]
+    ],
+    "brier_score": 0.10743970788788584,
+    "classification_threshold": 0.5,
+    "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+    "undefined_metrics_reason": null,
+    "undefined_metrics": {
+      "precision": "No positive predictions are present"
+    }
+  },
+  "test_calibrated": {
+    "n": 400,
+    "positives": 48,
+    "auroc": 0.5606060606060607,
+    "auprc": 0.17380722618635724,
+    "accuracy": 0.88,
+    "precision": null,
+    "recall": 0.0,
+    "f1": 0.0,
+    "confusion_matrix": [
+      [
+        352,
+        0
+      ],
+      [
+        48,
+        0
+      ]
+    ],
+    "brier_score": 0.10991837427002274,
+    "classification_threshold": 0.5,
+    "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+    "undefined_metrics_reason": null,
+    "undefined_metrics": {
+      "precision": "No positive predictions are present"
+    }
+  },
+  "clinical_use": "research_only"
+}

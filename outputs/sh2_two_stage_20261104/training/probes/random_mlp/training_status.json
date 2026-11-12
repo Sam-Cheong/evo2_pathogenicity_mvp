@@ -1,0 +1,8 @@
+{
+  "status": "completed",
+  "epochs_run": 11,
+  "best_epoch": 6,
+  "encoder_unchanged": true,
+  "clinical_test_opened": false,
+  "checkpoint_sha256": "f6b7c7af8ee16d8e976770d96ada07a8883acf44816818bd707027ee249872db"
+}

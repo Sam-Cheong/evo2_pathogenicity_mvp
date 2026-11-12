@@ -1,0 +1,28 @@
+{
+  "status": "completed",
+  "signature": {
+    "experiment_identity": "96ebfc7fad4467fd12eb75f2facba8b01dac254e522f6f0094a241ace856c72d",
+    "arguments": [
+      "scripts/test_hyenadna.py",
+      "--pretrained-dir",
+      "work/hyenadna_d256_pretrained",
+      "--window",
+      "256",
+      "--threads",
+      "4",
+      "--compare-official",
+      "--output",
+      "outputs\\hyenadna_notebook_run_20261104\\phase0"
+    ]
+  },
+  "started_at_utc": "2026-11-03T16:49:51.746172+00:00",
+  "completed_at_utc": "2026-11-03T16:50:00.134073+00:00",
+  "returncode": 0,
+  "artifacts_sha256": {
+    "outputs/hyenadna_notebook_run_20261104/phase0/result.json": "cf42d48a65baae3e0e86d70a2c05372365fbcd9ea12ad40763c1101e2412a5f9",
+    "outputs/hyenadna_notebook_run_20261104/phase0/embedding_ref.npy": "6a2faf8519a3d4a27b4abc5dd5112c2e8aaf88f02e7f0fbc6a2c2782bbe27866",
+    "outputs/hyenadna_notebook_run_20261104/phase0/embedding_alt.npy": "0897e4bafba86337f0d3a396bd53edd96d1221fb5bf3316506a99253ada090ee",
+    "outputs/hyenadna_notebook_run_20261104/phase0/embedding_delta.npy": "0e7b1479c36f327287f7fcbe4aa0d577b0031cc1db237b60aae1c2ee2e1cd3b7",
+    "outputs/hyenadna_notebook_run_20261104/phase0/variant_features.npy": "c74bc78eb37ec3008e4a0920763847907126087e8eb0f53150021a89d511ec3a"
+  }
+}

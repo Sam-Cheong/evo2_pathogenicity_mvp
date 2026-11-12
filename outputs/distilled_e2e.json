@@ -1,0 +1,19 @@
+{
+  "device": "cpu",
+  "repeats": 5,
+  "warmup": 1,
+  "seconds_mean": 0.0013075400027446448,
+  "seconds_std": 5.96622636361518e-05,
+  "process_rss_before_bytes": 291700736,
+  "process_rss_max_observed_bytes": 291704832,
+  "cpu_memory_measurement": "process RSS sampled between calls, not a transient peak",
+  "gpu_peak_allocated_bytes": null,
+  "scope": "warm_full_SNV_prediction_FASTA_encoder_head_and_uncertainty",
+  "model": "student",
+  "model_hashes": {
+    "student": "71e56ae18b2510010239583c44087d0fdef2affe6528438617ac7076f05ee63a"
+  },
+  "variant_id": "1-926029-C-T",
+  "window": 256,
+  "startup_seconds": 8.20958990001236
+}

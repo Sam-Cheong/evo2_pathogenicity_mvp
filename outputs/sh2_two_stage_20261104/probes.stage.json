@@ -1,0 +1,31 @@
+{
+  "status": "completed",
+  "signature": {
+    "experiment_identity": "706b915d195b7f940189efa8cb1b746c0986302424be505deef5546777176777",
+    "arguments": [
+      "-m",
+      "evo2_mvp.two_stage_student",
+      "--stage",
+      "probes",
+      "--data-dir",
+      "outputs\\sh2_two_stage_20261104\\data",
+      "--config",
+      "configs/stripedhyena2_two_stage.yaml",
+      "--output",
+      "outputs\\sh2_two_stage_20261104\\training",
+      "--device",
+      "cpu",
+      "--resume"
+    ]
+  },
+  "started_at_utc": "2026-11-04T01:45:21.434832+00:00",
+  "completed_at_utc": "2026-11-04T01:46:22.222483+00:00",
+  "returncode": 0,
+  "artifacts_sha256": {
+    "outputs/sh2_two_stage_20261104/training/probes_status.json": "1418f2241bfa648f8386ad461409078bc6c0e6d6392659f31b82046f7a4a9678",
+    "outputs/sh2_two_stage_20261104/training/probes/random_linear/best_student.pt": "c70ab761e078152f383f0f03bf39a41a92cc8543a4c53f7468b2b8a035ee1f94",
+    "outputs/sh2_two_stage_20261104/training/probes/distilled_linear/best_student.pt": "bcbdce7a3ac5a686c58dfe75c8adfa615bf29fd95c0cbbb6f1734bf04de833e9",
+    "outputs/sh2_two_stage_20261104/training/probes/random_mlp/best_student.pt": "f6b7c7af8ee16d8e976770d96ada07a8883acf44816818bd707027ee249872db",
+    "outputs/sh2_two_stage_20261104/training/probes/distilled_mlp/best_student.pt": "dd296b077d9d52600c5e24c647521a7a54541a416b6dd0c9988f5cc6a8de5717"
+  }
+}

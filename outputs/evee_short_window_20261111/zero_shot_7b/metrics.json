@@ -1,0 +1,50 @@
+{
+  "status": "complete",
+  "n_test": 8,
+  "n_positive": 4,
+  "model": "arc/evo2-7b",
+  "endpoint": "https://health.api.nvidia.com/v1/biology/arc/evo2-7b/forward",
+  "logit_layer": "unembed",
+  "window": 256,
+  "window_identity": "all 32 REF/ALT and direction sequence hashes matched original probe cache",
+  "score_rule": "mean over two directions of REF minus ALT mean causal next-token log-likelihood, larger means lower ALT likelihood",
+  "public_database": {
+    "status": "complete",
+    "queried_ids": [
+      "11:17427963:C:T",
+      "18:6976069:G:A",
+      "5:173234823:G:A",
+      "12:112477720:A:C",
+      "6:87534869:G:A",
+      "3:48858487:C:A",
+      "6:43670899:G:A",
+      "1:25563693:G:T"
+    ],
+    "http_status": 200,
+    "hits": [],
+    "missing_ids": [
+      "11:17427963:C:T",
+      "12:112477720:A:C",
+      "18:6976069:G:A",
+      "1:25563693:G:T",
+      "3:48858487:C:A",
+      "5:173234823:G:A",
+      "6:43670899:G:A",
+      "6:87534869:G:A"
+    ]
+  },
+  "metrics": {
+    "zero_shot": {
+      "auroc": 0.625,
+      "average_precision": 0.775
+    },
+    "mean_pooled": {
+      "auroc": 0.6875,
+      "average_precision": 0.7928571428571428
+    },
+    "covariance": {
+      "auroc": 0.5,
+      "average_precision": 0.7321428571428572
+    }
+  }
+}

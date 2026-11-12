@@ -1,0 +1,58 @@
+{
+  "status": "complete",
+  "feature_mode": "verified_cache",
+  "cohort_sha256": "77b937c2f8cf50e166543a0111ae61704ba279b00aee11f21011adb9b551907e",
+  "feature_manifest_sha256": "bfd79e743712afc25af4f2567ba584700145ff7a6628f3aef9e33f643ed2bd9d",
+  "test": {
+    "covariance": {
+      "n": 8,
+      "positives": 4,
+      "auroc": 0.5,
+      "auprc": 0.7321428571428572,
+      "accuracy": 0.75,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666,
+      "confusion_matrix": [
+        [
+          4,
+          0
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "brier_score": 0.2876266386759849,
+      "classification_threshold": 0.5,
+      "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+      "undefined_metrics_reason": null,
+      "undefined_metrics": {}
+    },
+    "mean_pooled": {
+      "n": 8,
+      "positives": 4,
+      "auroc": 0.6875,
+      "auprc": 0.7928571428571428,
+      "accuracy": 0.75,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666,
+      "confusion_matrix": [
+        [
+          4,
+          0
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "brier_score": 0.25478146860105944,
+      "classification_threshold": 0.5,
+      "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+      "undefined_metrics_reason": null,
+      "undefined_metrics": {}
+    }
+  }
+}

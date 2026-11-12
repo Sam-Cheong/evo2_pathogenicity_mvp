@@ -1,0 +1,48 @@
+{
+  "seed": 42,
+  "genome_build": "GRCh38",
+  "window": 256,
+  "encoder": {
+    "backend": "nvidia_api",
+    "model": "arc/evo2-40b",
+    "endpoint": "https://health.api.nvidia.com/v1/biology/arc/evo2-40b/forward",
+    "api_schema": "nim_v1",
+    "layer": "blocks.20.mlp.l3",
+    "tensor_key": null,
+    "pooling": "variant",
+    "local_radius": 16,
+    "service_revision": "nvidia-hosted-run-v1",
+    "timeout_seconds": 180,
+    "max_retries": 2,
+    "poll_timeout_seconds": 180
+  },
+  "training": {
+    "lr": 0.001,
+    "weight_decay": 0.01,
+    "epochs": 20,
+    "batch_size": 32,
+    "patience": 5
+  },
+  "teacher": {
+    "hidden_dims": [
+      256,
+      64
+    ],
+    "dropout": 0.2
+  },
+  "student": {
+    "embedding_dim": 64,
+    "channels": [
+      32,
+      64,
+      96
+    ],
+    "dropout": 0.2
+  },
+  "distillation": {
+    "alpha": 1.0,
+    "beta": 0.1,
+    "gamma": 0.5,
+    "temperature": 2.0
+  }
+}

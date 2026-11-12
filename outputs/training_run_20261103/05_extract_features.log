@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\Users\60152\learning materials\CISC7021\Report\evo2_pathogenicity_mvp\src\evo2_mvp\cache.py", line 145, in <module>
+    main()
+  File "D:\Users\60152\learning materials\CISC7021\Report\evo2_pathogenicity_mvp\src\evo2_mvp\cache.py", line 132, in main
+    arrays = encoded if i == first_index else encoder.encode_pair(context.ref_sequence, context.alt_sequence, context.variant_index)
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Users\60152\learning materials\CISC7021\Report\evo2_pathogenicity_mvp\src\evo2_mvp\nvidia_encoder.py", line 280, in encode_pair
+    ref, alt = self.encode(ref_sequence, variant_index), self.encode(alt_sequence, variant_index)
+                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Users\60152\learning materials\CISC7021\Report\evo2_pathogenicity_mvp\src\evo2_mvp\nvidia_encoder.py", line 268, in encode
+    hidden = self._normalize_shape(self._request(sequence, self.layer), len(sequence))
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Users\60152\learning materials\CISC7021\Report\evo2_pathogenicity_mvp\src\evo2_mvp\nvidia_encoder.py", line 185, in _request
+    raise NvidiaAPIError("NVIDIA request failed or timed out. Check network access and the configured timeout.") from None
+evo2_mvp.nvidia_encoder.NvidiaAPIError: NVIDIA request failed or timed out. Check network access and the configured timeout.

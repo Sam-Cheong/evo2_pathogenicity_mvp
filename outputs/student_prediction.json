@@ -1,0 +1,11 @@
+{
+  "variant_id": "1-926029-C-T",
+  "genome_build": "GRCh38",
+  "teacher_score": null,
+  "student_score": 0.1564967930316925,
+  "student_predictive_entropy": 0.43381483390547365,
+  "ensemble_std": null,
+  "calibrated_score": null,
+  "calibration_status": "not_calibrated",
+  "clinical_use": "research_only"
+}

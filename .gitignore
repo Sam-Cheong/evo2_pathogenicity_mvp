@@ -3,7 +3,7 @@ __pycache__/
 .pytest_cache/
 .venv*/
 work/
-outputs/
+# outputs/
 *.pt
 *.fai
 *.gzi

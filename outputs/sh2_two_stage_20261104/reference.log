@@ -1,0 +1,44 @@
+{
+  "commit": "7b819b8609ce0b29deff79358a294b59d8299d07",
+  "device": "cpu",
+  "torch_version": "2.7.1+cpu",
+  "mathematical_bodies_unmodified": true,
+  "training_or_model_api_calls": false,
+  "checks": {
+    "fftconv_filter_length_5": {
+      "passed": true,
+      "output_max_abs_difference": 1.3322676295501878e-15,
+      "gradient_max_abs_difference": 1.7763568394002505e-15
+    },
+    "fftconv_filter_length_17": {
+      "passed": true,
+      "output_max_abs_difference": 3.552713678800501e-15,
+      "gradient_max_abs_difference": 1.7763568394002505e-15
+    },
+    "hyena_se_gates_and_original_short_conv": {
+      "passed": true,
+      "output_max_abs_difference": 0.0,
+      "gradient_max_abs_difference": 0.0
+    },
+    "hyena_mr_explicit_filter": {
+      "passed": true,
+      "output_max_abs_difference": 0.0,
+      "gradient_max_abs_difference": 0.0
+    },
+    "hyena_li_original_modal_filter": {
+      "passed": true,
+      "output_max_abs_difference": 1.1920928955078125e-07,
+      "gradient_max_abs_difference": 4.76837158203125e-07
+    },
+    "hyena_mr_li_double_gate_skip": {
+      "passed": true,
+      "output_max_abs_difference": 3.552713678800501e-15,
+      "gradient_max_abs_difference": 1.7763568394002505e-15
+    },
+    "savanna_rmsnorm_epsilon_outside_sqrt": {
+      "passed": true,
+      "output_max_abs_difference": 4.440892098500626e-16,
+      "gradient_max_abs_difference": 6.661338147750939e-16
+    }
+  }
+}

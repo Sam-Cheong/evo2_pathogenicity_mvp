@@ -1,0 +1,14 @@
+model.safetensors: existing_sha256_verified
+config.json: existing_sha256_verified
+configuration_hyena.py: existing_sha256_verified
+modeling_hyena.py: existing_sha256_verified
+tokenization_hyena.py: existing_sha256_verified
+tokenizer_config.json: existing_sha256_verified
+special_tokens_map.json: existing_sha256_verified
+README.md: existing_sha256_verified
+{
+  "repo_id": "LongSafari/hyenadna-tiny-1k-seqlen-d256-hf",
+  "revision": "6036d4e144922b44470294f510cbfd2539ba3b7e",
+  "directory": "D:\\Users\\60152\\learning materials\\CISC7021\\Report\\evo2_pathogenicity_mvp\\work\\hyenadna_d256_pretrained",
+  "all_sha256_verified": true
+}

@@ -1,0 +1,44 @@
+{
+  "status": "completed",
+  "signature": {
+    "experiment_identity": "96ebfc7fad4467fd12eb75f2facba8b01dac254e522f6f0094a241ace856c72d",
+    "arguments": [
+      "-m",
+      "evo2_mvp.distill_student",
+      "--mode",
+      "distill",
+      "--variants",
+      "data/variants.csv",
+      "--splits",
+      "data/splits.json",
+      "--cache",
+      "outputs/nvidia_cache",
+      "--fasta",
+      "data/GRCh38.fa",
+      "--teacher",
+      "outputs/teacher/best_teacher.pt",
+      "--phase0-report",
+      "outputs/phase0_api_verified/result.json",
+      "--config",
+      "configs/hyenadna_d256.yaml",
+      "--device",
+      "cpu",
+      "--output",
+      "outputs\\hyenadna_notebook_run_20261104\\distilled"
+    ]
+  },
+  "started_at_utc": "2026-11-03T16:57:37.338208+00:00",
+  "completed_at_utc": "2026-11-03T17:04:15.624264+00:00",
+  "returncode": 0,
+  "artifacts_sha256": {
+    "outputs/hyenadna_notebook_run_20261104/distilled/best_student.pt": "1e7595afa1817a8c921f2740583a70eb59bb9865695315e98fc03ee68b0d6fdc",
+    "outputs/hyenadna_notebook_run_20261104/distilled/metrics.json": "01e89717b51658b18f7938c1907a853c5960ac9ec35847d32eed244f9132f478",
+    "outputs/hyenadna_notebook_run_20261104/distilled/predictions.csv": "63fabacf8d1c41afd5dc9c41b96c0eac292cd48545a3ba87c3961c7a326e9662",
+    "outputs/hyenadna_notebook_run_20261104/distilled/prediction_metadata.json": "4696b70433c3507e28b85ff90c73c0d12a1d6ebaeb5e58dcb6b186a10f85b74d",
+    "outputs/hyenadna_notebook_run_20261104/distilled/benchmark.json": "7c76494917ef33baa04fbc91bd89b993621be2a7a9ea706ea65dc7484bf68c26",
+    "outputs/hyenadna_notebook_run_20261104/distilled/training_curve.csv": "4e7647424ceef645d53652554f5d13ca65c7407a52cb92aafd97c11745998fed",
+    "outputs/hyenadna_notebook_run_20261104/distilled/training_curve.png": "dd83fe768175cd95409146a7fe542b2d3f0a98daeabf56a2989d4de907d926aa",
+    "outputs/hyenadna_notebook_run_20261104/distilled/config.json": "499221315817e402617b565b361ccd68568d68f5e623affa9100e149f4b6f07a",
+    "outputs/hyenadna_notebook_run_20261104/distilled/distillation_training_state.pt": "f83c5e39c31e8327087ea40a87833acadc2cf6c51dc2c28bf9a096fe70cd8d67"
+  }
+}

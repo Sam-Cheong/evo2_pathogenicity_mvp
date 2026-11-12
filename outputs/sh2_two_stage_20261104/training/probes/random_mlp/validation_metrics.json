@@ -1,0 +1,67 @@
+{
+  "train": {
+    "n": 1200,
+    "positives": 183,
+    "auroc": 0.637855903197554,
+    "auprc": 0.2460612616589088,
+    "accuracy": 0.8475,
+    "precision": null,
+    "recall": 0.0,
+    "f1": 0.0,
+    "confusion_matrix": [
+      [
+        1017,
+        0
+      ],
+      [
+        183,
+        0
+      ]
+    ],
+    "brier_score": 0.12549045774120265,
+    "classification_threshold": 0.5,
+    "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+    "undefined_metrics_reason": null,
+    "undefined_metrics": {
+      "precision": "No positive predictions are present"
+    }
+  },
+  "val": {
+    "n": 400,
+    "positives": 74,
+    "auroc": 0.6695407063505223,
+    "auprc": 0.3017752797025879,
+    "accuracy": 0.815,
+    "precision": null,
+    "recall": 0.0,
+    "f1": 0.0,
+    "confusion_matrix": [
+      [
+        326,
+        0
+      ],
+      [
+        74,
+        0
+      ]
+    ],
+    "brier_score": 0.1439809483836426,
+    "classification_threshold": 0.5,
+    "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+    "undefined_metrics_reason": null,
+    "undefined_metrics": {
+      "precision": "No positive predictions are present"
+    }
+  },
+  "clinical_test_opened": false,
+  "provenance": {
+    "variants_sha256": "b49c81a5d5e18f4230d34f51870a44fab514e976c54635388c4bf3b8abd8f848",
+    "variant_label_fingerprint": "1138fbfbe6f18b6de0b46b877e9b9cf0e7c40bcb76f8248b1987bbcb2d55051a",
+    "n_variants": 2000,
+    "synthetic": false,
+    "sources": [
+      "ClinVar"
+    ],
+    "performance_scope": "research_dataset"
+  }
+}

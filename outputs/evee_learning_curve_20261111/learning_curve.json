@@ -1,0 +1,3927 @@
+{
+  "scope": "exploratory_7b_fixed_window_historical_partition",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "cohort_sha256": "6955e324be761d32835ed1f70f7e1ed10dc783a1d4e18f3e51c2c8665a942a15",
+  "feature_manifest_sha256": "604d2488fe156b290aecbff0a35d9ac3f2be24dfbcd23d52d4f9dc661575ae17",
+  "both_heads_use": "same_bidirectional_top_k_deltas",
+  "training_sizes": [
+    12,
+    24,
+    40
+  ],
+  "covariance_updates": 60,
+  "projection_dim": 16,
+  "test_gene_bootstrap_replicates": 2000,
+  "change_in_delta_auroc": -0.01620370370370372,
+  "change_in_delta_auroc_95_ci": [
+    -0.1273726851851852,
+    0.07175925925925924
+  ],
+  "curve": [
+    {
+      "n_train": 12,
+      "n_test": 24,
+      "mean_auroc": 0.8726851851851851,
+      "covariance_auroc": 0.9166666666666666,
+      "delta_auroc": 0.04398148148148151,
+      "delta_ci_low": -0.09496527777777777,
+      "delta_ci_high": 0.21296296296296294,
+      "mean_auprc": 0.8899429973668879,
+      "covariance_auprc": 0.9290565734193185
+    },
+    {
+      "n_train": 24,
+      "n_test": 24,
+      "mean_auroc": 0.9050925925925926,
+      "covariance_auroc": 0.9189814814814814,
+      "delta_auroc": 0.01388888888888884,
+      "delta_ci_low": -0.10185185185185186,
+      "delta_ci_high": 0.14583333333333334,
+      "mean_auprc": 0.9137271335284751,
+      "covariance_auprc": 0.9360176112014348
+    },
+    {
+      "n_train": 40,
+      "n_test": 24,
+      "mean_auroc": 0.8888888888888888,
+      "covariance_auroc": 0.9166666666666666,
+      "delta_auroc": 0.02777777777777779,
+      "delta_ci_low": -0.08333333333333333,
+      "delta_ci_high": 0.18055555555555555,
+      "mean_auprc": 0.9000432437932439,
+      "covariance_auprc": 0.9342944092944093
+    }
+  ],
+  "runs": [
+    {
+      "n_train": 12,
+      "seed": 42,
+      "train_ids": [
+        "5-149004910-C-T",
+        "3-120652589-T-G",
+        "17-5433147-T-C",
+        "14-24082697-G-A",
+        "3-38016993-G-C",
+        "5-1815884-T-C",
+        "2-165354603-G-T",
+        "10-19450384-G-C",
+        "19-7167940-T-G",
+        "16-29813807-G-A",
+        "22-36877700-G-A",
+        "12-56181739-G-A"
+      ],
+      "metrics": {
+        "covariance": {
+          "train": {
+            "n": 12,
+            "positives": 6,
+            "auroc": 1.0,
+            "auprc": 1.0,
+            "accuracy": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "confusion_matrix": [
+              [
+                6,
+                0
+              ],
+              [
+                0,
+                6
+              ]
+            ],
+            "brier_score": 2.2449086389237955e-05,
+            "classification_threshold": 0.5,
+            "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+            "undefined_metrics_reason": null,
+            "undefined_metrics": {}
+          },
+          "val": {
+            "n": 8,
+            "positives": 4,
+            "auroc": 0.625,
+            "auprc": 0.775,
+            "accuracy": 0.75,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666,
+            "confusion_matrix": [
+              [
+                4,
+                0
+              ],
+              [
+                2,
+                2
+              ]
+            ],
+            "brier_score": 0.25022917199630534,
+            "classification_threshold": 0.5,
+            "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+            "undefined_metrics_reason": null,
+            "undefined_metrics": {}
+          },
+          "test": {
+            "n": 24,
+            "positives": 12,
+            "auroc": 0.8958333333333333,
+            "auprc": 0.9107235357235357,
+            "accuracy": 0.7916666666666666,
+            "precision": 1.0,
+            "recall": 0.5833333333333334,
+            "f1": 0.7368421052631579,
+            "confusion_matrix": [
+              [
+                12,
+                0
+              ],
+              [
+                5,
+                7
+              ]
+            ],
+            "brier_score": 0.19109362754697032,
+            "classification_threshold": 0.5,
+            "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+            "undefined_metrics_reason": null,
+            "undefined_metrics": {}
+          }
+        },
+        "mean_pooled": {
+          "train": {
+            "n": 12,
+            "positives": 6,
+            "auroc": 1.0,
+            "auprc": 1.0,
+            "accuracy": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "confusion_matrix": [
+              [
+                6,
+                0
+              ],
+              [
+                0,
+                6
+              ]
+            ],
+            "brier_score": 1.3027137268884735e-06,
+            "classification_threshold": 0.5,
+            "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+            "undefined_metrics_reason": null,
+            "undefined_metrics": {}
+          },
+          "val": {
+            "n": 8,
+            "positives": 4,
+            "auroc": 1.0,
+            "auprc": 1.0,
+            "accuracy": 0.5,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0,
+            "confusion_matrix": [
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                0
+              ]
+            ],
+            "brier_score": 0.3037742460700211,
+            "classification_threshold": 0.5,
+            "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+            "undefined_metrics_reason": null,
+            "undefined_metrics": {
+              "precision": "No positive predictions are present"
+            }
+          },
+          "test": {
+            "n": 24,
+            "positives": 12,
+            "auroc": 0.8472222222222222,
+            "auprc": 0.8368716931216931,
+            "accuracy": 0.5416666666666666,
+            "precision": 0.6666666666666666,
+            "recall": 0.16666666666666666,
+            "f1": 0.26666666666666666,
+            "confusion_matrix": [
+              [
+                11,
+                1
+              ],
+              [
+                10,
+                2
+              ]
+            ],
+            "brier_score": 0.37260136203867167,
+            "classification_threshold": 0.5,
+            "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+            "undefined_metrics_reason": null,
+            "undefined_metrics": {}
+          }
+        }
+      },
+      "predictions": [
+        {
+          "variant_id": "20-3230813-C-G",
+          "split": "test",
+          "gene_group": "SLC4A11",
+          "label": 1,
+          "covariance_logit": 6.369013786315918,
+          "covariance_score": 0.9982890836382993,
+          "mean_pooled_logit": -1.5693403938270507,
+          "mean_pooled_score": 0.17231044414025964
+        },
+        {
+          "variant_id": "8-60823864-A-G",
+          "split": "test",
+          "gene_group": "CHD7",
+          "label": 1,
+          "covariance_logit": 2.699455738067627,
+          "covariance_score": 0.9369945206514264,
+          "mean_pooled_logit": -4.900126749931844,
+          "mean_pooled_score": 0.0073906114499501865
+        },
+        {
+          "variant_id": "10-133366002-G-A",
+          "split": "test",
+          "gene_group": "ECHS1",
+          "label": 1,
+          "covariance_logit": -0.9317634105682373,
+          "covariance_score": 0.2825670937200714,
+          "mean_pooled_logit": -6.530701454506346,
+          "mean_pooled_score": 0.0014558601633665007
+        },
+        {
+          "variant_id": "9-132902658-T-A",
+          "split": "test",
+          "gene_group": "TSC1",
+          "label": 1,
+          "covariance_logit": 2.3846116065979004,
+          "covariance_score": 0.9156463096349335,
+          "mean_pooled_logit": -4.5265310612980745,
+          "mean_pooled_score": 0.010702358915887382
+        },
+        {
+          "variant_id": "9-136503340-C-T",
+          "split": "test",
+          "gene_group": "NOTCH1",
+          "label": 0,
+          "covariance_logit": -7.427227973937988,
+          "covariance_score": 0.0005944805070300936,
+          "mean_pooled_logit": -6.695901295595076,
+          "mean_pooled_score": 0.0012344416704663976
+        },
+        {
+          "variant_id": "1-226891600-G-C",
+          "split": "test",
+          "gene_group": "PSEN2",
+          "label": 0,
+          "covariance_logit": -17.233741760253906,
+          "covariance_score": 3.277034674813321e-08,
+          "mean_pooled_logit": -7.120675895322845,
+          "mean_pooled_score": 0.0008075676016298739
+        },
+        {
+          "variant_id": "5-53055607-C-T",
+          "split": "test",
+          "gene_group": "ITGA2",
+          "label": 0,
+          "covariance_logit": -3.0376710891723633,
+          "covariance_score": 0.04575274220241605,
+          "mean_pooled_logit": -6.940006288828626,
+          "mean_pooled_score": 0.000967326880580313
+        },
+        {
+          "variant_id": "2-27477684-C-T",
+          "split": "test",
+          "gene_group": "IFT172",
+          "label": 0,
+          "covariance_logit": -18.524303436279297,
+          "covariance_score": 9.015653926706558e-09,
+          "mean_pooled_logit": -7.491972558014645,
+          "mean_pooled_score": 0.0005572314109858776
+        },
+        {
+          "variant_id": "5-161848407-C-T",
+          "split": "test",
+          "gene_group": "GABRA1",
+          "label": 0,
+          "covariance_logit": -0.8240450620651245,
+          "covariance_score": 0.3049056807719666,
+          "mean_pooled_logit": -6.874715893012471,
+          "mean_pooled_score": 0.0010325240396230342
+        },
+        {
+          "variant_id": "4-186280334-G-A",
+          "split": "test",
+          "gene_group": "F11",
+          "label": 1,
+          "covariance_logit": -7.078278064727783,
+          "covariance_score": 0.0008425134484694181,
+          "mean_pooled_logit": -6.998727786191283,
+          "mean_pooled_score": 0.000912209925932794
+        },
+        {
+          "variant_id": "4-3476490-C-A",
+          "split": "test",
+          "gene_group": "DOK7",
+          "label": 1,
+          "covariance_logit": 31.114700317382812,
+          "covariance_score": 0.9999999999999694,
+          "mean_pooled_logit": 3.481073156342637,
+          "mean_pooled_score": 0.9701444190259808
+        },
+        {
+          "variant_id": "2-72887433-A-C",
+          "split": "test",
+          "gene_group": "LOC129934069|SPR",
+          "label": 1,
+          "covariance_logit": -9.99258804321289,
+          "covariance_score": 4.573559039723462e-05,
+          "mean_pooled_logit": 0.5583674898981799,
+          "mean_pooled_score": 0.6360747248662013
+        },
+        {
+          "variant_id": "3-4658252-G-C",
+          "split": "test",
+          "gene_group": "ITPR1",
+          "label": 0,
+          "covariance_logit": -9.3225679397583,
+          "covariance_score": 8.937609369784598e-05,
+          "mean_pooled_logit": -5.609986128059236,
+          "mean_pooled_score": 0.0036477652374283854
+        },
+        {
+          "variant_id": "15-80180172-G-A",
+          "split": "test",
+          "gene_group": "FAH",
+          "label": 1,
+          "covariance_logit": 2.7050399780273438,
+          "covariance_score": 0.9373233872809599,
+          "mean_pooled_logit": -2.901759524811705,
+          "mean_pooled_score": 0.05206665199543061
+        },
+        {
+          "variant_id": "11-119078567-C-G",
+          "split": "test",
+          "gene_group": "VPS11",
+          "label": 0,
+          "covariance_logit": -25.185937881469727,
+          "covariance_score": 1.1531509377704439e-11,
+          "mean_pooled_logit": -6.2683088439980645,
+          "mean_pooled_score": 0.0018918454811328905
+        },
+        {
+          "variant_id": "16-28894763-G-C",
+          "split": "test",
+          "gene_group": "ATP2A1",
+          "label": 0,
+          "covariance_logit": -18.40103530883789,
+          "covariance_score": 1.019839666175056e-08,
+          "mean_pooled_logit": -8.3287465971223,
+          "mean_pooled_score": 0.00024141622426880136
+        },
+        {
+          "variant_id": "18-31592968-G-A",
+          "split": "test",
+          "gene_group": "TTR",
+          "label": 1,
+          "covariance_logit": -4.047602653503418,
+          "covariance_score": 0.017164429320974284,
+          "mean_pooled_logit": -5.895879262035408,
+          "mean_pooled_score": 0.0027432107383978904
+        },
+        {
+          "variant_id": "2-10043776-C-G",
+          "split": "test",
+          "gene_group": "KLF11",
+          "label": 0,
+          "covariance_logit": -7.126442909240723,
+          "covariance_score": 0.0008029274801513801,
+          "mean_pooled_logit": -5.951954123604168,
+          "mean_pooled_score": 0.0025940069836652923
+        },
+        {
+          "variant_id": "9-106928521-C-T",
+          "split": "test",
+          "gene_group": "ZNF462",
+          "label": 1,
+          "covariance_logit": 4.908226013183594,
+          "covariance_score": 0.9926685682298007,
+          "mean_pooled_logit": -2.1320275011688774,
+          "mean_pooled_score": 0.10602266777937215
+        },
+        {
+          "variant_id": "10-47350353-G-A",
+          "split": "test",
+          "gene_group": "RBP3",
+          "label": 0,
+          "covariance_logit": -5.994091510772705,
+          "covariance_score": 0.002487239424184163,
+          "mean_pooled_logit": -6.825793098539658,
+          "mean_pooled_score": 0.001084237911316007
+        },
+        {
+          "variant_id": "2-32154386-C-T",
+          "split": "test",
+          "gene_group": "SPAST",
+          "label": 1,
+          "covariance_logit": -6.474555492401123,
+          "covariance_score": 0.0015398096274241205,
+          "mean_pooled_logit": -0.8950588023986549,
+          "mean_pooled_score": 0.2900669724484289
+        },
+        {
+          "variant_id": "16-8801912-T-G",
+          "split": "test",
+          "gene_group": "PMM2",
+          "label": 1,
+          "covariance_logit": 4.062505722045898,
+          "covariance_score": 0.9830851818837614,
+          "mean_pooled_logit": -1.3024498107633102,
+          "mean_pooled_score": 0.21375300653052434
+        },
+        {
+          "variant_id": "2-61048369-T-C",
+          "split": "test",
+          "gene_group": "PEX13",
+          "label": 0,
+          "covariance_logit": -23.53516387939453,
+          "covariance_score": 6.009082913523714e-11,
+          "mean_pooled_logit": -6.652074063654403,
+          "mean_pooled_score": 0.0012896755916275095
+        },
+        {
+          "variant_id": "6-135404967-C-T",
+          "split": "test",
+          "gene_group": "AHI1",
+          "label": 0,
+          "covariance_logit": -20.03311538696289,
+          "covariance_score": 1.9940155063013096e-09,
+          "mean_pooled_logit": 0.37154442298602425,
+          "mean_pooled_score": 0.591832112695358
+        }
+      ]
+    },
+    {
+      "n_train": 12,
+      "seed": 43,
+      "train_ids": [
+        "9-34649479-C-T",
+        "5-149004910-C-T",
+        "1-94043317-T-C",
+        "17-5433147-T-C",
+        "2-241744765-G-A",
+        "10-19450384-G-C",
+        "9-115029451-G-A",
+        "7-44145617-G-C",
+        "14-88385821-G-A",
+        "2-26191619-G-A",
+        "12-56181739-G-A",
+        "4-88038399-G-A"
+      ],
+      "metrics": {
+        "covariance": {
+          "train": {
+            "n": 12,
+            "positives": 6,
+            "auroc": 1.0,
+            "auprc": 1.0,
+            "accuracy": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "confusion_matrix": [
+              [
+                6,
+                0
+              ],
+              [
+                0,
+                6
+              ]
+            ],
+            "brier_score": 3.12695763329054e-07,
+            "classification_threshold": 0.5,
+            "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+            "undefined_metrics_reason": null,
+            "undefined_metrics": {}
+          },
+          "val": {
+            "n": 8,
+            "positives": 4,
+            "auroc": 0.6875,
+            "auprc": 0.7928571428571428,
+            "accuracy": 0.75,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666,
+            "confusion_matrix": [
+              [
+                4,
+                0
+              ],
+              [
+                2,
+                2
+              ]
+            ],
+            "brier_score": 0.274967588913492,
+            "classification_threshold": 0.5,
+            "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+            "undefined_metrics_reason": null,
+            "undefined_metrics": {}
+          },
+          "test": {
+            "n": 24,
+            "positives": 12,
+            "auroc": 0.9236111111111112,
+            "auprc": 0.9347222222222222,
+            "accuracy": 0.7916666666666666,
+            "precision": 1.0,
+            "recall": 0.5833333333333334,
+            "f1": 0.7368421052631579,
+            "confusion_matrix": [
+              [
+                12,
+                0
+              ],
+              [
+                5,
+                7
+              ]
+            ],
+            "brier_score": 0.19337882132332354,
+            "classification_threshold": 0.5,
+            "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+            "undefined_metrics_reason": null,
+            "undefined_metrics": {}
+          }
+        },
+        "mean_pooled": {
+          "train": {
+            "n": 12,
+            "positives": 6,
+            "auroc": 1.0,
+            "auprc": 1.0,
+            "accuracy": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "confusion_matrix": [
+              [
+                6,
+                0
+              ],
+              [
+                0,
+                6
+              ]
+            ],
+            "brier_score": 9.438180938984737e-07,
+            "classification_threshold": 0.5,
+            "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+            "undefined_metrics_reason": null,
+            "undefined_metrics": {}
+          },
+          "val": {
+            "n": 8,
+            "positives": 4,
+            "auroc": 0.75,
+            "auprc": 0.875,
+            "accuracy": 0.75,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666,
+            "confusion_matrix": [
+              [
+                4,
+                0
+              ],
+              [
+                2,
+                2
+              ]
+            ],
+            "brier_score": 0.18014804194311512,
+            "classification_threshold": 0.5,
+            "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+            "undefined_metrics_reason": null,
+            "undefined_metrics": {}
+          },
+          "test": {
+            "n": 24,
+            "positives": 12,
+            "auroc": 0.888888888888889,
+            "auprc": 0.9149331662489557,
+            "accuracy": 0.7083333333333334,
+            "precision": 1.0,
+            "recall": 0.4166666666666667,
+            "f1": 0.5882352941176471,
+            "confusion_matrix": [
+              [
+                12,
+                0
+              ],
+              [
+                7,
+                5
+              ]
+            ],
+            "brier_score": 0.25830764858344735,
+            "classification_threshold": 0.5,
+            "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+            "undefined_metrics_reason": null,
+            "undefined_metrics": {}
+          }
+        }
+      },
+      "predictions": [
+        {
+          "variant_id": "20-3230813-C-G",
+          "split": "test",
+          "gene_group": "SLC4A11",
+          "label": 1,
+          "covariance_logit": 17.3282527923584,
+          "covariance_score": 0.9999999701849585,
+          "mean_pooled_logit": 4.866879393597973,
+          "mean_pooled_score": 0.9923614483501577
+        },
+        {
+          "variant_id": "8-60823864-A-G",
+          "split": "test",
+          "gene_group": "CHD7",
+          "label": 1,
+          "covariance_logit": 1.7309342622756958,
+          "covariance_score": 0.8495318836326123,
+          "mean_pooled_logit": -2.139694450644973,
+          "mean_pooled_score": 0.10529817199851384
+        },
+        {
+          "variant_id": "10-133366002-G-A",
+          "split": "test",
+          "gene_group": "ECHS1",
+          "label": 1,
+          "covariance_logit": -1.4069023132324219,
+          "covariance_score": 0.19672310267561208,
+          "mean_pooled_logit": -5.733636004530224,
+          "mean_pooled_score": 0.0032248589229368716
+        },
+        {
+          "variant_id": "9-132902658-T-A",
+          "split": "test",
+          "gene_group": "TSC1",
+          "label": 1,
+          "covariance_logit": 6.024526119232178,
+          "covariance_score": 0.9975871385119301,
+          "mean_pooled_logit": -2.1292159376248314,
+          "mean_pooled_score": 0.10628944834139063
+        },
+        {
+          "variant_id": "9-136503340-C-T",
+          "split": "test",
+          "gene_group": "NOTCH1",
+          "label": 0,
+          "covariance_logit": -11.687939643859863,
+          "covariance_score": 8.394380716632253e-06,
+          "mean_pooled_logit": -4.87086830881696,
+          "mean_pooled_score": 0.007608374166263461
+        },
+        {
+          "variant_id": "1-226891600-G-C",
+          "split": "test",
+          "gene_group": "PSEN2",
+          "label": 0,
+          "covariance_logit": -20.296649932861328,
+          "covariance_score": 1.5320640867918424e-09,
+          "mean_pooled_logit": -7.1303431379838145,
+          "mean_pooled_score": 0.0007998044781529961
+        },
+        {
+          "variant_id": "5-53055607-C-T",
+          "split": "test",
+          "gene_group": "ITGA2",
+          "label": 0,
+          "covariance_logit": -2.7825160026550293,
+          "covariance_score": 0.058276323274669556,
+          "mean_pooled_logit": -6.559298219738591,
+          "mean_pooled_score": 0.0014148749920770746
+        },
+        {
+          "variant_id": "2-27477684-C-T",
+          "split": "test",
+          "gene_group": "IFT172",
+          "label": 0,
+          "covariance_logit": -30.3751277923584,
+          "covariance_score": 6.430572110964965e-14,
+          "mean_pooled_logit": -7.4690881284868915,
+          "mean_pooled_score": 0.0005701230096138519
+        },
+        {
+          "variant_id": "5-161848407-C-T",
+          "split": "test",
+          "gene_group": "GABRA1",
+          "label": 0,
+          "covariance_logit": -4.500242233276367,
+          "covariance_score": 0.010984310779935164,
+          "mean_pooled_logit": -5.719594469915008,
+          "mean_pooled_score": 0.003270311167845587
+        },
+        {
+          "variant_id": "4-186280334-G-A",
+          "split": "test",
+          "gene_group": "F11",
+          "label": 1,
+          "covariance_logit": -9.717677116394043,
+          "covariance_score": 6.0206073364791414e-05,
+          "mean_pooled_logit": -6.334913257771242,
+          "mean_pooled_score": 0.0017701606266686022
+        },
+        {
+          "variant_id": "4-3476490-C-A",
+          "split": "test",
+          "gene_group": "DOK7",
+          "label": 1,
+          "covariance_logit": 73.4306869506836,
+          "covariance_score": 1.0,
+          "mean_pooled_logit": 14.3748237258151,
+          "mean_pooled_score": 0.9999994283988033
+        },
+        {
+          "variant_id": "2-72887433-A-C",
+          "split": "test",
+          "gene_group": "LOC129934069|SPR",
+          "label": 1,
+          "covariance_logit": 1.3826894760131836,
+          "covariance_score": 0.7994225945641412,
+          "mean_pooled_logit": -0.6027585013046827,
+          "mean_pooled_score": 0.3537128460187235
+        },
+        {
+          "variant_id": "3-4658252-G-C",
+          "split": "test",
+          "gene_group": "ITPR1",
+          "label": 0,
+          "covariance_logit": -15.773913383483887,
+          "covariance_score": 1.4108355624994799e-07,
+          "mean_pooled_logit": -5.418994605508282,
+          "mean_pooled_score": 0.00441204748569289
+        },
+        {
+          "variant_id": "15-80180172-G-A",
+          "split": "test",
+          "gene_group": "FAH",
+          "label": 1,
+          "covariance_logit": 8.372517585754395,
+          "covariance_score": 0.9997689204864043,
+          "mean_pooled_logit": 0.3199339837514407,
+          "mean_pooled_score": 0.5793081633988457
+        },
+        {
+          "variant_id": "11-119078567-C-G",
+          "split": "test",
+          "gene_group": "VPS11",
+          "label": 0,
+          "covariance_logit": -25.235170364379883,
+          "covariance_score": 1.0977533240841915e-11,
+          "mean_pooled_logit": -6.141606973004532,
+          "mean_pooled_score": 0.002146844637256298
+        },
+        {
+          "variant_id": "16-28894763-G-C",
+          "split": "test",
+          "gene_group": "ATP2A1",
+          "label": 0,
+          "covariance_logit": -25.081445693969727,
+          "covariance_score": 1.2801667321644556e-11,
+          "mean_pooled_logit": -6.105225342085783,
+          "mean_pooled_score": 0.0022262114597657767
+        },
+        {
+          "variant_id": "18-31592968-G-A",
+          "split": "test",
+          "gene_group": "TTR",
+          "label": 1,
+          "covariance_logit": -4.827132225036621,
+          "covariance_score": 0.007945816007134504,
+          "mean_pooled_logit": -5.837661772683057,
+          "mean_pooled_score": 0.0029071758057714493
+        },
+        {
+          "variant_id": "2-10043776-C-G",
+          "split": "test",
+          "gene_group": "KLF11",
+          "label": 0,
+          "covariance_logit": -5.524622440338135,
+          "covariance_score": 0.003971537873118369,
+          "mean_pooled_logit": -5.88301453455381,
+          "mean_pooled_score": 0.00277863068272856
+        },
+        {
+          "variant_id": "9-106928521-C-T",
+          "split": "test",
+          "gene_group": "ZNF462",
+          "label": 1,
+          "covariance_logit": 9.887422561645508,
+          "covariance_score": 0.9999491928451651,
+          "mean_pooled_logit": 1.1140752443368003,
+          "mean_pooled_score": 0.7528880820710938
+        },
+        {
+          "variant_id": "10-47350353-G-A",
+          "split": "test",
+          "gene_group": "RBP3",
+          "label": 0,
+          "covariance_logit": -5.870095729827881,
+          "covariance_score": 0.002814658450065858,
+          "mean_pooled_logit": -6.396002688532832,
+          "mean_pooled_score": 0.0016654340298371164
+        },
+        {
+          "variant_id": "2-32154386-C-T",
+          "split": "test",
+          "gene_group": "SPAST",
+          "label": 1,
+          "covariance_logit": -10.807934761047363,
+          "covariance_score": 2.0237869132113e-05,
+          "mean_pooled_logit": -3.168966517978294,
+          "mean_pooled_score": 0.040350415176376234
+        },
+        {
+          "variant_id": "16-8801912-T-G",
+          "split": "test",
+          "gene_group": "PMM2",
+          "label": 1,
+          "covariance_logit": -3.5590288639068604,
+          "covariance_score": 0.027678545983946364,
+          "mean_pooled_logit": 1.517798727550981,
+          "mean_pooled_score": 0.8202141032894602
+        },
+        {
+          "variant_id": "2-61048369-T-C",
+          "split": "test",
+          "gene_group": "PEX13",
+          "label": 0,
+          "covariance_logit": -36.21372985839844,
+          "covariance_score": 1.873168963541704e-16,
+          "mean_pooled_logit": -6.522318692165021,
+          "mean_pooled_score": 0.0014680975963498322
+        },
+        {
+          "variant_id": "6-135404967-C-T",
+          "split": "test",
+          "gene_group": "AHI1",
+          "label": 0,
+          "covariance_logit": -38.800048828125,
+          "covariance_score": 1.4104344151280204e-17,
+          "mean_pooled_logit": -2.4092601844559542,
+          "mean_pooled_score": 0.08246928127435384
+        }
+      ]
+    },
+    {
+      "n_train": 12,
+      "seed": 44,
+      "train_ids": [
+        "19-4816229-G-A",
+        "5-149004910-C-T",
+        "18-31087948-G-A",
+        "14-24082697-G-A",
+        "2-241744765-G-A",
+        "3-38016993-G-C",
+        "5-1815884-T-C",
+        "1-155291891-C-T",
+        "6-64822806-T-G",
+        "9-115029451-G-A",
+        "7-44145617-G-C",
+        "4-88038399-G-A"
+      ],
+      "metrics": {
+        "covariance": {
+          "train": {
+            "n": 12,
+            "positives": 6,
+            "auroc": 1.0,
+            "auprc": 1.0,
+            "accuracy": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "confusion_matrix": [
+              [
+                6,
+                0
+              ],
+              [
+                0,
+                6
+              ]
+            ],
+            "brier_score": 1.186272629976013e-05,
+            "classification_threshold": 0.5,
+            "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+            "undefined_metrics_reason": null,
+            "undefined_metrics": {}
+          },
+          "val": {
+            "n": 8,
+            "positives": 4,
+            "auroc": 0.5,
+            "auprc": 0.7321428571428572,
+            "accuracy": 0.625,
+            "precision": 1.0,
+            "recall": 0.25,
+            "f1": 0.4,
+            "confusion_matrix": [
+              [
+                4,
+                0
+              ],
+              [
+                3,
+                1
+              ]
+            ],
+            "brier_score": 0.28654747093308913,
+            "classification_threshold": 0.5,
+            "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+            "undefined_metrics_reason": null,
+            "undefined_metrics": {}
+          },
+          "test": {
+            "n": 24,
+            "positives": 12,
+            "auroc": 0.9305555555555556,
+            "auprc": 0.9417239623121976,
+            "accuracy": 0.75,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666,
+            "confusion_matrix": [
+              [
+                12,
+                0
+              ],
+              [
+                6,
+                6
+              ]
+            ],
+            "brier_score": 0.19479297965813167,
+            "classification_threshold": 0.5,
+            "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+            "undefined_metrics_reason": null,
+            "undefined_metrics": {}
+          }
+        },
+        "mean_pooled": {
+          "train": {
+            "n": 12,
+            "positives": 6,
+            "auroc": 1.0,
+            "auprc": 1.0,
+            "accuracy": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "confusion_matrix": [
+              [
+                6,
+                0
+              ],
+              [
+                0,
+                6
+              ]
+            ],
+            "brier_score": 1.273000460555459e-06,
+            "classification_threshold": 0.5,
+            "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+            "undefined_metrics_reason": null,
+            "undefined_metrics": {}
+          },
+          "val": {
+            "n": 8,
+            "positives": 4,
+            "auroc": 0.75,
+            "auprc": 0.875,
+            "accuracy": 0.875,
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1": 0.8571428571428571,
+            "confusion_matrix": [
+              [
+                4,
+                0
+              ],
+              [
+                1,
+                3
+              ]
+            ],
+            "brier_score": 0.12679188996713756,
+            "classification_threshold": 0.5,
+            "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+            "undefined_metrics_reason": null,
+            "undefined_metrics": {}
+          },
+          "test": {
+            "n": 24,
+            "positives": 12,
+            "auroc": 0.8819444444444444,
+            "auprc": 0.918024132730015,
+            "accuracy": 0.7083333333333334,
+            "precision": 1.0,
+            "recall": 0.4166666666666667,
+            "f1": 0.5882352941176471,
+            "confusion_matrix": [
+              [
+                12,
+                0
+              ],
+              [
+                7,
+                5
+              ]
+            ],
+            "brier_score": 0.2407730209042417,
+            "classification_threshold": 0.5,
+            "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+            "undefined_metrics_reason": null,
+            "undefined_metrics": {}
+          }
+        }
+      },
+      "predictions": [
+        {
+          "variant_id": "20-3230813-C-G",
+          "split": "test",
+          "gene_group": "SLC4A11",
+          "label": 1,
+          "covariance_logit": 31.63684844970703,
+          "covariance_score": 0.9999999999999818,
+          "mean_pooled_logit": 5.719141083716423,
+          "mean_pooled_score": 0.9967282106342618
+        },
+        {
+          "variant_id": "8-60823864-A-G",
+          "split": "test",
+          "gene_group": "CHD7",
+          "label": 1,
+          "covariance_logit": 1.0387295484542847,
+          "covariance_score": 0.738604797226466,
+          "mean_pooled_logit": -1.0159157404203445,
+          "mean_pooled_score": 0.26582372790788183
+        },
+        {
+          "variant_id": "10-133366002-G-A",
+          "split": "test",
+          "gene_group": "ECHS1",
+          "label": 1,
+          "covariance_logit": -1.0138448476791382,
+          "covariance_score": 0.2662280823356648,
+          "mean_pooled_logit": -5.5675601838255355,
+          "mean_pooled_score": 0.0038052533912093342
+        },
+        {
+          "variant_id": "9-132902658-T-A",
+          "split": "test",
+          "gene_group": "TSC1",
+          "label": 1,
+          "covariance_logit": 8.122203826904297,
+          "covariance_score": 0.9997032144270546,
+          "mean_pooled_logit": -1.0613078345727311,
+          "mean_pooled_score": 0.25705960514893034
+        },
+        {
+          "variant_id": "9-136503340-C-T",
+          "split": "test",
+          "gene_group": "NOTCH1",
+          "label": 0,
+          "covariance_logit": -8.59604549407959,
+          "covariance_score": 0.00018480112478390774,
+          "mean_pooled_logit": -3.9963949618297874,
+          "mean_pooled_score": 0.01804999546176507
+        },
+        {
+          "variant_id": "1-226891600-G-C",
+          "split": "test",
+          "gene_group": "PSEN2",
+          "label": 0,
+          "covariance_logit": -17.634069442749023,
+          "covariance_score": 2.1959423680464697e-08,
+          "mean_pooled_logit": -6.772580431567192,
+          "mean_pooled_score": 0.0011434279969008343
+        },
+        {
+          "variant_id": "5-53055607-C-T",
+          "split": "test",
+          "gene_group": "ITGA2",
+          "label": 0,
+          "covariance_logit": -1.65425705909729,
+          "covariance_score": 0.16053442560312506,
+          "mean_pooled_logit": -6.272410500789215,
+          "mean_pooled_score": 0.0018841162625829616
+        },
+        {
+          "variant_id": "2-27477684-C-T",
+          "split": "test",
+          "gene_group": "IFT172",
+          "label": 0,
+          "covariance_logit": -22.632707595825195,
+          "covariance_score": 1.4816307421222602e-10,
+          "mean_pooled_logit": -6.753649528687392,
+          "mean_pooled_score": 0.001165254847146642
+        },
+        {
+          "variant_id": "5-161848407-C-T",
+          "split": "test",
+          "gene_group": "GABRA1",
+          "label": 0,
+          "covariance_logit": -6.814895153045654,
+          "covariance_score": 0.001096105474002837,
+          "mean_pooled_logit": -6.373829230071875,
+          "mean_pooled_score": 0.0017027113397906416
+        },
+        {
+          "variant_id": "4-186280334-G-A",
+          "split": "test",
+          "gene_group": "F11",
+          "label": 1,
+          "covariance_logit": -6.721102714538574,
+          "covariance_score": 0.0012037577010322045,
+          "mean_pooled_logit": -6.02130076084252,
+          "mean_pooled_score": 0.002420637526396012
+        },
+        {
+          "variant_id": "4-3476490-C-A",
+          "split": "test",
+          "gene_group": "DOK7",
+          "label": 1,
+          "covariance_logit": 118.5689697265625,
+          "covariance_score": 1.0,
+          "mean_pooled_logit": 14.655676255051675,
+          "mean_pooled_score": 0.9999995683611902
+        },
+        {
+          "variant_id": "2-72887433-A-C",
+          "split": "test",
+          "gene_group": "LOC129934069|SPR",
+          "label": 1,
+          "covariance_logit": -10.771912574768066,
+          "covariance_score": 2.098015524948449e-05,
+          "mean_pooled_logit": -1.982023997596043,
+          "mean_pooled_score": 0.12110324389477944
+        },
+        {
+          "variant_id": "3-4658252-G-C",
+          "split": "test",
+          "gene_group": "ITPR1",
+          "label": 0,
+          "covariance_logit": -16.958757400512695,
+          "covariance_score": 4.314249150746988e-08,
+          "mean_pooled_logit": -3.770818517475919,
+          "mean_pooled_score": 0.02251461871862385
+        },
+        {
+          "variant_id": "15-80180172-G-A",
+          "split": "test",
+          "gene_group": "FAH",
+          "label": 1,
+          "covariance_logit": 17.158971786499023,
+          "covariance_score": 0.9999999646854868,
+          "mean_pooled_logit": 1.6687875585627021,
+          "mean_pooled_score": 0.8414141042846858
+        },
+        {
+          "variant_id": "11-119078567-C-G",
+          "split": "test",
+          "gene_group": "VPS11",
+          "label": 0,
+          "covariance_logit": -17.08249282836914,
+          "covariance_score": 3.812129197235293e-08,
+          "mean_pooled_logit": -4.959166948018218,
+          "mean_pooled_score": 0.006969852591091668
+        },
+        {
+          "variant_id": "16-28894763-G-C",
+          "split": "test",
+          "gene_group": "ATP2A1",
+          "label": 0,
+          "covariance_logit": -18.04732322692871,
+          "covariance_score": 1.4526035564161012e-08,
+          "mean_pooled_logit": -5.187554719742668,
+          "mean_pooled_score": 0.005554622436316384
+        },
+        {
+          "variant_id": "18-31592968-G-A",
+          "split": "test",
+          "gene_group": "TTR",
+          "label": 1,
+          "covariance_logit": -2.6331515312194824,
+          "covariance_score": 0.06703508033267029,
+          "mean_pooled_logit": -4.891495222990658,
+          "mean_pooled_score": 0.007454202239367638
+        },
+        {
+          "variant_id": "2-10043776-C-G",
+          "split": "test",
+          "gene_group": "KLF11",
+          "label": 0,
+          "covariance_logit": -4.994046211242676,
+          "covariance_score": 0.006732548525787994,
+          "mean_pooled_logit": -5.237363715876918,
+          "mean_pooled_score": 0.005286156306468855
+        },
+        {
+          "variant_id": "9-106928521-C-T",
+          "split": "test",
+          "gene_group": "ZNF462",
+          "label": 1,
+          "covariance_logit": 16.884523391723633,
+          "covariance_score": 0.9999999535329992,
+          "mean_pooled_logit": 1.2279720921698507,
+          "mean_pooled_score": 0.7734634458961235
+        },
+        {
+          "variant_id": "10-47350353-G-A",
+          "split": "test",
+          "gene_group": "RBP3",
+          "label": 0,
+          "covariance_logit": -3.517183542251587,
+          "covariance_score": 0.028827241579760663,
+          "mean_pooled_logit": -5.977573116930335,
+          "mean_pooled_score": 0.0025285610822734276
+        },
+        {
+          "variant_id": "2-32154386-C-T",
+          "split": "test",
+          "gene_group": "SPAST",
+          "label": 1,
+          "covariance_logit": -2.5404772758483887,
+          "covariance_score": 0.07306884104397779,
+          "mean_pooled_logit": -2.55624739991277,
+          "mean_pooled_score": 0.07200789897673812
+        },
+        {
+          "variant_id": "16-8801912-T-G",
+          "split": "test",
+          "gene_group": "PMM2",
+          "label": 1,
+          "covariance_logit": -0.24426588416099548,
+          "covariance_score": 0.43923535995491486,
+          "mean_pooled_logit": 3.127948439078387,
+          "mean_pooled_score": 0.9580309820299531
+        },
+        {
+          "variant_id": "2-61048369-T-C",
+          "split": "test",
+          "gene_group": "PEX13",
+          "label": 0,
+          "covariance_logit": -22.193056106567383,
+          "covariance_score": 2.2997371255019278e-10,
+          "mean_pooled_logit": -5.721050661876768,
+          "mean_pooled_score": 0.0032655679726405692
+        },
+        {
+          "variant_id": "6-135404967-C-T",
+          "split": "test",
+          "gene_group": "AHI1",
+          "label": 0,
+          "covariance_logit": -34.064537048339844,
+          "covariance_score": 1.6067915210477926e-15,
+          "mean_pooled_logit": -3.0547776999435783,
+          "mean_pooled_score": 0.04501165414194664
+        }
+      ]
+    },
+    {
+      "n_train": 24,
+      "seed": 42,
+      "train_ids": [
+        "19-4816229-G-A",
+        "9-34649479-C-T",
+        "5-149004910-C-T",
+        "1-160142417-T-A",
+        "17-80389254-G-A",
+        "2-38689764-T-C",
+        "3-120652589-T-G",
+        "17-5433147-T-C",
+        "1-197434829-T-C",
+        "20-49374931-G-A",
+        "14-24082697-G-A",
+        "3-38016993-G-C",
+        "5-1815884-T-C",
+        "2-165354603-G-T",
+        "10-19450384-G-C",
+        "8-19961011-G-A",
+        "19-7167940-T-G",
+        "16-29813807-G-A",
+        "14-20295764-G-A",
+        "22-36877700-G-A",
+        "7-44145617-G-C",
+        "2-47804966-C-T",
+        "12-56181739-G-A",
+        "2-227247456-A-G"
+      ],
+      "metrics": {
+        "covariance": {
+          "train": {
+            "n": 24,
+            "positives": 12,
+            "auroc": 1.0,
+            "auprc": 1.0,
+            "accuracy": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "confusion_matrix": [
+              [
+                12,
+                0
+              ],
+              [
+                0,
+                12
+              ]
+            ],
+            "brier_score": 0.0002072376451704597,
+            "classification_threshold": 0.5,
+            "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+            "undefined_metrics_reason": null,
+            "undefined_metrics": {}
+          },
+          "val": {
+            "n": 8,
+            "positives": 4,
+            "auroc": 1.0,
+            "auprc": 1.0,
+            "accuracy": 0.875,
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1": 0.8571428571428571,
+            "confusion_matrix": [
+              [
+                4,
+                0
+              ],
+              [
+                1,
+                3
+              ]
+            ],
+            "brier_score": 0.06184083431843451,
+            "classification_threshold": 0.5,
+            "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+            "undefined_metrics_reason": null,
+            "undefined_metrics": {}
+          },
+          "test": {
+            "n": 24,
+            "positives": 12,
+            "auroc": 0.9166666666666666,
+            "auprc": 0.9351343101343101,
+            "accuracy": 0.8333333333333334,
+            "precision": 0.9,
+            "recall": 0.75,
+            "f1": 0.8181818181818182,
+            "confusion_matrix": [
+              [
+                11,
+                1
+              ],
+              [
+                3,
+                9
+              ]
+            ],
+            "brier_score": 0.14268693278250316,
+            "classification_threshold": 0.5,
+            "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+            "undefined_metrics_reason": null,
+            "undefined_metrics": {}
+          }
+        },
+        "mean_pooled": {
+          "train": {
+            "n": 24,
+            "positives": 12,
+            "auroc": 1.0,
+            "auprc": 1.0,
+            "accuracy": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "confusion_matrix": [
+              [
+                12,
+                0
+              ],
+              [
+                0,
+                12
+              ]
+            ],
+            "brier_score": 1.3049649202229287e-06,
+            "classification_threshold": 0.5,
+            "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+            "undefined_metrics_reason": null,
+            "undefined_metrics": {}
+          },
+          "val": {
+            "n": 8,
+            "positives": 4,
+            "auroc": 1.0,
+            "auprc": 1.0,
+            "accuracy": 0.875,
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1": 0.8571428571428571,
+            "confusion_matrix": [
+              [
+                4,
+                0
+              ],
+              [
+                1,
+                3
+              ]
+            ],
+            "brier_score": 0.07627566905677272,
+            "classification_threshold": 0.5,
+            "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+            "undefined_metrics_reason": null,
+            "undefined_metrics": {}
+          },
+          "test": {
+            "n": 24,
+            "positives": 12,
+            "auroc": 0.8888888888888888,
+            "auprc": 0.8887859338517233,
+            "accuracy": 0.625,
+            "precision": 0.8,
+            "recall": 0.3333333333333333,
+            "f1": 0.47058823529411764,
+            "confusion_matrix": [
+              [
+                11,
+                1
+              ],
+              [
+                8,
+                4
+              ]
+            ],
+            "brier_score": 0.2582070590012038,
+            "classification_threshold": 0.5,
+            "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+            "undefined_metrics_reason": null,
+            "undefined_metrics": {}
+          }
+        }
+      },
+      "predictions": [
+        {
+          "variant_id": "20-3230813-C-G",
+          "split": "test",
+          "gene_group": "SLC4A11",
+          "label": 1,
+          "covariance_logit": 28.13523292541504,
+          "covariance_score": 0.999999999999396,
+          "mean_pooled_logit": 4.142708291298856,
+          "mean_pooled_score": 0.9843684397068484
+        },
+        {
+          "variant_id": "8-60823864-A-G",
+          "split": "test",
+          "gene_group": "CHD7",
+          "label": 1,
+          "covariance_logit": 10.90343952178955,
+          "covariance_score": 0.9999816054828083,
+          "mean_pooled_logit": -1.0946474069683392,
+          "mean_pooled_score": 0.25074415196247485
+        },
+        {
+          "variant_id": "10-133366002-G-A",
+          "split": "test",
+          "gene_group": "ECHS1",
+          "label": 1,
+          "covariance_logit": 0.46758201718330383,
+          "covariance_score": 0.6148112928505274,
+          "mean_pooled_logit": -5.179228625824369,
+          "mean_pooled_score": 0.00560080370470726
+        },
+        {
+          "variant_id": "9-132902658-T-A",
+          "split": "test",
+          "gene_group": "TSC1",
+          "label": 1,
+          "covariance_logit": 6.733688831329346,
+          "covariance_score": 0.998811280091899,
+          "mean_pooled_logit": -1.3166155838964901,
+          "mean_pooled_score": 0.21138192321431404
+        },
+        {
+          "variant_id": "9-136503340-C-T",
+          "split": "test",
+          "gene_group": "NOTCH1",
+          "label": 0,
+          "covariance_logit": -6.109299182891846,
+          "covariance_score": 0.0022171807441411107,
+          "mean_pooled_logit": -6.353824351887129,
+          "mean_pooled_score": 0.0017370571001285254
+        },
+        {
+          "variant_id": "1-226891600-G-C",
+          "split": "test",
+          "gene_group": "PSEN2",
+          "label": 0,
+          "covariance_logit": -14.938194274902344,
+          "covariance_score": 3.2540522006111467e-07,
+          "mean_pooled_logit": -7.081131393251057,
+          "mean_pooled_score": 0.0008401149239412819
+        },
+        {
+          "variant_id": "5-53055607-C-T",
+          "split": "test",
+          "gene_group": "ITGA2",
+          "label": 0,
+          "covariance_logit": -2.3845489025115967,
+          "covariance_score": 0.08435853363862178,
+          "mean_pooled_logit": -6.812421463131071,
+          "mean_pooled_score": 0.0010988172723898498
+        },
+        {
+          "variant_id": "2-27477684-C-T",
+          "split": "test",
+          "gene_group": "IFT172",
+          "label": 0,
+          "covariance_logit": -21.116756439208984,
+          "covariance_score": 6.746976577232957e-10,
+          "mean_pooled_logit": -7.903897232807758,
+          "mean_pooled_score": 0.00036916514518701125
+        },
+        {
+          "variant_id": "5-161848407-C-T",
+          "split": "test",
+          "gene_group": "GABRA1",
+          "label": 0,
+          "covariance_logit": 0.2755494713783264,
+          "covariance_score": 0.5684547815354628,
+          "mean_pooled_logit": -5.585241483578496,
+          "mean_pooled_score": 0.0037388122334304323
+        },
+        {
+          "variant_id": "4-186280334-G-A",
+          "split": "test",
+          "gene_group": "F11",
+          "label": 1,
+          "covariance_logit": -7.07014799118042,
+          "covariance_score": 0.0008493852229041836,
+          "mean_pooled_logit": -6.690831353299645,
+          "mean_pooled_score": 0.0012407083258373047
+        },
+        {
+          "variant_id": "4-3476490-C-A",
+          "split": "test",
+          "gene_group": "DOK7",
+          "label": 1,
+          "covariance_logit": 101.03199005126953,
+          "covariance_score": 1.0,
+          "mean_pooled_logit": 13.399320870689444,
+          "mean_pooled_score": 0.9999984838288585
+        },
+        {
+          "variant_id": "2-72887433-A-C",
+          "split": "test",
+          "gene_group": "LOC129934069|SPR",
+          "label": 1,
+          "covariance_logit": 4.501028537750244,
+          "covariance_score": 0.9890242280773811,
+          "mean_pooled_logit": 2.7492946071208815,
+          "mean_pooled_score": 0.9398734995208151
+        },
+        {
+          "variant_id": "3-4658252-G-C",
+          "split": "test",
+          "gene_group": "ITPR1",
+          "label": 0,
+          "covariance_logit": -1.8576136827468872,
+          "covariance_score": 0.13498143919396038,
+          "mean_pooled_logit": -3.9931205980419566,
+          "mean_pooled_score": 0.018108122595216047
+        },
+        {
+          "variant_id": "15-80180172-G-A",
+          "split": "test",
+          "gene_group": "FAH",
+          "label": 1,
+          "covariance_logit": 11.996638298034668,
+          "covariance_score": 0.9999938351358848,
+          "mean_pooled_logit": -0.45579686860778457,
+          "mean_pooled_score": 0.38798339584857794
+        },
+        {
+          "variant_id": "11-119078567-C-G",
+          "split": "test",
+          "gene_group": "VPS11",
+          "label": 0,
+          "covariance_logit": -18.548288345336914,
+          "covariance_score": 8.801986923922322e-09,
+          "mean_pooled_logit": -6.569462705637189,
+          "mean_pooled_score": 0.0014005863987959688
+        },
+        {
+          "variant_id": "16-28894763-G-C",
+          "split": "test",
+          "gene_group": "ATP2A1",
+          "label": 0,
+          "covariance_logit": -12.307162284851074,
+          "covariance_score": 4.51923961925193e-06,
+          "mean_pooled_logit": -8.348711594154732,
+          "mean_pooled_score": 0.00023664527513521147
+        },
+        {
+          "variant_id": "18-31592968-G-A",
+          "split": "test",
+          "gene_group": "TTR",
+          "label": 1,
+          "covariance_logit": -3.8931734561920166,
+          "covariance_score": 0.019973495320858983,
+          "mean_pooled_logit": -5.117049780942235,
+          "mean_pooled_score": 0.005957969345513128
+        },
+        {
+          "variant_id": "2-10043776-C-G",
+          "split": "test",
+          "gene_group": "KLF11",
+          "label": 0,
+          "covariance_logit": -4.700489521026611,
+          "covariance_score": 0.009008927272848428,
+          "mean_pooled_logit": -5.832930752118703,
+          "mean_pooled_score": 0.0029209220313967587
+        },
+        {
+          "variant_id": "9-106928521-C-T",
+          "split": "test",
+          "gene_group": "ZNF462",
+          "label": 1,
+          "covariance_logit": 16.38846206665039,
+          "covariance_score": 0.9999999236900226,
+          "mean_pooled_logit": 1.7900677133871217,
+          "mean_pooled_score": 0.8569355781782104
+        },
+        {
+          "variant_id": "10-47350353-G-A",
+          "split": "test",
+          "gene_group": "RBP3",
+          "label": 0,
+          "covariance_logit": -4.659077167510986,
+          "covariance_score": 0.009386265626400417,
+          "mean_pooled_logit": -6.579674617563138,
+          "mean_pooled_score": 0.0013863762426429853
+        },
+        {
+          "variant_id": "2-32154386-C-T",
+          "split": "test",
+          "gene_group": "SPAST",
+          "label": 1,
+          "covariance_logit": -4.129836559295654,
+          "covariance_score": 0.0158308602116581,
+          "mean_pooled_logit": -0.6979356646995785,
+          "mean_pooled_score": 0.3322700763432893
+        },
+        {
+          "variant_id": "16-8801912-T-G",
+          "split": "test",
+          "gene_group": "PMM2",
+          "label": 1,
+          "covariance_logit": 10.592578887939453,
+          "covariance_score": 0.9999748990280439,
+          "mean_pooled_logit": -1.7781714480777515,
+          "mean_pooled_score": 0.1445290700938155
+        },
+        {
+          "variant_id": "2-61048369-T-C",
+          "split": "test",
+          "gene_group": "PEX13",
+          "label": 0,
+          "covariance_logit": -25.662315368652344,
+          "covariance_score": 7.161401823893319e-12,
+          "mean_pooled_logit": -6.848012330036983,
+          "mean_pooled_score": 0.001060437913092387
+        },
+        {
+          "variant_id": "6-135404967-C-T",
+          "split": "test",
+          "gene_group": "AHI1",
+          "label": 0,
+          "covariance_logit": -22.159982681274414,
+          "covariance_score": 2.377069076743195e-10,
+          "mean_pooled_logit": 0.7532702576079975,
+          "mean_pooled_score": 0.6798908540071996
+        }
+      ]
+    },
+    {
+      "n_train": 24,
+      "seed": 43,
+      "train_ids": [
+        "9-34649479-C-T",
+        "5-149004910-C-T",
+        "1-94043317-T-C",
+        "10-70598553-G-A",
+        "6-157180967-A-G",
+        "2-38689764-T-C",
+        "17-5433147-T-C",
+        "1-197434829-T-C",
+        "2-241744765-G-A",
+        "5-1815884-T-C",
+        "10-19450384-G-C",
+        "19-7167940-T-G",
+        "9-115029451-G-A",
+        "16-29813807-G-A",
+        "14-20295764-G-A",
+        "10-124405545-C-G",
+        "7-44145617-G-C",
+        "2-47804966-C-T",
+        "14-88385821-G-A",
+        "2-26191619-G-A",
+        "12-56181739-G-A",
+        "1-3186487-G-A",
+        "4-88038399-G-A",
+        "2-227247456-A-G"
+      ],
+      "metrics": {
+        "covariance": {
+          "train": {
+            "n": 24,
+            "positives": 12,
+            "auroc": 1.0,
+            "auprc": 1.0,
+            "accuracy": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "confusion_matrix": [
+              [
+                12,
+                0
+              ],
+              [
+                0,
+                12
+              ]
+            ],
+            "brier_score": 9.292974240795121e-05,
+            "classification_threshold": 0.5,
+            "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+            "undefined_metrics_reason": null,
+            "undefined_metrics": {}
+          },
+          "val": {
+            "n": 8,
+            "positives": 4,
+            "auroc": 0.625,
+            "auprc": 0.7678571428571428,
+            "accuracy": 0.625,
+            "precision": 1.0,
+            "recall": 0.25,
+            "f1": 0.4,
+            "confusion_matrix": [
+              [
+                4,
+                0
+              ],
+              [
+                3,
+                1
+              ]
+            ],
+            "brier_score": 0.30861784383919166,
+            "classification_threshold": 0.5,
+            "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+            "undefined_metrics_reason": null,
+            "undefined_metrics": {}
+          },
+          "test": {
+            "n": 24,
+            "positives": 12,
+            "auroc": 0.9166666666666666,
+            "auprc": 0.9355596405228759,
+            "accuracy": 0.8333333333333334,
+            "precision": 1.0,
+            "recall": 0.6666666666666666,
+            "f1": 0.8,
+            "confusion_matrix": [
+              [
+                12,
+                0
+              ],
+              [
+                4,
+                8
+              ]
+            ],
+            "brier_score": 0.1508739831468969,
+            "classification_threshold": 0.5,
+            "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+            "undefined_metrics_reason": null,
+            "undefined_metrics": {}
+          }
+        },
+        "mean_pooled": {
+          "train": {
+            "n": 24,
+            "positives": 12,
+            "auroc": 1.0,
+            "auprc": 1.0,
+            "accuracy": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "confusion_matrix": [
+              [
+                12,
+                0
+              ],
+              [
+                0,
+                12
+              ]
+            ],
+            "brier_score": 1.3471700409853508e-06,
+            "classification_threshold": 0.5,
+            "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+            "undefined_metrics_reason": null,
+            "undefined_metrics": {}
+          },
+          "val": {
+            "n": 8,
+            "positives": 4,
+            "auroc": 0.75,
+            "auprc": 0.875,
+            "accuracy": 0.75,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666,
+            "confusion_matrix": [
+              [
+                4,
+                0
+              ],
+              [
+                2,
+                2
+              ]
+            ],
+            "brier_score": 0.16325532081195218,
+            "classification_threshold": 0.5,
+            "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+            "undefined_metrics_reason": null,
+            "undefined_metrics": {}
+          },
+          "test": {
+            "n": 24,
+            "positives": 12,
+            "auroc": 0.9166666666666665,
+            "auprc": 0.9207715351097703,
+            "accuracy": 0.7083333333333334,
+            "precision": 1.0,
+            "recall": 0.4166666666666667,
+            "f1": 0.5882352941176471,
+            "confusion_matrix": [
+              [
+                12,
+                0
+              ],
+              [
+                7,
+                5
+              ]
+            ],
+            "brier_score": 0.2495464085715511,
+            "classification_threshold": 0.5,
+            "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+            "undefined_metrics_reason": null,
+            "undefined_metrics": {}
+          }
+        }
+      },
+      "predictions": [
+        {
+          "variant_id": "20-3230813-C-G",
+          "split": "test",
+          "gene_group": "SLC4A11",
+          "label": 1,
+          "covariance_logit": 18.010456085205078,
+          "covariance_score": 0.9999999849284369,
+          "mean_pooled_logit": 4.136209719955399,
+          "mean_pooled_score": 0.9842681294008727
+        },
+        {
+          "variant_id": "8-60823864-A-G",
+          "split": "test",
+          "gene_group": "CHD7",
+          "label": 1,
+          "covariance_logit": 4.6529622077941895,
+          "covariance_score": 0.9905567055640068,
+          "mean_pooled_logit": -1.88675960156974,
+          "mean_pooled_score": 0.13161437927648936
+        },
+        {
+          "variant_id": "10-133366002-G-A",
+          "split": "test",
+          "gene_group": "ECHS1",
+          "label": 1,
+          "covariance_logit": -0.9827864170074463,
+          "covariance_score": 0.27233924763124295,
+          "mean_pooled_logit": -5.323315394843446,
+          "mean_pooled_score": 0.00485289375171478
+        },
+        {
+          "variant_id": "9-132902658-T-A",
+          "split": "test",
+          "gene_group": "TSC1",
+          "label": 1,
+          "covariance_logit": 6.102165222167969,
+          "covariance_score": 0.9977669808677551,
+          "mean_pooled_logit": -2.5499055652485816,
+          "mean_pooled_score": 0.07243282982829613
+        },
+        {
+          "variant_id": "9-136503340-C-T",
+          "split": "test",
+          "gene_group": "NOTCH1",
+          "label": 0,
+          "covariance_logit": -9.772439956665039,
+          "covariance_score": 5.699785307770182e-05,
+          "mean_pooled_logit": -5.698895818830978,
+          "mean_pooled_score": 0.003338479272675568
+        },
+        {
+          "variant_id": "1-226891600-G-C",
+          "split": "test",
+          "gene_group": "PSEN2",
+          "label": 0,
+          "covariance_logit": -12.45716381072998,
+          "covariance_score": 3.889742100982586e-06,
+          "mean_pooled_logit": -7.268921957776394,
+          "mean_pooled_score": 0.0006963775568893317
+        },
+        {
+          "variant_id": "5-53055607-C-T",
+          "split": "test",
+          "gene_group": "ITGA2",
+          "label": 0,
+          "covariance_logit": -2.503117561340332,
+          "covariance_score": 0.07563991616921097,
+          "mean_pooled_logit": -7.089864627651375,
+          "mean_pooled_score": 0.0008328160315515173
+        },
+        {
+          "variant_id": "2-27477684-C-T",
+          "split": "test",
+          "gene_group": "IFT172",
+          "label": 0,
+          "covariance_logit": -28.608821868896484,
+          "covariance_score": 3.7613740896849376e-13,
+          "mean_pooled_logit": -8.305334774242992,
+          "mean_pooled_score": 0.00024713348597386875
+        },
+        {
+          "variant_id": "5-161848407-C-T",
+          "split": "test",
+          "gene_group": "GABRA1",
+          "label": 0,
+          "covariance_logit": -4.179853916168213,
+          "covariance_score": 0.015070157986369164,
+          "mean_pooled_logit": -6.3632458497710065,
+          "mean_pooled_score": 0.001720796303150715
+        },
+        {
+          "variant_id": "4-186280334-G-A",
+          "split": "test",
+          "gene_group": "F11",
+          "label": 1,
+          "covariance_logit": -8.425127983093262,
+          "covariance_score": 0.00021923918694333113,
+          "mean_pooled_logit": -6.65916492204634,
+          "mean_pooled_score": 0.001280574700071811
+        },
+        {
+          "variant_id": "4-3476490-C-A",
+          "split": "test",
+          "gene_group": "DOK7",
+          "label": 1,
+          "covariance_logit": 76.99239349365234,
+          "covariance_score": 1.0,
+          "mean_pooled_logit": 14.631202873382229,
+          "mean_pooled_score": 0.9999995576672083
+        },
+        {
+          "variant_id": "2-72887433-A-C",
+          "split": "test",
+          "gene_group": "LOC129934069|SPR",
+          "label": 1,
+          "covariance_logit": 17.21173858642578,
+          "covariance_score": 0.9999999665006105,
+          "mean_pooled_logit": 5.908735360270754,
+          "mean_pooled_score": 0.9972917356177928
+        },
+        {
+          "variant_id": "3-4658252-G-C",
+          "split": "test",
+          "gene_group": "ITPR1",
+          "label": 0,
+          "covariance_logit": -7.420165538787842,
+          "covariance_score": 0.0005986913252786036,
+          "mean_pooled_logit": -4.893096389623933,
+          "mean_pooled_score": 0.0074423651263412745
+        },
+        {
+          "variant_id": "15-80180172-G-A",
+          "split": "test",
+          "gene_group": "FAH",
+          "label": 1,
+          "covariance_logit": 6.428069591522217,
+          "covariance_score": 0.9983870393157329,
+          "mean_pooled_logit": 0.12396601349010863,
+          "mean_pooled_score": 0.5309518755884493
+        },
+        {
+          "variant_id": "11-119078567-C-G",
+          "split": "test",
+          "gene_group": "VPS11",
+          "label": 0,
+          "covariance_logit": -15.446802139282227,
+          "covariance_score": 1.9567664021276616e-07,
+          "mean_pooled_logit": -6.687136356275333,
+          "mean_pooled_score": 0.0012452955000381743
+        },
+        {
+          "variant_id": "16-28894763-G-C",
+          "split": "test",
+          "gene_group": "ATP2A1",
+          "label": 0,
+          "covariance_logit": -15.44594669342041,
+          "covariance_score": 1.9584410256938557e-07,
+          "mean_pooled_logit": -7.900922248958182,
+          "mean_pooled_score": 0.00037026463355395114
+        },
+        {
+          "variant_id": "18-31592968-G-A",
+          "split": "test",
+          "gene_group": "TTR",
+          "label": 1,
+          "covariance_logit": -3.8090875148773193,
+          "covariance_score": 0.021687618308515847,
+          "mean_pooled_logit": -5.39947108826957,
+          "mean_pooled_score": 0.004498641220390303
+        },
+        {
+          "variant_id": "2-10043776-C-G",
+          "split": "test",
+          "gene_group": "KLF11",
+          "label": 0,
+          "covariance_logit": -3.062969207763672,
+          "covariance_score": 0.044660846656702946,
+          "mean_pooled_logit": -6.0703795322534235,
+          "mean_pooled_score": 0.002304971046382735
+        },
+        {
+          "variant_id": "9-106928521-C-T",
+          "split": "test",
+          "gene_group": "ZNF462",
+          "label": 1,
+          "covariance_logit": 9.861801147460938,
+          "covariance_score": 0.9999478743430452,
+          "mean_pooled_logit": 0.8267701810702973,
+          "mean_pooled_score": 0.6956715688077781
+        },
+        {
+          "variant_id": "10-47350353-G-A",
+          "split": "test",
+          "gene_group": "RBP3",
+          "label": 0,
+          "covariance_logit": -5.283297061920166,
+          "covariance_score": 0.005050036073167527,
+          "mean_pooled_logit": -6.6951830551611256,
+          "mean_pooled_score": 0.0012353275192021884
+        },
+        {
+          "variant_id": "2-32154386-C-T",
+          "split": "test",
+          "gene_group": "SPAST",
+          "label": 1,
+          "covariance_logit": -8.728233337402344,
+          "covariance_score": 0.00016192208866219605,
+          "mean_pooled_logit": -1.8074495398044579,
+          "mean_pooled_score": 0.14094665452456798
+        },
+        {
+          "variant_id": "16-8801912-T-G",
+          "split": "test",
+          "gene_group": "PMM2",
+          "label": 1,
+          "covariance_logit": 0.5906209349632263,
+          "covariance_score": 0.6435076043217752,
+          "mean_pooled_logit": -0.23401254036342264,
+          "mean_pooled_score": 0.44176238936091394
+        },
+        {
+          "variant_id": "2-61048369-T-C",
+          "split": "test",
+          "gene_group": "PEX13",
+          "label": 0,
+          "covariance_logit": -33.18923568725586,
+          "covariance_score": 3.855654251477262e-15,
+          "mean_pooled_logit": -6.849700163212713,
+          "mean_pooled_score": 0.0010586514736510223
+        },
+        {
+          "variant_id": "6-135404967-C-T",
+          "split": "test",
+          "gene_group": "AHI1",
+          "label": 0,
+          "covariance_logit": -34.442718505859375,
+          "covariance_score": 1.1008227877363491e-15,
+          "mean_pooled_logit": -1.4996315076168591,
+          "mean_pooled_score": 0.1824804895695959
+        }
+      ]
+    },
+    {
+      "n_train": 24,
+      "seed": 44,
+      "train_ids": [
+        "19-4816229-G-A",
+        "9-34649479-C-T",
+        "5-149004910-C-T",
+        "10-70598553-G-A",
+        "1-160142417-T-A",
+        "18-31087948-G-A",
+        "1-197434829-T-C",
+        "14-24082697-G-A",
+        "2-241744765-G-A",
+        "3-38016993-G-C",
+        "5-1815884-T-C",
+        "10-19450384-G-C",
+        "1-155291891-C-T",
+        "6-64822806-T-G",
+        "9-115029451-G-A",
+        "14-20295764-G-A",
+        "11-2160847-A-G",
+        "22-36877700-G-A",
+        "7-44145617-G-C",
+        "14-88385821-G-A",
+        "2-26191619-G-A",
+        "1-3186487-G-A",
+        "4-88038399-G-A",
+        "2-227247456-A-G"
+      ],
+      "metrics": {
+        "covariance": {
+          "train": {
+            "n": 24,
+            "positives": 12,
+            "auroc": 1.0,
+            "auprc": 1.0,
+            "accuracy": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "confusion_matrix": [
+              [
+                12,
+                0
+              ],
+              [
+                0,
+                12
+              ]
+            ],
+            "brier_score": 2.206510064009114e-05,
+            "classification_threshold": 0.5,
+            "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+            "undefined_metrics_reason": null,
+            "undefined_metrics": {}
+          },
+          "val": {
+            "n": 8,
+            "positives": 4,
+            "auroc": 0.6875,
+            "auprc": 0.7928571428571428,
+            "accuracy": 0.75,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666,
+            "confusion_matrix": [
+              [
+                4,
+                0
+              ],
+              [
+                2,
+                2
+              ]
+            ],
+            "brier_score": 0.2507866834308654,
+            "classification_threshold": 0.5,
+            "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+            "undefined_metrics_reason": null,
+            "undefined_metrics": {}
+          },
+          "test": {
+            "n": 24,
+            "positives": 12,
+            "auroc": 0.923611111111111,
+            "auprc": 0.9373588829471182,
+            "accuracy": 0.7916666666666666,
+            "precision": 1.0,
+            "recall": 0.5833333333333334,
+            "f1": 0.7368421052631579,
+            "confusion_matrix": [
+              [
+                12,
+                0
+              ],
+              [
+                5,
+                7
+              ]
+            ],
+            "brier_score": 0.1757156630410567,
+            "classification_threshold": 0.5,
+            "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+            "undefined_metrics_reason": null,
+            "undefined_metrics": {}
+          }
+        },
+        "mean_pooled": {
+          "train": {
+            "n": 24,
+            "positives": 12,
+            "auroc": 1.0,
+            "auprc": 1.0,
+            "accuracy": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "confusion_matrix": [
+              [
+                12,
+                0
+              ],
+              [
+                0,
+                12
+              ]
+            ],
+            "brier_score": 1.2461337405917012e-06,
+            "classification_threshold": 0.5,
+            "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+            "undefined_metrics_reason": null,
+            "undefined_metrics": {}
+          },
+          "val": {
+            "n": 8,
+            "positives": 4,
+            "auroc": 0.75,
+            "auprc": 0.875,
+            "accuracy": 0.875,
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1": 0.8571428571428571,
+            "confusion_matrix": [
+              [
+                4,
+                0
+              ],
+              [
+                1,
+                3
+              ]
+            ],
+            "brier_score": 0.12523318642096498,
+            "classification_threshold": 0.5,
+            "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+            "undefined_metrics_reason": null,
+            "undefined_metrics": {}
+          },
+          "test": {
+            "n": 24,
+            "positives": 12,
+            "auroc": 0.9097222222222222,
+            "auprc": 0.9316239316239316,
+            "accuracy": 0.7916666666666666,
+            "precision": 1.0,
+            "recall": 0.5833333333333334,
+            "f1": 0.7368421052631579,
+            "confusion_matrix": [
+              [
+                12,
+                0
+              ],
+              [
+                5,
+                7
+              ]
+            ],
+            "brier_score": 0.18476808504429265,
+            "classification_threshold": 0.5,
+            "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+            "undefined_metrics_reason": null,
+            "undefined_metrics": {}
+          }
+        }
+      },
+      "predictions": [
+        {
+          "variant_id": "20-3230813-C-G",
+          "split": "test",
+          "gene_group": "SLC4A11",
+          "label": 1,
+          "covariance_logit": 25.24056053161621,
+          "covariance_score": 0.9999999999890814,
+          "mean_pooled_logit": 7.639454149046412,
+          "mean_pooled_score": 0.9995191403528684
+        },
+        {
+          "variant_id": "8-60823864-A-G",
+          "split": "test",
+          "gene_group": "CHD7",
+          "label": 1,
+          "covariance_logit": 8.687966346740723,
+          "covariance_score": 0.9998314258650812,
+          "mean_pooled_logit": 1.2112970881301333,
+          "mean_pooled_score": 0.7705283733776727
+        },
+        {
+          "variant_id": "10-133366002-G-A",
+          "split": "test",
+          "gene_group": "ECHS1",
+          "label": 1,
+          "covariance_logit": -0.5470917820930481,
+          "covariance_score": 0.36653940060724366,
+          "mean_pooled_logit": -4.7782639005033385,
+          "mean_pooled_score": 0.008340439914175357
+        },
+        {
+          "variant_id": "9-132902658-T-A",
+          "split": "test",
+          "gene_group": "TSC1",
+          "label": 1,
+          "covariance_logit": 9.95661449432373,
+          "covariance_score": 0.9999525892663307,
+          "mean_pooled_logit": -0.42631693426453365,
+          "mean_pooled_score": 0.3950061557414568
+        },
+        {
+          "variant_id": "9-136503340-C-T",
+          "split": "test",
+          "gene_group": "NOTCH1",
+          "label": 0,
+          "covariance_logit": -7.996124744415283,
+          "covariance_score": 0.0003366517809158162,
+          "mean_pooled_logit": -5.128078848805031,
+          "mean_pooled_score": 0.005893004640208377
+        },
+        {
+          "variant_id": "1-226891600-G-C",
+          "split": "test",
+          "gene_group": "PSEN2",
+          "label": 0,
+          "covariance_logit": -16.666656494140625,
+          "covariance_score": 5.777806960184806e-08,
+          "mean_pooled_logit": -7.532013198468445,
+          "mean_pooled_score": 0.0005353720062937536
+        },
+        {
+          "variant_id": "5-53055607-C-T",
+          "split": "test",
+          "gene_group": "ITGA2",
+          "label": 0,
+          "covariance_logit": -1.761408805847168,
+          "covariance_score": 0.1466139846051004,
+          "mean_pooled_logit": -7.186995985478009,
+          "mean_pooled_score": 0.0007557861762755392
+        },
+        {
+          "variant_id": "2-27477684-C-T",
+          "split": "test",
+          "gene_group": "IFT172",
+          "label": 0,
+          "covariance_logit": -26.627187728881836,
+          "covariance_score": 2.7287220527275833e-12,
+          "mean_pooled_logit": -8.281560588350676,
+          "mean_pooled_score": 0.00025307777683571613
+        },
+        {
+          "variant_id": "5-161848407-C-T",
+          "split": "test",
+          "gene_group": "GABRA1",
+          "label": 0,
+          "covariance_logit": -4.9841437339782715,
+          "covariance_score": 0.006799093080576859,
+          "mean_pooled_logit": -5.622190193550876,
+          "mean_pooled_score": 0.0036036776695097354
+        },
+        {
+          "variant_id": "4-186280334-G-A",
+          "split": "test",
+          "gene_group": "F11",
+          "label": 1,
+          "covariance_logit": -8.039666175842285,
+          "covariance_score": 0.00032231264365898977,
+          "mean_pooled_logit": -6.618061430898636,
+          "mean_pooled_score": 0.0013342358371838615
+        },
+        {
+          "variant_id": "4-3476490-C-A",
+          "split": "test",
+          "gene_group": "DOK7",
+          "label": 1,
+          "covariance_logit": 124.86749267578125,
+          "covariance_score": 1.0,
+          "mean_pooled_logit": 19.2927453016884,
+          "mean_pooled_score": 0.999999995819125
+        },
+        {
+          "variant_id": "2-72887433-A-C",
+          "split": "test",
+          "gene_group": "LOC129934069|SPR",
+          "label": 1,
+          "covariance_logit": 25.522878646850586,
+          "covariance_score": 0.999999999991767,
+          "mean_pooled_logit": 5.607738586701301,
+          "mean_pooled_score": 0.9963440570461611
+        },
+        {
+          "variant_id": "3-4658252-G-C",
+          "split": "test",
+          "gene_group": "ITPR1",
+          "label": 0,
+          "covariance_logit": -9.77613639831543,
+          "covariance_score": 5.678756470292757e-05,
+          "mean_pooled_logit": -3.3257062564607733,
+          "mean_pooled_score": 0.03469976520920779
+        },
+        {
+          "variant_id": "15-80180172-G-A",
+          "split": "test",
+          "gene_group": "FAH",
+          "label": 1,
+          "covariance_logit": 12.00007438659668,
+          "covariance_score": 0.9999938562824221,
+          "mean_pooled_logit": 1.780280742571328,
+          "mean_pooled_score": 0.8557315284674736
+        },
+        {
+          "variant_id": "11-119078567-C-G",
+          "split": "test",
+          "gene_group": "VPS11",
+          "label": 0,
+          "covariance_logit": -23.030534744262695,
+          "covariance_score": 9.953271375313537e-11,
+          "mean_pooled_logit": -5.435971186465115,
+          "mean_pooled_score": 0.004338100394879814
+        },
+        {
+          "variant_id": "16-28894763-G-C",
+          "split": "test",
+          "gene_group": "ATP2A1",
+          "label": 0,
+          "covariance_logit": -22.40679359436035,
+          "covariance_score": 1.8571765218545668e-10,
+          "mean_pooled_logit": -6.918842857682225,
+          "mean_pooled_score": 0.000987996559379466
+        },
+        {
+          "variant_id": "18-31592968-G-A",
+          "split": "test",
+          "gene_group": "TTR",
+          "label": 1,
+          "covariance_logit": -3.1406333446502686,
+          "covariance_score": 0.041461941069969144,
+          "mean_pooled_logit": -4.523708938710671,
+          "mean_pooled_score": 0.01073228033479831
+        },
+        {
+          "variant_id": "2-10043776-C-G",
+          "split": "test",
+          "gene_group": "KLF11",
+          "label": 0,
+          "covariance_logit": -5.134459018707275,
+          "covariance_score": 0.005855745422318496,
+          "mean_pooled_logit": -5.478860110802491,
+          "mean_pooled_score": 0.004156734418811194
+        },
+        {
+          "variant_id": "9-106928521-C-T",
+          "split": "test",
+          "gene_group": "ZNF462",
+          "label": 1,
+          "covariance_logit": 15.46353816986084,
+          "covariance_score": 0.9999998075709577,
+          "mean_pooled_logit": 3.5636966631485567,
+          "mean_pooled_score": 0.9724467993254957
+        },
+        {
+          "variant_id": "10-47350353-G-A",
+          "split": "test",
+          "gene_group": "RBP3",
+          "label": 0,
+          "covariance_logit": -3.808281898498535,
+          "covariance_score": 0.02170471787329028,
+          "mean_pooled_logit": -6.094857615738987,
+          "mean_pooled_score": 0.0022493600860083417
+        },
+        {
+          "variant_id": "2-32154386-C-T",
+          "split": "test",
+          "gene_group": "SPAST",
+          "label": 1,
+          "covariance_logit": -6.598300457000732,
+          "covariance_score": 0.0013608276319819561,
+          "mean_pooled_logit": -1.6469615933855666,
+          "mean_pooled_score": 0.1615200218683317
+        },
+        {
+          "variant_id": "16-8801912-T-G",
+          "split": "test",
+          "gene_group": "PMM2",
+          "label": 1,
+          "covariance_logit": -2.7036800384521484,
+          "covariance_score": 0.06275655432752529,
+          "mean_pooled_logit": 0.012524237745343836,
+          "mean_pooled_score": 0.5031310185097178
+        },
+        {
+          "variant_id": "2-61048369-T-C",
+          "split": "test",
+          "gene_group": "PEX13",
+          "label": 0,
+          "covariance_logit": -29.114564895629883,
+          "covariance_score": 2.2683241825711257e-13,
+          "mean_pooled_logit": -6.025639950469766,
+          "mean_pooled_score": 0.002410181937546443
+        },
+        {
+          "variant_id": "6-135404967-C-T",
+          "split": "test",
+          "gene_group": "AHI1",
+          "label": 0,
+          "covariance_logit": -34.15530776977539,
+          "covariance_score": 1.4673655133320582e-15,
+          "mean_pooled_logit": -0.8998133112184847,
+          "mean_pooled_score": 0.289088863487794
+        }
+      ]
+    },
+    {
+      "n_train": 40,
+      "seed": 42,
+      "train_ids": [
+        "19-4816229-G-A",
+        "9-34649479-C-T",
+        "5-149004910-C-T",
+        "15-90271712-A-G",
+        "1-94043317-T-C",
+        "10-70598553-G-A",
+        "1-160142417-T-A",
+        "6-157180967-A-G",
+        "18-31087948-G-A",
+        "17-80389254-G-A",
+        "2-38689764-T-C",
+        "3-120652589-T-G",
+        "17-5433147-T-C",
+        "1-197434829-T-C",
+        "20-49374931-G-A",
+        "14-24082697-G-A",
+        "2-241744765-G-A",
+        "3-38016993-G-C",
+        "5-1815884-T-C",
+        "2-165354603-G-T",
+        "10-19450384-G-C",
+        "1-155291891-C-T",
+        "8-19961011-G-A",
+        "6-64822806-T-G",
+        "19-7167940-T-G",
+        "9-115029451-G-A",
+        "16-29813807-G-A",
+        "14-20295764-G-A",
+        "10-124405545-C-G",
+        "11-2160847-A-G",
+        "22-36877700-G-A",
+        "7-44145617-G-C",
+        "2-47804966-C-T",
+        "14-88385821-G-A",
+        "2-26191619-G-A",
+        "2-219418809-A-G",
+        "12-56181739-G-A",
+        "1-3186487-G-A",
+        "4-88038399-G-A",
+        "2-227247456-A-G"
+      ],
+      "metrics": {
+        "covariance": {
+          "train": {
+            "n": 40,
+            "positives": 20,
+            "auroc": 1.0,
+            "auprc": 1.0,
+            "accuracy": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "confusion_matrix": [
+              [
+                20,
+                0
+              ],
+              [
+                0,
+                20
+              ]
+            ],
+            "brier_score": 0.0015856022994921535,
+            "classification_threshold": 0.5,
+            "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+            "undefined_metrics_reason": null,
+            "undefined_metrics": {}
+          },
+          "val": {
+            "n": 8,
+            "positives": 4,
+            "auroc": 1.0,
+            "auprc": 1.0,
+            "accuracy": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "confusion_matrix": [
+              [
+                4,
+                0
+              ],
+              [
+                0,
+                4
+              ]
+            ],
+            "brier_score": 0.003863061558258607,
+            "classification_threshold": 0.5,
+            "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+            "undefined_metrics_reason": null,
+            "undefined_metrics": {}
+          },
+          "test": {
+            "n": 24,
+            "positives": 12,
+            "auroc": 0.9236111111111112,
+            "auprc": 0.9424242424242424,
+            "accuracy": 0.8333333333333334,
+            "precision": 0.8333333333333334,
+            "recall": 0.8333333333333334,
+            "f1": 0.8333333333333334,
+            "confusion_matrix": [
+              [
+                10,
+                2
+              ],
+              [
+                2,
+                10
+              ]
+            ],
+            "brier_score": 0.13309045591389465,
+            "classification_threshold": 0.5,
+            "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+            "undefined_metrics_reason": null,
+            "undefined_metrics": {}
+          }
+        },
+        "mean_pooled": {
+          "train": {
+            "n": 40,
+            "positives": 20,
+            "auroc": 1.0,
+            "auprc": 1.0,
+            "accuracy": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "confusion_matrix": [
+              [
+                20,
+                0
+              ],
+              [
+                0,
+                20
+              ]
+            ],
+            "brier_score": 1.0361476517370193e-06,
+            "classification_threshold": 0.5,
+            "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+            "undefined_metrics_reason": null,
+            "undefined_metrics": {}
+          },
+          "val": {
+            "n": 8,
+            "positives": 4,
+            "auroc": 1.0,
+            "auprc": 1.0,
+            "accuracy": 0.875,
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1": 0.8571428571428571,
+            "confusion_matrix": [
+              [
+                4,
+                0
+              ],
+              [
+                1,
+                3
+              ]
+            ],
+            "brier_score": 0.1217163233212334,
+            "classification_threshold": 0.5,
+            "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+            "undefined_metrics_reason": null,
+            "undefined_metrics": {}
+          },
+          "test": {
+            "n": 24,
+            "positives": 12,
+            "auroc": 0.8888888888888888,
+            "auprc": 0.9000432437932437,
+            "accuracy": 0.7916666666666666,
+            "precision": 0.8888888888888888,
+            "recall": 0.6666666666666666,
+            "f1": 0.7619047619047619,
+            "confusion_matrix": [
+              [
+                11,
+                1
+              ],
+              [
+                4,
+                8
+              ]
+            ],
+            "brier_score": 0.19561805215197145,
+            "classification_threshold": 0.5,
+            "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+            "undefined_metrics_reason": null,
+            "undefined_metrics": {}
+          }
+        }
+      },
+      "predictions": [
+        {
+          "variant_id": "20-3230813-C-G",
+          "split": "test",
+          "gene_group": "SLC4A11",
+          "label": 1,
+          "covariance_logit": 46.01553726196289,
+          "covariance_score": 1.0,
+          "mean_pooled_logit": 9.775577889754972,
+          "mean_pooled_score": 0.9999431807119001
+        },
+        {
+          "variant_id": "8-60823864-A-G",
+          "split": "test",
+          "gene_group": "CHD7",
+          "label": 1,
+          "covariance_logit": 18.703054428100586,
+          "covariance_score": 0.9999999924600814,
+          "mean_pooled_logit": 0.4727955541360376,
+          "mean_pooled_score": 0.6160452127721704
+        },
+        {
+          "variant_id": "10-133366002-G-A",
+          "split": "test",
+          "gene_group": "ECHS1",
+          "label": 1,
+          "covariance_logit": 0.8957707285881042,
+          "covariance_score": 0.7100796112620239,
+          "mean_pooled_logit": -5.220816141638401,
+          "mean_pooled_score": 0.005373883131653133
+        },
+        {
+          "variant_id": "9-132902658-T-A",
+          "split": "test",
+          "gene_group": "TSC1",
+          "label": 1,
+          "covariance_logit": 13.126792907714844,
+          "covariance_score": 0.9999980088434336,
+          "mean_pooled_logit": 0.5984256663509004,
+          "mean_pooled_score": 0.645296040959058
+        },
+        {
+          "variant_id": "9-136503340-C-T",
+          "split": "test",
+          "gene_group": "NOTCH1",
+          "label": 0,
+          "covariance_logit": -3.8009188175201416,
+          "covariance_score": 0.021861614598176298,
+          "mean_pooled_logit": -6.1547479019016995,
+          "mean_pooled_score": 0.0021188770438340795
+        },
+        {
+          "variant_id": "1-226891600-G-C",
+          "split": "test",
+          "gene_group": "PSEN2",
+          "label": 0,
+          "covariance_logit": -8.099427223205566,
+          "covariance_score": 0.00030362083444532295,
+          "mean_pooled_logit": -7.808125362453984,
+          "mean_pooled_score": 0.000406254113387142
+        },
+        {
+          "variant_id": "5-53055607-C-T",
+          "split": "test",
+          "gene_group": "ITGA2",
+          "label": 0,
+          "covariance_logit": -1.364074945449829,
+          "covariance_score": 0.20357881502286088,
+          "mean_pooled_logit": -7.236338274674124,
+          "mean_pooled_score": 0.0007194252282822918
+        },
+        {
+          "variant_id": "2-27477684-C-T",
+          "split": "test",
+          "gene_group": "IFT172",
+          "label": 0,
+          "covariance_logit": -15.957149505615234,
+          "covariance_score": 1.1746215702877469e-07,
+          "mean_pooled_logit": -8.550732411828744,
+          "mean_pooled_score": 0.0001933659990954896
+        },
+        {
+          "variant_id": "5-161848407-C-T",
+          "split": "test",
+          "gene_group": "GABRA1",
+          "label": 0,
+          "covariance_logit": 0.5058081150054932,
+          "covariance_score": 0.6238232858312379,
+          "mean_pooled_logit": -6.330877565889546,
+          "mean_pooled_score": 0.0017773061616691763
+        },
+        {
+          "variant_id": "4-186280334-G-A",
+          "split": "test",
+          "gene_group": "F11",
+          "label": 1,
+          "covariance_logit": -6.314190864562988,
+          "covariance_score": 0.0018071583175020567,
+          "mean_pooled_logit": -7.121400871735318,
+          "mean_pooled_score": 0.0008069828186319508
+        },
+        {
+          "variant_id": "4-3476490-C-A",
+          "split": "test",
+          "gene_group": "DOK7",
+          "label": 1,
+          "covariance_logit": 172.25245666503906,
+          "covariance_score": 1.0,
+          "mean_pooled_logit": 19.2719015187348,
+          "mean_pooled_score": 0.9999999957310652
+        },
+        {
+          "variant_id": "2-72887433-A-C",
+          "split": "test",
+          "gene_group": "LOC129934069|SPR",
+          "label": 1,
+          "covariance_logit": 8.862614631652832,
+          "covariance_score": 0.9998584356545414,
+          "mean_pooled_logit": 8.600815759072026,
+          "mean_pooled_score": 0.9998160781645269
+        },
+        {
+          "variant_id": "3-4658252-G-C",
+          "split": "test",
+          "gene_group": "ITPR1",
+          "label": 0,
+          "covariance_logit": 2.5074398517608643,
+          "covariance_score": 0.9246617382104025,
+          "mean_pooled_logit": -3.6607727660400924,
+          "mean_pooled_score": 0.02506806908040256
+        },
+        {
+          "variant_id": "15-80180172-G-A",
+          "split": "test",
+          "gene_group": "FAH",
+          "label": 1,
+          "covariance_logit": 20.17574691772461,
+          "covariance_score": 0.9999999982710419,
+          "mean_pooled_logit": 2.305629993652373,
+          "mean_pooled_score": 0.9093422405104666
+        },
+        {
+          "variant_id": "11-119078567-C-G",
+          "split": "test",
+          "gene_group": "VPS11",
+          "label": 0,
+          "covariance_logit": -9.961593627929688,
+          "covariance_score": 4.717526712447913e-05,
+          "mean_pooled_logit": -6.140458704923139,
+          "mean_pooled_score": 0.0021493059048877934
+        },
+        {
+          "variant_id": "16-28894763-G-C",
+          "split": "test",
+          "gene_group": "ATP2A1",
+          "label": 0,
+          "covariance_logit": -7.0263824462890625,
+          "covariance_score": 0.000887350775535676,
+          "mean_pooled_logit": -8.421831261384906,
+          "mean_pooled_score": 0.0002199629909821655
+        },
+        {
+          "variant_id": "18-31592968-G-A",
+          "split": "test",
+          "gene_group": "TTR",
+          "label": 1,
+          "covariance_logit": -2.212026357650757,
+          "covariance_score": 0.09867570472133694,
+          "mean_pooled_logit": -4.85063388281776,
+          "mean_pooled_score": 0.0077626861182637915
+        },
+        {
+          "variant_id": "2-10043776-C-G",
+          "split": "test",
+          "gene_group": "KLF11",
+          "label": 0,
+          "covariance_logit": -2.08185076713562,
+          "covariance_score": 0.11087338576280792,
+          "mean_pooled_logit": -5.885697056401239,
+          "mean_pooled_score": 0.0027712075618632624
+        },
+        {
+          "variant_id": "9-106928521-C-T",
+          "split": "test",
+          "gene_group": "ZNF462",
+          "label": 1,
+          "covariance_logit": 27.900341033935547,
+          "covariance_score": 0.9999999999992362,
+          "mean_pooled_logit": 4.766682336368918,
+          "mean_pooled_score": 0.9915632229086284
+        },
+        {
+          "variant_id": "10-47350353-G-A",
+          "split": "test",
+          "gene_group": "RBP3",
+          "label": 0,
+          "covariance_logit": -2.8540608882904053,
+          "covariance_score": 0.05447178394547934,
+          "mean_pooled_logit": -6.816747565601537,
+          "mean_pooled_score": 0.0010940791333106656
+        },
+        {
+          "variant_id": "2-32154386-C-T",
+          "split": "test",
+          "gene_group": "SPAST",
+          "label": 1,
+          "covariance_logit": 6.142063617706299,
+          "covariance_score": 0.9978541333809624,
+          "mean_pooled_logit": 0.08283120033933145,
+          "mean_pooled_score": 0.5206959685043514
+        },
+        {
+          "variant_id": "16-8801912-T-G",
+          "split": "test",
+          "gene_group": "PMM2",
+          "label": 1,
+          "covariance_logit": 26.615734100341797,
+          "covariance_score": 0.9999999999972398,
+          "mean_pooled_logit": -1.0496296614435559,
+          "mean_pooled_score": 0.2592962223266739
+        },
+        {
+          "variant_id": "2-61048369-T-C",
+          "split": "test",
+          "gene_group": "PEX13",
+          "label": 0,
+          "covariance_logit": -18.791297912597656,
+          "covariance_score": 6.903081578233116e-09,
+          "mean_pooled_logit": -6.036357590141972,
+          "mean_pooled_score": 0.0023845496764276224
+        },
+        {
+          "variant_id": "6-135404967-C-T",
+          "split": "test",
+          "gene_group": "AHI1",
+          "label": 0,
+          "covariance_logit": -18.20071792602539,
+          "covariance_score": 1.2460303842068159e-08,
+          "mean_pooled_logit": 1.4740964901258828,
+          "mean_pooled_score": 0.8136792339977519
+        }
+      ]
+    },
+    {
+      "n_train": 40,
+      "seed": 43,
+      "train_ids": [
+        "19-4816229-G-A",
+        "9-34649479-C-T",
+        "5-149004910-C-T",
+        "15-90271712-A-G",
+        "1-94043317-T-C",
+        "10-70598553-G-A",
+        "1-160142417-T-A",
+        "6-157180967-A-G",
+        "18-31087948-G-A",
+        "17-80389254-G-A",
+        "2-38689764-T-C",
+        "3-120652589-T-G",
+        "17-5433147-T-C",
+        "1-197434829-T-C",
+        "20-49374931-G-A",
+        "14-24082697-G-A",
+        "2-241744765-G-A",
+        "3-38016993-G-C",
+        "5-1815884-T-C",
+        "2-165354603-G-T",
+        "10-19450384-G-C",
+        "1-155291891-C-T",
+        "8-19961011-G-A",
+        "6-64822806-T-G",
+        "19-7167940-T-G",
+        "9-115029451-G-A",
+        "16-29813807-G-A",
+        "14-20295764-G-A",
+        "10-124405545-C-G",
+        "11-2160847-A-G",
+        "22-36877700-G-A",
+        "7-44145617-G-C",
+        "2-47804966-C-T",
+        "14-88385821-G-A",
+        "2-26191619-G-A",
+        "2-219418809-A-G",
+        "12-56181739-G-A",
+        "1-3186487-G-A",
+        "4-88038399-G-A",
+        "2-227247456-A-G"
+      ],
+      "metrics": {
+        "covariance": {
+          "train": {
+            "n": 40,
+            "positives": 20,
+            "auroc": 1.0,
+            "auprc": 1.0,
+            "accuracy": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "confusion_matrix": [
+              [
+                20,
+                0
+              ],
+              [
+                0,
+                20
+              ]
+            ],
+            "brier_score": 7.311313096796754e-05,
+            "classification_threshold": 0.5,
+            "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+            "undefined_metrics_reason": null,
+            "undefined_metrics": {}
+          },
+          "val": {
+            "n": 8,
+            "positives": 4,
+            "auroc": 0.8125,
+            "auprc": 0.8928571428571428,
+            "accuracy": 0.75,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666,
+            "confusion_matrix": [
+              [
+                4,
+                0
+              ],
+              [
+                2,
+                2
+              ]
+            ],
+            "brier_score": 0.24099397573641163,
+            "classification_threshold": 0.5,
+            "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+            "undefined_metrics_reason": null,
+            "undefined_metrics": {}
+          },
+          "test": {
+            "n": 24,
+            "positives": 12,
+            "auroc": 0.9027777777777777,
+            "auprc": 0.919982794982795,
+            "accuracy": 0.7916666666666666,
+            "precision": 1.0,
+            "recall": 0.5833333333333334,
+            "f1": 0.7368421052631579,
+            "confusion_matrix": [
+              [
+                12,
+                0
+              ],
+              [
+                5,
+                7
+              ]
+            ],
+            "brier_score": 0.1806709095574822,
+            "classification_threshold": 0.5,
+            "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+            "undefined_metrics_reason": null,
+            "undefined_metrics": {}
+          }
+        },
+        "mean_pooled": {
+          "train": {
+            "n": 40,
+            "positives": 20,
+            "auroc": 1.0,
+            "auprc": 1.0,
+            "accuracy": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "confusion_matrix": [
+              [
+                20,
+                0
+              ],
+              [
+                0,
+                20
+              ]
+            ],
+            "brier_score": 1.0361476517370193e-06,
+            "classification_threshold": 0.5,
+            "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+            "undefined_metrics_reason": null,
+            "undefined_metrics": {}
+          },
+          "val": {
+            "n": 8,
+            "positives": 4,
+            "auroc": 1.0,
+            "auprc": 1.0,
+            "accuracy": 0.875,
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1": 0.8571428571428571,
+            "confusion_matrix": [
+              [
+                4,
+                0
+              ],
+              [
+                1,
+                3
+              ]
+            ],
+            "brier_score": 0.1217163233212334,
+            "classification_threshold": 0.5,
+            "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+            "undefined_metrics_reason": null,
+            "undefined_metrics": {}
+          },
+          "test": {
+            "n": 24,
+            "positives": 12,
+            "auroc": 0.8888888888888888,
+            "auprc": 0.9000432437932437,
+            "accuracy": 0.7916666666666666,
+            "precision": 0.8888888888888888,
+            "recall": 0.6666666666666666,
+            "f1": 0.7619047619047619,
+            "confusion_matrix": [
+              [
+                11,
+                1
+              ],
+              [
+                4,
+                8
+              ]
+            ],
+            "brier_score": 0.19561805215197145,
+            "classification_threshold": 0.5,
+            "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+            "undefined_metrics_reason": null,
+            "undefined_metrics": {}
+          }
+        }
+      },
+      "predictions": [
+        {
+          "variant_id": "20-3230813-C-G",
+          "split": "test",
+          "gene_group": "SLC4A11",
+          "label": 1,
+          "covariance_logit": 34.61763000488281,
+          "covariance_score": 0.9999999999999991,
+          "mean_pooled_logit": 9.775577889754972,
+          "mean_pooled_score": 0.9999431807119001
+        },
+        {
+          "variant_id": "8-60823864-A-G",
+          "split": "test",
+          "gene_group": "CHD7",
+          "label": 1,
+          "covariance_logit": 11.412798881530762,
+          "covariance_score": 0.9999889470139371,
+          "mean_pooled_logit": 0.4727955541360376,
+          "mean_pooled_score": 0.6160452127721704
+        },
+        {
+          "variant_id": "10-133366002-G-A",
+          "split": "test",
+          "gene_group": "ECHS1",
+          "label": 1,
+          "covariance_logit": -0.4740794599056244,
+          "covariance_score": 0.3836511457730373,
+          "mean_pooled_logit": -5.220816141638401,
+          "mean_pooled_score": 0.005373883131653133
+        },
+        {
+          "variant_id": "9-132902658-T-A",
+          "split": "test",
+          "gene_group": "TSC1",
+          "label": 1,
+          "covariance_logit": 9.390969276428223,
+          "covariance_score": 0.9999165324602712,
+          "mean_pooled_logit": 0.5984256663509004,
+          "mean_pooled_score": 0.645296040959058
+        },
+        {
+          "variant_id": "9-136503340-C-T",
+          "split": "test",
+          "gene_group": "NOTCH1",
+          "label": 0,
+          "covariance_logit": -10.968477249145508,
+          "covariance_score": 1.723627323832724e-05,
+          "mean_pooled_logit": -6.1547479019016995,
+          "mean_pooled_score": 0.0021188770438340795
+        },
+        {
+          "variant_id": "1-226891600-G-C",
+          "split": "test",
+          "gene_group": "PSEN2",
+          "label": 0,
+          "covariance_logit": -16.78667449951172,
+          "covariance_score": 5.12436283899481e-08,
+          "mean_pooled_logit": -7.808125362453984,
+          "mean_pooled_score": 0.000406254113387142
+        },
+        {
+          "variant_id": "5-53055607-C-T",
+          "split": "test",
+          "gene_group": "ITGA2",
+          "label": 0,
+          "covariance_logit": -2.5688998699188232,
+          "covariance_score": 0.07116699085932116,
+          "mean_pooled_logit": -7.236338274674124,
+          "mean_pooled_score": 0.0007194252282822918
+        },
+        {
+          "variant_id": "2-27477684-C-T",
+          "split": "test",
+          "gene_group": "IFT172",
+          "label": 0,
+          "covariance_logit": -31.91659164428711,
+          "covariance_score": 1.3765765520864956e-14,
+          "mean_pooled_logit": -8.550732411828744,
+          "mean_pooled_score": 0.0001933659990954896
+        },
+        {
+          "variant_id": "5-161848407-C-T",
+          "split": "test",
+          "gene_group": "GABRA1",
+          "label": 0,
+          "covariance_logit": -2.0279228687286377,
+          "covariance_score": 0.11630223127667831,
+          "mean_pooled_logit": -6.330877565889546,
+          "mean_pooled_score": 0.0017773061616691763
+        },
+        {
+          "variant_id": "4-186280334-G-A",
+          "split": "test",
+          "gene_group": "F11",
+          "label": 1,
+          "covariance_logit": -11.943211555480957,
+          "covariance_score": 6.503187876902384e-06,
+          "mean_pooled_logit": -7.121400871735318,
+          "mean_pooled_score": 0.0008069828186319508
+        },
+        {
+          "variant_id": "4-3476490-C-A",
+          "split": "test",
+          "gene_group": "DOK7",
+          "label": 1,
+          "covariance_logit": 122.6603012084961,
+          "covariance_score": 1.0,
+          "mean_pooled_logit": 19.2719015187348,
+          "mean_pooled_score": 0.9999999957310652
+        },
+        {
+          "variant_id": "2-72887433-A-C",
+          "split": "test",
+          "gene_group": "LOC129934069|SPR",
+          "label": 1,
+          "covariance_logit": -4.408284664154053,
+          "covariance_score": 0.0120295737867756,
+          "mean_pooled_logit": 8.600815759072026,
+          "mean_pooled_score": 0.9998160781645269
+        },
+        {
+          "variant_id": "3-4658252-G-C",
+          "split": "test",
+          "gene_group": "ITPR1",
+          "label": 0,
+          "covariance_logit": -8.069587707519531,
+          "covariance_score": 0.0003128143823912273,
+          "mean_pooled_logit": -3.6607727660400924,
+          "mean_pooled_score": 0.02506806908040256
+        },
+        {
+          "variant_id": "15-80180172-G-A",
+          "split": "test",
+          "gene_group": "FAH",
+          "label": 1,
+          "covariance_logit": 13.774275779724121,
+          "covariance_score": 0.9999989579043475,
+          "mean_pooled_logit": 2.305629993652373,
+          "mean_pooled_score": 0.9093422405104666
+        },
+        {
+          "variant_id": "11-119078567-C-G",
+          "split": "test",
+          "gene_group": "VPS11",
+          "label": 0,
+          "covariance_logit": -20.571516036987305,
+          "covariance_score": 1.1638689985739712e-09,
+          "mean_pooled_logit": -6.140458704923139,
+          "mean_pooled_score": 0.0021493059048877934
+        },
+        {
+          "variant_id": "16-28894763-G-C",
+          "split": "test",
+          "gene_group": "ATP2A1",
+          "label": 0,
+          "covariance_logit": -17.192424774169922,
+          "covariance_score": 3.415267892009878e-08,
+          "mean_pooled_logit": -8.421831261384906,
+          "mean_pooled_score": 0.0002199629909821655
+        },
+        {
+          "variant_id": "18-31592968-G-A",
+          "split": "test",
+          "gene_group": "TTR",
+          "label": 1,
+          "covariance_logit": -5.30685567855835,
+          "covariance_score": 0.004933034708142015,
+          "mean_pooled_logit": -4.85063388281776,
+          "mean_pooled_score": 0.0077626861182637915
+        },
+        {
+          "variant_id": "2-10043776-C-G",
+          "split": "test",
+          "gene_group": "KLF11",
+          "label": 0,
+          "covariance_logit": -4.299117565155029,
+          "covariance_score": 0.013398577775730171,
+          "mean_pooled_logit": -5.885697056401239,
+          "mean_pooled_score": 0.0027712075618632624
+        },
+        {
+          "variant_id": "9-106928521-C-T",
+          "split": "test",
+          "gene_group": "ZNF462",
+          "label": 1,
+          "covariance_logit": 18.315223693847656,
+          "covariance_score": 0.9999999888878163,
+          "mean_pooled_logit": 4.766682336368918,
+          "mean_pooled_score": 0.9915632229086284
+        },
+        {
+          "variant_id": "10-47350353-G-A",
+          "split": "test",
+          "gene_group": "RBP3",
+          "label": 0,
+          "covariance_logit": -5.314767360687256,
+          "covariance_score": 0.0048943503561892105,
+          "mean_pooled_logit": -6.816747565601537,
+          "mean_pooled_score": 0.0010940791333106656
+        },
+        {
+          "variant_id": "2-32154386-C-T",
+          "split": "test",
+          "gene_group": "SPAST",
+          "label": 1,
+          "covariance_logit": -4.218301773071289,
+          "covariance_score": 0.01450998769446868,
+          "mean_pooled_logit": 0.08283120033933145,
+          "mean_pooled_score": 0.5206959685043514
+        },
+        {
+          "variant_id": "16-8801912-T-G",
+          "split": "test",
+          "gene_group": "PMM2",
+          "label": 1,
+          "covariance_logit": 10.198616027832031,
+          "covariance_score": 0.9999627795884259,
+          "mean_pooled_logit": -1.0496296614435559,
+          "mean_pooled_score": 0.2592962223266739
+        },
+        {
+          "variant_id": "2-61048369-T-C",
+          "split": "test",
+          "gene_group": "PEX13",
+          "label": 0,
+          "covariance_logit": -36.98823928833008,
+          "covariance_score": 8.633994780190931e-17,
+          "mean_pooled_logit": -6.036357590141972,
+          "mean_pooled_score": 0.0023845496764276224
+        },
+        {
+          "variant_id": "6-135404967-C-T",
+          "split": "test",
+          "gene_group": "AHI1",
+          "label": 0,
+          "covariance_logit": -38.147518157958984,
+          "covariance_score": 2.7085905922377414e-17,
+          "mean_pooled_logit": 1.4740964901258828,
+          "mean_pooled_score": 0.8136792339977519
+        }
+      ]
+    },
+    {
+      "n_train": 40,
+      "seed": 44,
+      "train_ids": [
+        "19-4816229-G-A",
+        "9-34649479-C-T",
+        "5-149004910-C-T",
+        "15-90271712-A-G",
+        "1-94043317-T-C",
+        "10-70598553-G-A",
+        "1-160142417-T-A",
+        "6-157180967-A-G",
+        "18-31087948-G-A",
+        "17-80389254-G-A",
+        "2-38689764-T-C",
+        "3-120652589-T-G",
+        "17-5433147-T-C",
+        "1-197434829-T-C",
+        "20-49374931-G-A",
+        "14-24082697-G-A",
+        "2-241744765-G-A",
+        "3-38016993-G-C",
+        "5-1815884-T-C",
+        "2-165354603-G-T",
+        "10-19450384-G-C",
+        "1-155291891-C-T",
+        "8-19961011-G-A",
+        "6-64822806-T-G",
+        "19-7167940-T-G",
+        "9-115029451-G-A",
+        "16-29813807-G-A",
+        "14-20295764-G-A",
+        "10-124405545-C-G",
+        "11-2160847-A-G",
+        "22-36877700-G-A",
+        "7-44145617-G-C",
+        "2-47804966-C-T",
+        "14-88385821-G-A",
+        "2-26191619-G-A",
+        "2-219418809-A-G",
+        "12-56181739-G-A",
+        "1-3186487-G-A",
+        "4-88038399-G-A",
+        "2-227247456-A-G"
+      ],
+      "metrics": {
+        "covariance": {
+          "train": {
+            "n": 40,
+            "positives": 20,
+            "auroc": 1.0,
+            "auprc": 1.0,
+            "accuracy": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "confusion_matrix": [
+              [
+                20,
+                0
+              ],
+              [
+                0,
+                20
+              ]
+            ],
+            "brier_score": 4.203194639473025e-05,
+            "classification_threshold": 0.5,
+            "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+            "undefined_metrics_reason": null,
+            "undefined_metrics": {}
+          },
+          "val": {
+            "n": 8,
+            "positives": 4,
+            "auroc": 0.8125,
+            "auprc": 0.8928571428571428,
+            "accuracy": 0.75,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666,
+            "confusion_matrix": [
+              [
+                4,
+                0
+              ],
+              [
+                2,
+                2
+              ]
+            ],
+            "brier_score": 0.23659246842739007,
+            "classification_threshold": 0.5,
+            "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+            "undefined_metrics_reason": null,
+            "undefined_metrics": {}
+          },
+          "test": {
+            "n": 24,
+            "positives": 12,
+            "auroc": 0.9236111111111112,
+            "auprc": 0.9404761904761905,
+            "accuracy": 0.7916666666666666,
+            "precision": 1.0,
+            "recall": 0.5833333333333334,
+            "f1": 0.7368421052631579,
+            "confusion_matrix": [
+              [
+                12,
+                0
+              ],
+              [
+                5,
+                7
+              ]
+            ],
+            "brier_score": 0.15975589855695305,
+            "classification_threshold": 0.5,
+            "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+            "undefined_metrics_reason": null,
+            "undefined_metrics": {}
+          }
+        },
+        "mean_pooled": {
+          "train": {
+            "n": 40,
+            "positives": 20,
+            "auroc": 1.0,
+            "auprc": 1.0,
+            "accuracy": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "confusion_matrix": [
+              [
+                20,
+                0
+              ],
+              [
+                0,
+                20
+              ]
+            ],
+            "brier_score": 1.0361476517370193e-06,
+            "classification_threshold": 0.5,
+            "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+            "undefined_metrics_reason": null,
+            "undefined_metrics": {}
+          },
+          "val": {
+            "n": 8,
+            "positives": 4,
+            "auroc": 1.0,
+            "auprc": 1.0,
+            "accuracy": 0.875,
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1": 0.8571428571428571,
+            "confusion_matrix": [
+              [
+                4,
+                0
+              ],
+              [
+                1,
+                3
+              ]
+            ],
+            "brier_score": 0.1217163233212334,
+            "classification_threshold": 0.5,
+            "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+            "undefined_metrics_reason": null,
+            "undefined_metrics": {}
+          },
+          "test": {
+            "n": 24,
+            "positives": 12,
+            "auroc": 0.8888888888888888,
+            "auprc": 0.9000432437932437,
+            "accuracy": 0.7916666666666666,
+            "precision": 0.8888888888888888,
+            "recall": 0.6666666666666666,
+            "f1": 0.7619047619047619,
+            "confusion_matrix": [
+              [
+                11,
+                1
+              ],
+              [
+                4,
+                8
+              ]
+            ],
+            "brier_score": 0.19561805215197145,
+            "classification_threshold": 0.5,
+            "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+            "undefined_metrics_reason": null,
+            "undefined_metrics": {}
+          }
+        }
+      },
+      "predictions": [
+        {
+          "variant_id": "20-3230813-C-G",
+          "split": "test",
+          "gene_group": "SLC4A11",
+          "label": 1,
+          "covariance_logit": 39.9483642578125,
+          "covariance_score": 1.0,
+          "mean_pooled_logit": 9.775577889754972,
+          "mean_pooled_score": 0.9999431807119001
+        },
+        {
+          "variant_id": "8-60823864-A-G",
+          "split": "test",
+          "gene_group": "CHD7",
+          "label": 1,
+          "covariance_logit": 12.921808242797852,
+          "covariance_score": 0.9999975558439953,
+          "mean_pooled_logit": 0.4727955541360376,
+          "mean_pooled_score": 0.6160452127721704
+        },
+        {
+          "variant_id": "10-133366002-G-A",
+          "split": "test",
+          "gene_group": "ECHS1",
+          "label": 1,
+          "covariance_logit": -1.278703212738037,
+          "covariance_score": 0.2177710463101364,
+          "mean_pooled_logit": -5.220816141638401,
+          "mean_pooled_score": 0.005373883131653133
+        },
+        {
+          "variant_id": "9-132902658-T-A",
+          "split": "test",
+          "gene_group": "TSC1",
+          "label": 1,
+          "covariance_logit": 11.893561363220215,
+          "covariance_score": 0.999993165779895,
+          "mean_pooled_logit": 0.5984256663509004,
+          "mean_pooled_score": 0.645296040959058
+        },
+        {
+          "variant_id": "9-136503340-C-T",
+          "split": "test",
+          "gene_group": "NOTCH1",
+          "label": 0,
+          "covariance_logit": -10.895650863647461,
+          "covariance_score": 1.8538342517718606e-05,
+          "mean_pooled_logit": -6.1547479019016995,
+          "mean_pooled_score": 0.0021188770438340795
+        },
+        {
+          "variant_id": "1-226891600-G-C",
+          "split": "test",
+          "gene_group": "PSEN2",
+          "label": 0,
+          "covariance_logit": -17.24879264831543,
+          "covariance_score": 3.2280817112316576e-08,
+          "mean_pooled_logit": -7.808125362453984,
+          "mean_pooled_score": 0.000406254113387142
+        },
+        {
+          "variant_id": "5-53055607-C-T",
+          "split": "test",
+          "gene_group": "ITGA2",
+          "label": 0,
+          "covariance_logit": -2.9327380657196045,
+          "covariance_score": 0.05055872895164,
+          "mean_pooled_logit": -7.236338274674124,
+          "mean_pooled_score": 0.0007194252282822918
+        },
+        {
+          "variant_id": "2-27477684-C-T",
+          "split": "test",
+          "gene_group": "IFT172",
+          "label": 0,
+          "covariance_logit": -34.64170455932617,
+          "covariance_score": 9.021917806276627e-16,
+          "mean_pooled_logit": -8.550732411828744,
+          "mean_pooled_score": 0.0001933659990954896
+        },
+        {
+          "variant_id": "5-161848407-C-T",
+          "split": "test",
+          "gene_group": "GABRA1",
+          "label": 0,
+          "covariance_logit": -3.0451624393463135,
+          "covariance_score": 0.04542678486586513,
+          "mean_pooled_logit": -6.330877565889546,
+          "mean_pooled_score": 0.0017773061616691763
+        },
+        {
+          "variant_id": "4-186280334-G-A",
+          "split": "test",
+          "gene_group": "F11",
+          "label": 1,
+          "covariance_logit": -12.757861137390137,
+          "covariance_score": 2.8795860206441487e-06,
+          "mean_pooled_logit": -7.121400871735318,
+          "mean_pooled_score": 0.0008069828186319508
+        },
+        {
+          "variant_id": "4-3476490-C-A",
+          "split": "test",
+          "gene_group": "DOK7",
+          "label": 1,
+          "covariance_logit": 156.37339782714844,
+          "covariance_score": 1.0,
+          "mean_pooled_logit": 19.2719015187348,
+          "mean_pooled_score": 0.9999999957310652
+        },
+        {
+          "variant_id": "2-72887433-A-C",
+          "split": "test",
+          "gene_group": "LOC129934069|SPR",
+          "label": 1,
+          "covariance_logit": -0.08305419981479645,
+          "covariance_score": 0.4792483773996966,
+          "mean_pooled_logit": 8.600815759072026,
+          "mean_pooled_score": 0.9998160781645269
+        },
+        {
+          "variant_id": "3-4658252-G-C",
+          "split": "test",
+          "gene_group": "ITPR1",
+          "label": 0,
+          "covariance_logit": -8.237521171569824,
+          "covariance_score": 0.0002644692221627635,
+          "mean_pooled_logit": -3.6607727660400924,
+          "mean_pooled_score": 0.02506806908040256
+        },
+        {
+          "variant_id": "15-80180172-G-A",
+          "split": "test",
+          "gene_group": "FAH",
+          "label": 1,
+          "covariance_logit": 17.696897506713867,
+          "covariance_score": 0.9999999793777969,
+          "mean_pooled_logit": 2.305629993652373,
+          "mean_pooled_score": 0.9093422405104666
+        },
+        {
+          "variant_id": "11-119078567-C-G",
+          "split": "test",
+          "gene_group": "VPS11",
+          "label": 0,
+          "covariance_logit": -20.471357345581055,
+          "covariance_score": 1.2864783063698085e-09,
+          "mean_pooled_logit": -6.140458704923139,
+          "mean_pooled_score": 0.0021493059048877934
+        },
+        {
+          "variant_id": "16-28894763-G-C",
+          "split": "test",
+          "gene_group": "ATP2A1",
+          "label": 0,
+          "covariance_logit": -18.891809463500977,
+          "covariance_score": 6.242972100862326e-09,
+          "mean_pooled_logit": -8.421831261384906,
+          "mean_pooled_score": 0.0002199629909821655
+        },
+        {
+          "variant_id": "18-31592968-G-A",
+          "split": "test",
+          "gene_group": "TTR",
+          "label": 1,
+          "covariance_logit": -5.6067657470703125,
+          "covariance_score": 0.0036594883087791366,
+          "mean_pooled_logit": -4.85063388281776,
+          "mean_pooled_score": 0.0077626861182637915
+        },
+        {
+          "variant_id": "2-10043776-C-G",
+          "split": "test",
+          "gene_group": "KLF11",
+          "label": 0,
+          "covariance_logit": -4.680153846740723,
+          "covariance_score": 0.009192304055272042,
+          "mean_pooled_logit": -5.885697056401239,
+          "mean_pooled_score": 0.0027712075618632624
+        },
+        {
+          "variant_id": "9-106928521-C-T",
+          "split": "test",
+          "gene_group": "ZNF462",
+          "label": 1,
+          "covariance_logit": 23.32952880859375,
+          "covariance_score": 0.9999999999261902,
+          "mean_pooled_logit": 4.766682336368918,
+          "mean_pooled_score": 0.9915632229086284
+        },
+        {
+          "variant_id": "10-47350353-G-A",
+          "split": "test",
+          "gene_group": "RBP3",
+          "label": 0,
+          "covariance_logit": -5.726560592651367,
+          "covariance_score": 0.0032476826735283572,
+          "mean_pooled_logit": -6.816747565601537,
+          "mean_pooled_score": 0.0010940791333106656
+        },
+        {
+          "variant_id": "2-32154386-C-T",
+          "split": "test",
+          "gene_group": "SPAST",
+          "label": 1,
+          "covariance_logit": -3.7296860218048096,
+          "covariance_score": 0.023437853094699052,
+          "mean_pooled_logit": 0.08283120033933145,
+          "mean_pooled_score": 0.5206959685043514
+        },
+        {
+          "variant_id": "16-8801912-T-G",
+          "split": "test",
+          "gene_group": "PMM2",
+          "label": 1,
+          "covariance_logit": 14.506649017333984,
+          "covariance_score": 0.9999994989948809,
+          "mean_pooled_logit": -1.0496296614435559,
+          "mean_pooled_score": 0.2592962223266739
+        },
+        {
+          "variant_id": "2-61048369-T-C",
+          "split": "test",
+          "gene_group": "PEX13",
+          "label": 0,
+          "covariance_logit": -40.04060745239258,
+          "covariance_score": 4.0792951718706735e-18,
+          "mean_pooled_logit": -6.036357590141972,
+          "mean_pooled_score": 0.0023845496764276224
+        },
+        {
+          "variant_id": "6-135404967-C-T",
+          "split": "test",
+          "gene_group": "AHI1",
+          "label": 0,
+          "covariance_logit": -40.591609954833984,
+          "covariance_score": 2.3511903199796787e-18,
+          "mean_pooled_logit": 1.4740964901258828,
+          "mean_pooled_score": 0.8136792339977519
+        }
+      ]
+    }
+  ]
+}

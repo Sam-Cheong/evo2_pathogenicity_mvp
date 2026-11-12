@@ -1,0 +1,55 @@
+{
+  "date": "2026-11-03",
+  "timezone": "Asia/Shanghai",
+  "backend": "nvidia_api",
+  "model": "arc/evo2-40b",
+  "api_key_present_in_user_project": true,
+  "credentials_included": false,
+  "phase0": {
+    "status": "passed",
+    "reason": null,
+    "real_api_verified": true,
+    "local_evo2_loading_required": false,
+    "actual_embedding_shape": [
+      8192
+    ],
+    "actual_token_embedding_shape": [
+      1,
+      256,
+      8192
+    ],
+    "actual_variant_features_shape": [
+      24576
+    ],
+    "actual_inference_seconds": 8.538849599994137,
+    "gpu_peak_allocated_bytes": null
+  },
+  "data_pipeline": {
+    "status": "verified_on_public_partial_demo",
+    "source": "official_ClinVar_GRCh38_2026-11-01_prefix_5000",
+    "n": 473,
+    "positive": 7,
+    "negative": 466,
+    "representative_training_cohort": false
+  },
+  "teacher": {
+    "implementation": "available_unit_tested",
+    "real_data_training_completed": false,
+    "test_metrics": null
+  },
+  "student": {
+    "implementation": "available_components_unit_tested",
+    "experiment_started": false,
+    "distillation_completed": false,
+    "test_metrics": null
+  },
+  "real_prediction": null,
+  "validation": {
+    "tests": 110,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 1,
+    "passed": 109
+  },
+  "clinical_use": "research_only"
+}

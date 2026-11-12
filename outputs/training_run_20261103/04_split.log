@@ -1,0 +1,21 @@
+{
+  "split": "connected_gene_held_out",
+  "seed": 42,
+  "partitions": {
+    "train": {
+      "n": 1200,
+      "positive": 183,
+      "gene_groups": 717
+    },
+    "val": {
+      "n": 400,
+      "positive": 74,
+      "gene_groups": 233
+    },
+    "test": {
+      "n": 400,
+      "positive": 48,
+      "gene_groups": 219
+    }
+  }
+}

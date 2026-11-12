@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "input_and_source_checksums_reverified": true,
+  "successful_notebook_code_cells": 10,
+  "same_complete_initialization": true,
+  "teacher_unchanged": true,
+  "independent_reload_predictions_identical": true,
+  "models": {
+    "supervised": {
+      "parameter_count": 1854465,
+      "all_saved_state_finite": true,
+      "pretrained_encoder_actually_updated": true,
+      "best_epoch": 1,
+      "epochs_run": 6,
+      "all_split_metrics_recomputed_from_predictions": true,
+      "checkpoint_sha256": "7db00d61ebe68d0ac3ca600788fe84b6b3e37c47633cf396c5bfeb4c4f207dd6"
+    },
+    "distilled": {
+      "parameter_count": 1854465,
+      "all_saved_state_finite": true,
+      "pretrained_encoder_actually_updated": true,
+      "best_epoch": 1,
+      "epochs_run": 6,
+      "all_split_metrics_recomputed_from_predictions": true,
+      "checkpoint_sha256": "1e7595afa1817a8c921f2740583a70eb59bb9865695315e98fc03ee68b0d6fdc"
+    }
+  },
+  "new_nvidia_api_calls": 0,
+  "clinical_use": "research_only"
+}

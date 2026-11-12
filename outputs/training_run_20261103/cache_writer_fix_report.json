@@ -1,0 +1,26 @@
+{
+  "training_completed": false,
+  "stage": "paused_after_error_file_write_fix_verified",
+  "cache_valid_records": 497,
+  "required_records": 2000,
+  "writer_conflict_fix": {
+    "unique_JSON_temporary_files": true,
+    "unique_NPZ_temporary_files": true,
+    "CLI_exclusive_writer_lock": true,
+    "lock_acquired_before_manifest_and_API": true
+  },
+  "network_error": "not retried after failure",
+  "failed_variant": "4-54288779-T-C",
+  "teacher_training_started": false,
+  "student_training_started": false,
+  "env_modified": false,
+  "existing_cache_regression_tests": {
+    "passed": 5,
+    "skipped": 1
+  },
+  "cross_process_tests": {
+    "passed": 5,
+    "API_calls": 0,
+    "training_runs": 0
+  }
+}

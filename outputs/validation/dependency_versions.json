@@ -1,0 +1,51 @@
+{
+  "python": "3.10.6 (tags/v3.10.6:9c7b4bd, Aug  1 2022, 21:53:49) [MSC v.1932 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "packages": {
+    "torch": "2.5.1+cu121",
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.5.2",
+    "PyYAML": "6.0.2",
+    "pytest": "8.4.1",
+    "pyfaidx": "0.8.1.4",
+    "matplotlib": "3.10.0",
+    "psutil": "6.1.0",
+    "requests": "2.33.1",
+    "python-dotenv": "1.2.1"
+  },
+  "backend": "nvidia_api",
+  "real_api_verified": true,
+  "real_api_runtime": {
+    "timestamp_utc": "2026-11-03T05:34:41.863999+00:00",
+    "os": "Windows-10-10.0.26200-SP0",
+    "system": "Windows",
+    "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+    "executable": "D:\\Users\\60152\\learning materials\\CISC7021\\Report\\evo2_pathogenicity_mvp\\.venv\\Scripts\\python.exe",
+    "torch": "2.7.1+cpu",
+    "torch_cuda_runtime": null,
+    "cudnn_version": null,
+    "cuda_available": false,
+    "gpus": [],
+    "packages": {
+      "evo2": null,
+      "vtx": null,
+      "transformer-engine": null,
+      "flash-attn": null,
+      "numpy": "1.26.4",
+      "pyfaidx": "0.8.1.4"
+    },
+    "official_model": "nvidia/arc/evo2-40b",
+    "official_requirements_source": "https://docs.nvidia.com/nim/bionemo/evo2/endpoints",
+    "nvidia_smi": "NVIDIA GeForce RTX 3050 Ti Laptop GPU, 4096 MiB, 2679 MiB, 621.01\n",
+    "nvcc": "nvcc: NVIDIA (R) Cuda compiler driver\nCopyright (c) 2005-2025 NVIDIA Corporation\nBuilt on Wed_Aug_20_13:58:20_Pacific_Daylight_Time_2025\nCuda compilation tools, release 13.0, V13.0.88\nBuild cuda_13.0.r13.0/compiler.36424714_0\n",
+    "note": "Hosted Evo 2 requires no local CUDA/Evo 2 weights. Key presence is not successful authentication; run Phase 0.",
+    "selected_backend": "nvidia_api",
+    "api_key_present": true,
+    "selected_backend_blockers": [],
+    "ready_for_selected_backend_attempt": true,
+    "api_authentication_verified": true,
+    "local_gpu_required": false,
+    "local_evo2_installation_required": false
+  }
+}

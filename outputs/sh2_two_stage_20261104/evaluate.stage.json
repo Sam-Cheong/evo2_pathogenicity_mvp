@@ -1,0 +1,31 @@
+{
+  "status": "completed",
+  "signature": {
+    "experiment_identity": "706b915d195b7f940189efa8cb1b746c0986302424be505deef5546777176777",
+    "arguments": [
+      "-m",
+      "evo2_mvp.two_stage_student",
+      "--stage",
+      "evaluate",
+      "--data-dir",
+      "outputs\\sh2_two_stage_20261104\\data",
+      "--config",
+      "configs/stripedhyena2_two_stage.yaml",
+      "--output",
+      "outputs\\sh2_two_stage_20261104\\training",
+      "--device",
+      "cpu"
+    ]
+  },
+  "started_at_utc": "2026-11-04T01:46:22.295846+00:00",
+  "completed_at_utc": "2026-11-04T01:46:40.053728+00:00",
+  "returncode": 0,
+  "artifacts_sha256": {
+    "outputs/sh2_two_stage_20261104/training/two_stage_test_comparison.json": "02129510965a140f5629f209c5e57b805100b53d9564e4dab6c07d92f80ad0b6",
+    "outputs/sh2_two_stage_20261104/training/two_stage_test_predictions.csv": "fa61ba23b40a04502027be91abe5d185f8c0140a201c169ec0e73eadeecd7b5e",
+    "outputs/sh2_two_stage_20261104/training/probes/random_linear/test_metrics.json": "bc6b68957c7a98d67c407c60da7e1961dda1cf23295f7994a3cbbf8e16aaf19a",
+    "outputs/sh2_two_stage_20261104/training/probes/distilled_linear/test_metrics.json": "c3477731a6ebd3ab8a04f259affd5fa92c56c454888b598225105199a8b05eac",
+    "outputs/sh2_two_stage_20261104/training/probes/random_mlp/test_metrics.json": "31a81f3d98dd94f74b61395d9e82492f98b133d71fd52e4a4f9c6adc66063c4c",
+    "outputs/sh2_two_stage_20261104/training/probes/distilled_mlp/test_metrics.json": "40a9c313d437a27d027beb6bca19a8551d110b5fce56ca7b4b3ac53a5f318c66"
+  }
+}

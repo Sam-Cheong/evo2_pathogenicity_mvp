@@ -1,0 +1,21 @@
+{
+  "status": "completed",
+  "started_at_utc": "2026-11-04T01:25:04.159759+00:00",
+  "notebook": "D:\\Users\\60152\\learning materials\\CISC7021\\Report\\evo2_pathogenicity_mvp\\StripedHyena2_two_stage_experiment.ipynb",
+  "executed_notebook": "D:\\Users\\60152\\learning materials\\CISC7021\\Report\\evo2_pathogenicity_mvp\\StripedHyena2_two_stage_experiment.executed.ipynb",
+  "kernel_python": "D:\\Users\\60152\\learning materials\\CISC7021\\Report\\evo2_pathogenicity_mvp\\.venv\\Scripts\\python.exe",
+  "successful_cells": [
+    1,
+    2,
+    3,
+    4,
+    6,
+    8,
+    9,
+    10,
+    11
+  ],
+  "current_cell": 11,
+  "current_cell_id": "run-report",
+  "completed_at_utc": "2026-11-04T01:47:10.312510+00:00"
+}

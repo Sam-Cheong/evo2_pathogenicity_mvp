@@ -1,0 +1,23 @@
+{
+  "status": "completed",
+  "signature": {
+    "experiment_identity": "96ebfc7fad4467fd12eb75f2facba8b01dac254e522f6f0094a241ace856c72d",
+    "arguments": [
+      "scripts/compare_models.py",
+      "--teacher",
+      "outputs/teacher",
+      "--supervised",
+      "outputs\\hyenadna_notebook_run_20261104\\supervised",
+      "--distilled",
+      "outputs\\hyenadna_notebook_run_20261104\\distilled",
+      "--output",
+      "outputs\\hyenadna_notebook_run_20261104\\comparison.json"
+    ]
+  },
+  "started_at_utc": "2026-11-03T17:04:15.682681+00:00",
+  "completed_at_utc": "2026-11-03T17:04:20.190879+00:00",
+  "returncode": 0,
+  "artifacts_sha256": {
+    "outputs/hyenadna_notebook_run_20261104/comparison.json": "3c49f55e55d70819c587d241b398de61173ffec5c498e216d429891ee46e9a43"
+  }
+}

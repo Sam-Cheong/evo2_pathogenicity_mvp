@@ -1,0 +1,20 @@
+{
+  "status": "completed",
+  "signature": {
+    "experiment_identity": "706b915d195b7f940189efa8cb1b746c0986302424be505deef5546777176777",
+    "arguments": [
+      "scripts/test_stripedhyena2.py",
+      "--output",
+      "outputs\\sh2_two_stage_20261104\\phase0"
+    ]
+  },
+  "started_at_utc": "2026-11-04T01:25:25.883207+00:00",
+  "completed_at_utc": "2026-11-04T01:25:30.304713+00:00",
+  "returncode": 0,
+  "artifacts_sha256": {
+    "outputs/sh2_two_stage_20261104/phase0/result.json": "405595e2135585543ca9c4bcee60503d421d69a6b1d8a8e1afc752c7b9434994",
+    "outputs/sh2_two_stage_20261104/phase0/embedding_ref.npy": "a0113ffc6cc3f558a5c34e9ca73cdfec3fe4d2aedf6df7ef6675bb3150ef69d4",
+    "outputs/sh2_two_stage_20261104/phase0/embedding_alt.npy": "d0cecff1188bb48272d40d724e8cbf18d82100b3c58b1bd802ebea4590ec416b",
+    "outputs/sh2_two_stage_20261104/phase0/features.npy": "b7f5a83000d379b5e089fefc5730b6656a514e49738a6c5c570a617b0bdd1ca7"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "status": "completed",
+  "signature": {
+    "experiment_identity": "706b915d195b7f940189efa8cb1b746c0986302424be505deef5546777176777",
+    "arguments": [
+      "-m",
+      "evo2_mvp.inference",
+      "--fasta",
+      "data/GRCh38.fa",
+      "--chrom",
+      "1",
+      "--pos",
+      "926029",
+      "--ref",
+      "C",
+      "--alt",
+      "T",
+      "--student",
+      "outputs\\sh2_two_stage_20261104\\training\\probes\\distilled_linear\\best_student.pt",
+      "--device",
+      "cpu",
+      "--cpu-threads",
+      "4",
+      "--output",
+      "outputs\\sh2_two_stage_20261104\\prediction.json"
+    ]
+  },
+  "started_at_utc": "2026-11-04T01:46:42.146095+00:00",
+  "completed_at_utc": "2026-11-04T01:46:54.948769+00:00",
+  "returncode": 0,
+  "artifacts_sha256": {
+    "outputs/sh2_two_stage_20261104/prediction.json": "93ec153f15ba8c91cbd0d06aa566842070cc5fadbce809ee74529efb0e57531c"
+  }
+}
