@@ -1,9 +1,7 @@
 {
-  "state": "retry_wait",
-  "updated_at": "2026-11-11T22:07:04+08:00",
-  "attempt": 7,
-  "retry_in_seconds": 600,
-  "http_status": null,
+  "state": "failed",
+  "updated_at": "2026-11-12T10:37:45+08:00",
+  "error_type": "NvidiaAPIError",
   "started_at": "2026-11-11T20:52:44+08:00",
   "total_variants": 2000
 }
