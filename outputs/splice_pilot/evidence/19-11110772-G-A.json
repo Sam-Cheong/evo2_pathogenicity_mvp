@@ -1,0 +1,40 @@
+{
+  "variant": {
+    "variant_id": "19-11110772-G-A",
+    "gene": "LDLR",
+    "clinvar_variation_id": "251623",
+    "consequence": "splice_donor_variant",
+    "hgvs_g": "NC_000019.10:g.11110772G>A"
+  },
+  "disruptions": [
+    {
+      "annotation": "donor",
+      "position": 11110772,
+      "strand": "+",
+      "ref_score": 0.9862129840050353,
+      "alt_score": 0.7888881777239952,
+      "delta": -0.1973248062810401
+    },
+    {
+      "annotation": "acceptor",
+      "position": 11110772,
+      "strand": "+",
+      "ref_score": 0.0014208131092707092,
+      "alt_score": 0.028791174439424524,
+      "delta": 0.027370361330153813
+    }
+  ],
+  "evaluation": {
+    "validated": false
+  },
+  "protocol": {
+    "model": "arc/evo2-7b",
+    "endpoint": "https://health.api.nvidia.com/v1/biology/arc/evo2-7b/forward",
+    "layer": "blocks.27",
+    "window": 256,
+    "scored_token": 192,
+    "anchor_offset_in_transcript_direction": 1,
+    "genome_build": "GRCh38",
+    "revision": "nvidia-hosted-splice-block27-v1"
+  }
+}

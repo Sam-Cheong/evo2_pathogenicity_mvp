@@ -1,0 +1,40 @@
+{
+  "variant": {
+    "variant_id": "19-35848171-G-A",
+    "gene": "NPHS1",
+    "clinvar_variation_id": "1093375",
+    "consequence": "intron_variant",
+    "hgvs_g": "NC_000019.10:g.35848171G>A"
+  },
+  "disruptions": [
+    {
+      "annotation": "acceptor",
+      "position": 35848166,
+      "strand": "-",
+      "ref_score": 0.9704874660366936,
+      "alt_score": 0.9749265079017388,
+      "delta": 0.00443904186504529
+    },
+    {
+      "annotation": "donor",
+      "position": 35848166,
+      "strand": "-",
+      "ref_score": 0.005025271245228574,
+      "alt_score": 0.0037363884278602934,
+      "delta": -0.0012888828173682806
+    }
+  ],
+  "evaluation": {
+    "validated": false
+  },
+  "protocol": {
+    "model": "arc/evo2-7b",
+    "endpoint": "https://health.api.nvidia.com/v1/biology/arc/evo2-7b/forward",
+    "layer": "blocks.27",
+    "window": 256,
+    "scored_token": 192,
+    "anchor_offset_in_transcript_direction": 1,
+    "genome_build": "GRCh38",
+    "revision": "nvidia-hosted-splice-block27-v1"
+  }
+}

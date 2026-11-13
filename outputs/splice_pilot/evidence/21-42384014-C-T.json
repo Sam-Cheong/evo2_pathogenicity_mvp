@@ -1,0 +1,40 @@
+{
+  "variant": {
+    "variant_id": "21-42384014-C-T",
+    "gene": "TMPRSS3",
+    "clinvar_variation_id": "3587682",
+    "consequence": "splice_acceptor_variant",
+    "hgvs_g": "NC_000021.9:g.42384014C>T"
+  },
+  "disruptions": [
+    {
+      "annotation": "acceptor",
+      "position": 42384014,
+      "strand": "-",
+      "ref_score": 0.9991395245011132,
+      "alt_score": 0.8862222917964867,
+      "delta": -0.1129172327046265
+    },
+    {
+      "annotation": "donor",
+      "position": 42384014,
+      "strand": "-",
+      "ref_score": 0.00025965784415165575,
+      "alt_score": 0.002133003278098062,
+      "delta": 0.0018733454339464064
+    }
+  ],
+  "evaluation": {
+    "validated": false
+  },
+  "protocol": {
+    "model": "arc/evo2-7b",
+    "endpoint": "https://health.api.nvidia.com/v1/biology/arc/evo2-7b/forward",
+    "layer": "blocks.27",
+    "window": 256,
+    "scored_token": 192,
+    "anchor_offset_in_transcript_direction": 1,
+    "genome_build": "GRCh38",
+    "revision": "nvidia-hosted-splice-block27-v1"
+  }
+}

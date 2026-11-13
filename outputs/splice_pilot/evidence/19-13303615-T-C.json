@@ -1,0 +1,40 @@
+{
+  "variant": {
+    "variant_id": "19-13303615-T-C",
+    "gene": "CACNA1A",
+    "clinvar_variation_id": "804599",
+    "consequence": "splice_acceptor_variant",
+    "hgvs_g": "NC_000019.10:g.13303615T>C"
+  },
+  "disruptions": [
+    {
+      "annotation": "acceptor",
+      "position": 13303614,
+      "strand": "-",
+      "ref_score": 0.9878274943391843,
+      "alt_score": 0.8250224227860965,
+      "delta": -0.16280507155308777
+    },
+    {
+      "annotation": "donor",
+      "position": 13303614,
+      "strand": "-",
+      "ref_score": 0.0033312454929477478,
+      "alt_score": 0.06724201136992437,
+      "delta": 0.06391076587697662
+    }
+  ],
+  "evaluation": {
+    "validated": false
+  },
+  "protocol": {
+    "model": "arc/evo2-7b",
+    "endpoint": "https://health.api.nvidia.com/v1/biology/arc/evo2-7b/forward",
+    "layer": "blocks.27",
+    "window": 256,
+    "scored_token": 192,
+    "anchor_offset_in_transcript_direction": 1,
+    "genome_build": "GRCh38",
+    "revision": "nvidia-hosted-splice-block27-v1"
+  }
+}

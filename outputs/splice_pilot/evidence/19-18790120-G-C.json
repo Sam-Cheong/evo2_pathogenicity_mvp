@@ -1,0 +1,40 @@
+{
+  "variant": {
+    "variant_id": "19-18790120-G-C",
+    "gene": "COMP",
+    "clinvar_variation_id": "890265",
+    "consequence": "intron_variant",
+    "hgvs_g": "NC_000019.10:g.18790120G>C"
+  },
+  "disruptions": [
+    {
+      "annotation": "acceptor",
+      "position": 18790115,
+      "strand": "-",
+      "ref_score": 0.9918019470603068,
+      "alt_score": 0.9761926135432212,
+      "delta": -0.0156093335170856
+    },
+    {
+      "annotation": "donor",
+      "position": 18790115,
+      "strand": "-",
+      "ref_score": 0.001365048693989097,
+      "alt_score": 0.002189109656768255,
+      "delta": 0.000824060962779158
+    }
+  ],
+  "evaluation": {
+    "validated": false
+  },
+  "protocol": {
+    "model": "arc/evo2-7b",
+    "endpoint": "https://health.api.nvidia.com/v1/biology/arc/evo2-7b/forward",
+    "layer": "blocks.27",
+    "window": 256,
+    "scored_token": 192,
+    "anchor_offset_in_transcript_direction": 1,
+    "genome_build": "GRCh38",
+    "revision": "nvidia-hosted-splice-block27-v1"
+  }
+}

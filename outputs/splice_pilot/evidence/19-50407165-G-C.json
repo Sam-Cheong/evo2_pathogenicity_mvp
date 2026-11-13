@@ -1,0 +1,40 @@
+{
+  "variant": {
+    "variant_id": "19-50407165-G-C",
+    "gene": "POLD1",
+    "clinvar_variation_id": "1121255",
+    "consequence": "non-coding_transcript_variant, synonymous_variant",
+    "hgvs_g": "NC_000019.10:g.50407165G>C"
+  },
+  "disruptions": [
+    {
+      "annotation": "donor",
+      "position": 50407175,
+      "strand": "+",
+      "ref_score": 0.9921231271871646,
+      "alt_score": 0.9855802951699248,
+      "delta": -0.006542832017239708
+    },
+    {
+      "annotation": "acceptor",
+      "position": 50407175,
+      "strand": "+",
+      "ref_score": 0.0009485161572102834,
+      "alt_score": 0.00172551196567366,
+      "delta": 0.0007769958084633767
+    }
+  ],
+  "evaluation": {
+    "validated": false
+  },
+  "protocol": {
+    "model": "arc/evo2-7b",
+    "endpoint": "https://health.api.nvidia.com/v1/biology/arc/evo2-7b/forward",
+    "layer": "blocks.27",
+    "window": 256,
+    "scored_token": 192,
+    "anchor_offset_in_transcript_direction": 1,
+    "genome_build": "GRCh38",
+    "revision": "nvidia-hosted-splice-block27-v1"
+  }
+}

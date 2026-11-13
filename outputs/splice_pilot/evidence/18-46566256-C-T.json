@@ -1,0 +1,40 @@
+{
+  "variant": {
+    "variant_id": "18-46566256-C-T",
+    "gene": "LOXHD1",
+    "clinvar_variation_id": "3583354",
+    "consequence": "splice_donor_variant",
+    "hgvs_g": "NC_000018.10:g.46566256C>T"
+  },
+  "disruptions": [
+    {
+      "annotation": "donor",
+      "position": 46566256,
+      "strand": "-",
+      "ref_score": 0.9986510876311995,
+      "alt_score": 0.2857766478409036,
+      "delta": -0.7128744397902959
+    },
+    {
+      "annotation": "acceptor",
+      "position": 46566256,
+      "strand": "-",
+      "ref_score": 0.0001880521285133938,
+      "alt_score": 0.07850660764716846,
+      "delta": 0.07831855551865508
+    }
+  ],
+  "evaluation": {
+    "validated": false
+  },
+  "protocol": {
+    "model": "arc/evo2-7b",
+    "endpoint": "https://health.api.nvidia.com/v1/biology/arc/evo2-7b/forward",
+    "layer": "blocks.27",
+    "window": 256,
+    "scored_token": 192,
+    "anchor_offset_in_transcript_direction": 1,
+    "genome_build": "GRCh38",
+    "revision": "nvidia-hosted-splice-block27-v1"
+  }
+}

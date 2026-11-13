@@ -1,0 +1,40 @@
+{
+  "variant": {
+    "variant_id": "21-46116007-A-C",
+    "gene": "COL6A2",
+    "clinvar_variation_id": "290497",
+    "consequence": "splice_acceptor_variant",
+    "hgvs_g": "NC_000021.9:g.46116007A>C"
+  },
+  "disruptions": [
+    {
+      "annotation": "acceptor",
+      "position": 46116008,
+      "strand": "+",
+      "ref_score": 0.9187857523647498,
+      "alt_score": 0.05089020222080801,
+      "delta": -0.8678955501439418
+    },
+    {
+      "annotation": "donor",
+      "position": 46116008,
+      "strand": "+",
+      "ref_score": 0.007771895915078025,
+      "alt_score": 0.00757577944351247,
+      "delta": -0.00019611647156555449
+    }
+  ],
+  "evaluation": {
+    "validated": false
+  },
+  "protocol": {
+    "model": "arc/evo2-7b",
+    "endpoint": "https://health.api.nvidia.com/v1/biology/arc/evo2-7b/forward",
+    "layer": "blocks.27",
+    "window": 256,
+    "scored_token": 192,
+    "anchor_offset_in_transcript_direction": 1,
+    "genome_build": "GRCh38",
+    "revision": "nvidia-hosted-splice-block27-v1"
+  }
+}

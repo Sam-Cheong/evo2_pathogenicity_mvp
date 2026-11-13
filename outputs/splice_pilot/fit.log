@@ -1,0 +1,159 @@
+Preparing 144 unique allele windows
+Features 8/144 ready
+Features 16/144 ready
+Features 24/144 ready
+Features 32/144 ready
+Features 40/144 ready
+Features 48/144 ready
+Features 56/144 ready
+Features 64/144 ready
+Features 72/144 ready
+Features 80/144 ready
+Features 88/144 ready
+Features 96/144 ready
+Features 104/144 ready
+Features 112/144 ready
+Features 120/144 ready
+Features 128/144 ready
+Features 136/144 ready
+Features 144/144 ready
+{
+  "annotation": {
+    "val": {
+      "acceptor": {
+        "n": 24,
+        "positives": 8,
+        "auroc": 0.9375,
+        "auprc": 0.8802579365079365,
+        "accuracy": 0.9166666666666666,
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1": 0.8888888888888888,
+        "confusion_matrix": [
+          [
+            14,
+            2
+          ],
+          [
+            0,
+            8
+          ]
+        ],
+        "brier_score": 0.10586443415774349,
+        "classification_threshold": 0.5,
+        "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+        "undefined_metrics_reason": null,
+        "undefined_metrics": {}
+      },
+      "donor": {
+        "n": 24,
+        "positives": 8,
+        "auroc": 0.9921875,
+        "auprc": 0.9861111111111112,
+        "accuracy": 0.875,
+        "precision": 1.0,
+        "recall": 0.625,
+        "f1": 0.7692307692307693,
+        "confusion_matrix": [
+          [
+            16,
+            0
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "brier_score": 0.06553960021262652,
+        "classification_threshold": 0.5,
+        "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+        "undefined_metrics_reason": null,
+        "undefined_metrics": {}
+      }
+    },
+    "test": {
+      "acceptor": {
+        "n": 24,
+        "positives": 8,
+        "auroc": 0.9765625,
+        "auprc": 0.9526289682539684,
+        "accuracy": 0.9166666666666666,
+        "precision": 0.875,
+        "recall": 0.875,
+        "f1": 0.875,
+        "confusion_matrix": [
+          [
+            15,
+            1
+          ],
+          [
+            1,
+            7
+          ]
+        ],
+        "brier_score": 0.06485390245079753,
+        "classification_threshold": 0.5,
+        "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+        "undefined_metrics_reason": null,
+        "undefined_metrics": {}
+      },
+      "donor": {
+        "n": 24,
+        "positives": 8,
+        "auroc": 0.96875,
+        "auprc": 0.9415178571428571,
+        "accuracy": 0.8333333333333334,
+        "precision": 0.8333333333333334,
+        "recall": 0.625,
+        "f1": 0.7142857142857143,
+        "confusion_matrix": [
+          [
+            15,
+            1
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "brier_score": 0.07394441258624862,
+        "classification_threshold": 0.5,
+        "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+        "undefined_metrics_reason": null,
+        "undefined_metrics": {}
+      }
+    }
+  },
+  "annotation_counts": {
+    "train": 48,
+    "val": 24,
+    "test": 24
+  },
+  "clinvar_challenge": {
+    "n": 24,
+    "positives": 12,
+    "auroc": 0.9305555555555555,
+    "auprc": 0.8877666315166315,
+    "accuracy": 0.7083333333333334,
+    "precision": 0.631578947368421,
+    "recall": 1.0,
+    "f1": 0.7741935483870968,
+    "confusion_matrix": [
+      [
+        5,
+        7
+      ],
+      [
+        0,
+        12
+      ]
+    ],
+    "brier_score": 0.2138782247557938,
+    "classification_threshold": 0.5,
+    "threshold_use": "metric_computation_only_not_a_clinical_cutoff",
+    "undefined_metrics_reason": null,
+    "undefined_metrics": {}
+  },
+  "clinvar_score": "decrease in the corresponding annotation score at the specified anchor",
+  "research_only": true
+}

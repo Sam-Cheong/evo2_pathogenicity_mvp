@@ -1,0 +1,1087 @@
+{
+  "schema_version": 1,
+  "genome_build": "GRCh38",
+  "seed": 42,
+  "annotation_source": "data\\wgEncodeGencodeBasicV49.txt.gz",
+  "annotation_sha256": "f7f63e50d8967b435aec919964d009a72d9c7f72d24e6f68d699c55ad8debae2",
+  "vcf_source": "data\\clinvar.vcf.gz",
+  "vcf_sha256": "0f0f848b8c23c3d994f572c91d84674aec5d8206269aec6605dc09ca88b4a3b4",
+  "clinvar_release": "2026-11-01",
+  "fasta_sha256": "df6e4918316e05a9cc1fd29c352841d3678b607d7a436819cd43371b52c814c0",
+  "chromosome_partitions": {
+    "train": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "val": [
+      14,
+      15
+    ],
+    "test": [
+      16,
+      17
+    ],
+    "challenge": [
+      18,
+      19,
+      20,
+      21,
+      22
+    ]
+  },
+  "site_anchor": "first intronic base for donor and last intronic base for acceptor in transcript direction",
+  "challenge_sampling": "canonical splice annotated pathogenic SNVs versus nearby noncanonical benign controls",
+  "annotation": {
+    "train": [
+      {
+        "chrom": "2",
+        "pos": 104406776,
+        "strand": "+",
+        "gene": "ENSG00000227157",
+        "annotation": "donor"
+      },
+      {
+        "chrom": "1",
+        "pos": 236275595,
+        "strand": "-",
+        "gene": "ERO1B",
+        "annotation": "donor"
+      },
+      {
+        "chrom": "1",
+        "pos": 235730846,
+        "strand": "-",
+        "gene": "LYST",
+        "annotation": "donor"
+      },
+      {
+        "chrom": "1",
+        "pos": 113963522,
+        "strand": "+",
+        "gene": "HIPK1",
+        "annotation": "donor"
+      },
+      {
+        "chrom": "1",
+        "pos": 40493598,
+        "strand": "-",
+        "gene": "EXO5-DT",
+        "annotation": "donor"
+      },
+      {
+        "chrom": "11",
+        "pos": 1198306,
+        "strand": "+",
+        "gene": "MUC5AC",
+        "annotation": "donor"
+      },
+      {
+        "chrom": "9",
+        "pos": 135098506,
+        "strand": "+",
+        "gene": "OLFM1",
+        "annotation": "donor"
+      },
+      {
+        "chrom": "1",
+        "pos": 43997854,
+        "strand": "-",
+        "gene": "SLC6A9",
+        "annotation": "donor"
+      },
+      {
+        "chrom": "1",
+        "pos": 186224504,
+        "strand": "+",
+        "gene": "ENSG00000288078",
+        "annotation": "donor"
+      },
+      {
+        "chrom": "12",
+        "pos": 93708946,
+        "strand": "-",
+        "gene": "CRADD-AS1",
+        "annotation": "donor"
+      },
+      {
+        "chrom": "10",
+        "pos": 50604898,
+        "strand": "-",
+        "gene": "SGMS1",
+        "annotation": "donor"
+      },
+      {
+        "chrom": "2",
+        "pos": 238288643,
+        "strand": "-",
+        "gene": "PER2",
+        "annotation": "donor"
+      },
+      {
+        "chrom": "6",
+        "pos": 143136991,
+        "strand": "+",
+        "gene": "AIG1",
+        "annotation": "donor"
+      },
+      {
+        "chrom": "11",
+        "pos": 118655691,
+        "strand": "+",
+        "gene": "PHLDB1",
+        "annotation": "donor"
+      },
+      {
+        "chrom": "7",
+        "pos": 94865968,
+        "strand": "+",
+        "gene": "ENSG00000300594",
+        "annotation": "donor"
+      },
+      {
+        "chrom": "9",
+        "pos": 40352654,
+        "strand": "-",
+        "gene": "BMS1P14",
+        "annotation": "donor"
+      },
+      {
+        "chrom": "11",
+        "pos": 47350616,
+        "strand": "-",
+        "gene": "MYBPC3",
+        "annotation": "acceptor"
+      },
+      {
+        "chrom": "13",
+        "pos": 22903409,
+        "strand": "+",
+        "gene": "ENSG00000262198",
+        "annotation": "acceptor"
+      },
+      {
+        "chrom": "12",
+        "pos": 42682702,
+        "strand": "+",
+        "gene": "LINC02450",
+        "annotation": "acceptor"
+      },
+      {
+        "chrom": "5",
+        "pos": 98773952,
+        "strand": "+",
+        "gene": "RGMB",
+        "annotation": "acceptor"
+      },
+      {
+        "chrom": "3",
+        "pos": 4800424,
+        "strand": "+",
+        "gene": "ITPR1",
+        "annotation": "acceptor"
+      },
+      {
+        "chrom": "1",
+        "pos": 227160637,
+        "strand": "-",
+        "gene": "CDC42BPA",
+        "annotation": "acceptor"
+      },
+      {
+        "chrom": "12",
+        "pos": 107758274,
+        "strand": "+",
+        "gene": "PRDM4-AS1",
+        "annotation": "acceptor"
+      },
+      {
+        "chrom": "2",
+        "pos": 173693364,
+        "strand": "+",
+        "gene": "ENSG00000270460",
+        "annotation": "acceptor"
+      },
+      {
+        "chrom": "12",
+        "pos": 64688254,
+        "strand": "+",
+        "gene": "RASSF3",
+        "annotation": "acceptor"
+      },
+      {
+        "chrom": "3",
+        "pos": 74813070,
+        "strand": "-",
+        "gene": "ENSG00000306639",
+        "annotation": "acceptor"
+      },
+      {
+        "chrom": "5",
+        "pos": 65785774,
+        "strand": "+",
+        "gene": "NLN",
+        "annotation": "acceptor"
+      },
+      {
+        "chrom": "10",
+        "pos": 97864167,
+        "strand": "+",
+        "gene": "GOLGA7B",
+        "annotation": "acceptor"
+      },
+      {
+        "chrom": "7",
+        "pos": 1461879,
+        "strand": "+",
+        "gene": "MICALL2-DT",
+        "annotation": "acceptor"
+      },
+      {
+        "chrom": "1",
+        "pos": 177255918,
+        "strand": "+",
+        "gene": "BRINP2",
+        "annotation": "acceptor"
+      },
+      {
+        "chrom": "11",
+        "pos": 60627920,
+        "strand": "-",
+        "gene": "ENSG00000308960",
+        "annotation": "acceptor"
+      },
+      {
+        "chrom": "4",
+        "pos": 2459106,
+        "strand": "+",
+        "gene": "CFAP99",
+        "annotation": "acceptor"
+      },
+      {
+        "chrom": "11",
+        "pos": 1772052,
+        "strand": "-",
+        "gene": "ENSG00000230834",
+        "annotation": "background"
+      },
+      {
+        "chrom": "1",
+        "pos": 174151527,
+        "strand": "-",
+        "gene": "RABGAP1L-DT",
+        "annotation": "background"
+      },
+      {
+        "chrom": "13",
+        "pos": 112834569,
+        "strand": "+",
+        "gene": "ATP11A",
+        "annotation": "background"
+      },
+      {
+        "chrom": "2",
+        "pos": 110387369,
+        "strand": "-",
+        "gene": "ENSG00000273471",
+        "annotation": "background"
+      },
+      {
+        "chrom": "2",
+        "pos": 233792936,
+        "strand": "+",
+        "gene": "MROH2A",
+        "annotation": "background"
+      },
+      {
+        "chrom": "2",
+        "pos": 206958341,
+        "strand": "+",
+        "gene": "CPO",
+        "annotation": "background"
+      },
+      {
+        "chrom": "8",
+        "pos": 93791339,
+        "strand": "+",
+        "gene": "TMEM67",
+        "annotation": "background"
+      },
+      {
+        "chrom": "2",
+        "pos": 128734851,
+        "strand": "+",
+        "gene": "ENSG00000295488",
+        "annotation": "background"
+      },
+      {
+        "chrom": "13",
+        "pos": 89278338,
+        "strand": "+",
+        "gene": "LINC00440",
+        "annotation": "background"
+      },
+      {
+        "chrom": "5",
+        "pos": 34944907,
+        "strand": "+",
+        "gene": "DNAJC21",
+        "annotation": "background"
+      },
+      {
+        "chrom": "2",
+        "pos": 241145778,
+        "strand": "-",
+        "gene": "PASK",
+        "annotation": "background"
+      },
+      {
+        "chrom": "12",
+        "pos": 121004509,
+        "strand": "-",
+        "gene": "C12orf43",
+        "annotation": "background"
+      },
+      {
+        "chrom": "13",
+        "pos": 94468704,
+        "strand": "-",
+        "gene": "DCT",
+        "annotation": "background"
+      },
+      {
+        "chrom": "7",
+        "pos": 100629344,
+        "strand": "-",
+        "gene": "TFR2",
+        "annotation": "background"
+      },
+      {
+        "chrom": "2",
+        "pos": 238148042,
+        "strand": "+",
+        "gene": "KLHL30",
+        "annotation": "background"
+      },
+      {
+        "chrom": "1",
+        "pos": 208613497,
+        "strand": "+",
+        "gene": "ENSG00000310018",
+        "annotation": "background"
+      }
+    ],
+    "val": [
+      {
+        "chrom": "14",
+        "pos": 20326715,
+        "strand": "-",
+        "gene": "CCNB1IP1",
+        "annotation": "donor"
+      },
+      {
+        "chrom": "15",
+        "pos": 41871374,
+        "strand": "-",
+        "gene": "SPTBN5",
+        "annotation": "donor"
+      },
+      {
+        "chrom": "15",
+        "pos": 30394783,
+        "strand": "+",
+        "gene": "ENSG00000297730",
+        "annotation": "donor"
+      },
+      {
+        "chrom": "15",
+        "pos": 40602967,
+        "strand": "+",
+        "gene": "KNL1",
+        "annotation": "donor"
+      },
+      {
+        "chrom": "15",
+        "pos": 39390428,
+        "strand": "+",
+        "gene": "ENSG00000304936",
+        "annotation": "donor"
+      },
+      {
+        "chrom": "15",
+        "pos": 74841404,
+        "strand": "-",
+        "gene": "ULK3",
+        "annotation": "donor"
+      },
+      {
+        "chrom": "14",
+        "pos": 94062474,
+        "strand": "-",
+        "gene": "DDX24",
+        "annotation": "donor"
+      },
+      {
+        "chrom": "14",
+        "pos": 28929995,
+        "strand": "+",
+        "gene": "LINC02327",
+        "annotation": "donor"
+      },
+      {
+        "chrom": "15",
+        "pos": 100802246,
+        "strand": "+",
+        "gene": "ENSG00000259579",
+        "annotation": "acceptor"
+      },
+      {
+        "chrom": "14",
+        "pos": 74502935,
+        "strand": "-",
+        "gene": "LTBP2",
+        "annotation": "acceptor"
+      },
+      {
+        "chrom": "15",
+        "pos": 99671531,
+        "strand": "+",
+        "gene": "MEF2A",
+        "annotation": "acceptor"
+      },
+      {
+        "chrom": "14",
+        "pos": 64787161,
+        "strand": "-",
+        "gene": "SPTB",
+        "annotation": "acceptor"
+      },
+      {
+        "chrom": "14",
+        "pos": 101038764,
+        "strand": "+",
+        "gene": "MEG8",
+        "annotation": "acceptor"
+      },
+      {
+        "chrom": "15",
+        "pos": 65389415,
+        "strand": "-",
+        "gene": "IGDCC4",
+        "annotation": "acceptor"
+      },
+      {
+        "chrom": "15",
+        "pos": 29107826,
+        "strand": "+",
+        "gene": "APBA2",
+        "annotation": "acceptor"
+      },
+      {
+        "chrom": "15",
+        "pos": 83988690,
+        "strand": "+",
+        "gene": "ADAMTSL3",
+        "annotation": "acceptor"
+      },
+      {
+        "chrom": "14",
+        "pos": 91339482,
+        "strand": "-",
+        "gene": "CCDC88C",
+        "annotation": "background"
+      },
+      {
+        "chrom": "15",
+        "pos": 37904583,
+        "strand": "-",
+        "gene": "ENSG00000300563",
+        "annotation": "background"
+      },
+      {
+        "chrom": "14",
+        "pos": 71754065,
+        "strand": "+",
+        "gene": "ENSG00000302484",
+        "annotation": "background"
+      },
+      {
+        "chrom": "15",
+        "pos": 42310311,
+        "strand": "+",
+        "gene": "GANC",
+        "annotation": "background"
+      },
+      {
+        "chrom": "14",
+        "pos": 100351516,
+        "strand": "-",
+        "gene": "WARS1",
+        "annotation": "background"
+      },
+      {
+        "chrom": "14",
+        "pos": 45187739,
+        "strand": "+",
+        "gene": "FANCM",
+        "annotation": "background"
+      },
+      {
+        "chrom": "15",
+        "pos": 79117329,
+        "strand": "+",
+        "gene": "ENSG00000300669",
+        "annotation": "background"
+      },
+      {
+        "chrom": "14",
+        "pos": 102017058,
+        "strand": "+",
+        "gene": "DYNC1H1",
+        "annotation": "background"
+      }
+    ],
+    "test": [
+      {
+        "chrom": "16",
+        "pos": 8371366,
+        "strand": "+",
+        "gene": "ENSG00000259819",
+        "annotation": "donor"
+      },
+      {
+        "chrom": "17",
+        "pos": 45404268,
+        "strand": "-",
+        "gene": "ARHGAP27",
+        "annotation": "donor"
+      },
+      {
+        "chrom": "16",
+        "pos": 86225431,
+        "strand": "-",
+        "gene": "LINC01081",
+        "annotation": "donor"
+      },
+      {
+        "chrom": "16",
+        "pos": 3685995,
+        "strand": "-",
+        "gene": "TRAP1",
+        "annotation": "donor"
+      },
+      {
+        "chrom": "16",
+        "pos": 1202453,
+        "strand": "+",
+        "gene": "CACNA1H",
+        "annotation": "donor"
+      },
+      {
+        "chrom": "17",
+        "pos": 41367907,
+        "strand": "-",
+        "gene": "KRT33B",
+        "annotation": "donor"
+      },
+      {
+        "chrom": "17",
+        "pos": 69221791,
+        "strand": "-",
+        "gene": "ABCA10",
+        "annotation": "donor"
+      },
+      {
+        "chrom": "17",
+        "pos": 8230293,
+        "strand": "-",
+        "gene": "CTC1",
+        "annotation": "donor"
+      },
+      {
+        "chrom": "17",
+        "pos": 51293902,
+        "strand": "+",
+        "gene": "UTP18",
+        "annotation": "acceptor"
+      },
+      {
+        "chrom": "17",
+        "pos": 53105037,
+        "strand": "+",
+        "gene": "LINC02089",
+        "annotation": "acceptor"
+      },
+      {
+        "chrom": "17",
+        "pos": 4674670,
+        "strand": "-",
+        "gene": "PELP1",
+        "annotation": "acceptor"
+      },
+      {
+        "chrom": "17",
+        "pos": 36379549,
+        "strand": "-",
+        "gene": "TBC1D3H",
+        "annotation": "acceptor"
+      },
+      {
+        "chrom": "16",
+        "pos": 89198798,
+        "strand": "-",
+        "gene": "SLC22A31",
+        "annotation": "acceptor"
+      },
+      {
+        "chrom": "17",
+        "pos": 81800729,
+        "strand": "-",
+        "gene": "ENSG00000295310",
+        "annotation": "acceptor"
+      },
+      {
+        "chrom": "16",
+        "pos": 23465399,
+        "strand": "-",
+        "gene": "GGA2",
+        "annotation": "acceptor"
+      },
+      {
+        "chrom": "17",
+        "pos": 72040583,
+        "strand": "-",
+        "gene": "ROCR",
+        "annotation": "acceptor"
+      },
+      {
+        "chrom": "17",
+        "pos": 61907654,
+        "strand": "-",
+        "gene": "INTS2",
+        "annotation": "background"
+      },
+      {
+        "chrom": "16",
+        "pos": 20815003,
+        "strand": "+",
+        "gene": "REXO5",
+        "annotation": "background"
+      },
+      {
+        "chrom": "16",
+        "pos": 679014,
+        "strand": "-",
+        "gene": "STUB1-DT",
+        "annotation": "background"
+      },
+      {
+        "chrom": "17",
+        "pos": 30887344,
+        "strand": "+",
+        "gene": "ATAD5",
+        "annotation": "background"
+      },
+      {
+        "chrom": "16",
+        "pos": 81657815,
+        "strand": "+",
+        "gene": "CMIP",
+        "annotation": "background"
+      },
+      {
+        "chrom": "17",
+        "pos": 63822024,
+        "strand": "-",
+        "gene": "FTSJ3",
+        "annotation": "background"
+      },
+      {
+        "chrom": "17",
+        "pos": 81447006,
+        "strand": "+",
+        "gene": "BAHCC1",
+        "annotation": "background"
+      },
+      {
+        "chrom": "16",
+        "pos": 46884988,
+        "strand": "+",
+        "gene": "GPT2",
+        "annotation": "background"
+      }
+    ]
+  },
+  "variants": [
+    {
+      "chrom": "19",
+      "pos": 48596896,
+      "ref": "G",
+      "alt": "A",
+      "gene": "SULT2B1",
+      "strand": "+",
+      "anchor_pos": 48596920,
+      "annotation": "donor",
+      "label": 0,
+      "variant_id": "19-48596896-G-A",
+      "clinvar_variation_id": "782627",
+      "consequence": "missense_variant",
+      "hgvs": "NC_000019.10:g.48596896G>A"
+    },
+    {
+      "chrom": "19",
+      "pos": 8112006,
+      "ref": "C",
+      "alt": "G",
+      "gene": "FBN3",
+      "strand": "-",
+      "anchor_pos": 8111976,
+      "annotation": "donor",
+      "label": 0,
+      "variant_id": "19-8112006-C-G",
+      "clinvar_variation_id": "1598697",
+      "consequence": "missense_variant",
+      "hgvs": "NC_000019.10:g.8112006C>G"
+    },
+    {
+      "chrom": "22",
+      "pos": 18936198,
+      "ref": "G",
+      "alt": "A",
+      "gene": "PRODH",
+      "strand": "-",
+      "anchor_pos": 18936169,
+      "annotation": "donor",
+      "label": 0,
+      "variant_id": "22-18936198-G-A",
+      "clinvar_variation_id": "1545570",
+      "consequence": "intron_variant, synonymous_variant",
+      "hgvs": "NC_000022.11:g.18936198G>A"
+    },
+    {
+      "chrom": "22",
+      "pos": 30933470,
+      "ref": "C",
+      "alt": "T",
+      "gene": "MORC2",
+      "strand": "-",
+      "anchor_pos": 30933465,
+      "annotation": "donor",
+      "label": 0,
+      "variant_id": "22-30933470-C-T",
+      "clinvar_variation_id": "1532109",
+      "consequence": "synonymous_variant",
+      "hgvs": "NC_000022.11:g.30933470C>T"
+    },
+    {
+      "chrom": "19",
+      "pos": 40703554,
+      "ref": "C",
+      "alt": "T",
+      "gene": "COQ8B",
+      "strand": "-",
+      "anchor_pos": 40703540,
+      "annotation": "donor",
+      "label": 0,
+      "variant_id": "19-40703554-C-T",
+      "clinvar_variation_id": "508413",
+      "consequence": "synonymous_variant",
+      "hgvs": "NC_000019.10:g.40703554C>T"
+    },
+    {
+      "chrom": "19",
+      "pos": 50407165,
+      "ref": "G",
+      "alt": "C",
+      "gene": "POLD1",
+      "strand": "+",
+      "anchor_pos": 50407175,
+      "annotation": "donor",
+      "label": 0,
+      "variant_id": "19-50407165-G-C",
+      "clinvar_variation_id": "1121255",
+      "consequence": "non-coding_transcript_variant, synonymous_variant",
+      "hgvs": "NC_000019.10:g.50407165G>C"
+    },
+    {
+      "chrom": "19",
+      "pos": 10986181,
+      "ref": "C",
+      "alt": "T",
+      "gene": "SMARCA4",
+      "strand": "+",
+      "anchor_pos": 10986188,
+      "annotation": "acceptor",
+      "label": 0,
+      "variant_id": "19-10986181-C-T",
+      "clinvar_variation_id": "1692591",
+      "consequence": "intron_variant",
+      "hgvs": "NC_000019.10:g.10986181C>T"
+    },
+    {
+      "chrom": "19",
+      "pos": 35848171,
+      "ref": "G",
+      "alt": "A",
+      "gene": "NPHS1",
+      "strand": "-",
+      "anchor_pos": 35848166,
+      "annotation": "acceptor",
+      "label": 0,
+      "variant_id": "19-35848171-G-A",
+      "clinvar_variation_id": "1093375",
+      "consequence": "intron_variant",
+      "hgvs": "NC_000019.10:g.35848171G>A"
+    },
+    {
+      "chrom": "18",
+      "pos": 58333801,
+      "ref": "T",
+      "alt": "C",
+      "gene": "NEDD4L",
+      "strand": "+",
+      "anchor_pos": 58333817,
+      "annotation": "acceptor",
+      "label": 0,
+      "variant_id": "18-58333801-T-C",
+      "clinvar_variation_id": "1596243",
+      "consequence": "intron_variant",
+      "hgvs": "NC_000018.10:g.58333801T>C"
+    },
+    {
+      "chrom": "19",
+      "pos": 38444570,
+      "ref": "C",
+      "alt": "A",
+      "gene": "RYR1",
+      "strand": "+",
+      "anchor_pos": 38444583,
+      "annotation": "acceptor",
+      "label": 0,
+      "variant_id": "19-38444570-C-A",
+      "clinvar_variation_id": "2723432",
+      "consequence": "intron_variant",
+      "hgvs": "NC_000019.10:g.38444570C>A"
+    },
+    {
+      "chrom": "19",
+      "pos": 18790120,
+      "ref": "G",
+      "alt": "C",
+      "gene": "COMP",
+      "strand": "-",
+      "anchor_pos": 18790115,
+      "annotation": "acceptor",
+      "label": 0,
+      "variant_id": "19-18790120-G-C",
+      "clinvar_variation_id": "890265",
+      "consequence": "intron_variant",
+      "hgvs": "NC_000019.10:g.18790120G>C"
+    },
+    {
+      "chrom": "19",
+      "pos": 2132598,
+      "ref": "G",
+      "alt": "A",
+      "gene": "AP3D1",
+      "strand": "-",
+      "anchor_pos": 2132579,
+      "annotation": "acceptor",
+      "label": 0,
+      "variant_id": "19-2132598-G-A",
+      "clinvar_variation_id": "1637680",
+      "consequence": "intron_variant",
+      "hgvs": "NC_000019.10:g.2132598G>A"
+    },
+    {
+      "chrom": "19",
+      "pos": 11110772,
+      "ref": "G",
+      "alt": "A",
+      "gene": "LDLR",
+      "strand": "+",
+      "anchor_pos": 11110772,
+      "annotation": "donor",
+      "label": 1,
+      "variant_id": "19-11110772-G-A",
+      "clinvar_variation_id": "251623",
+      "consequence": "splice_donor_variant",
+      "hgvs": "NC_000019.10:g.11110772G>A"
+    },
+    {
+      "chrom": "19",
+      "pos": 1220506,
+      "ref": "G",
+      "alt": "T",
+      "gene": "STK11",
+      "strand": "+",
+      "anchor_pos": 1220506,
+      "annotation": "donor",
+      "label": 1,
+      "variant_id": "19-1220506-G-T",
+      "clinvar_variation_id": "265451",
+      "consequence": "splice_donor_variant",
+      "hgvs": "NC_000019.10:g.1220506G>T"
+    },
+    {
+      "chrom": "19",
+      "pos": 45352505,
+      "ref": "C",
+      "alt": "A",
+      "gene": "ERCC2",
+      "strand": "-",
+      "anchor_pos": 45352505,
+      "annotation": "donor",
+      "label": 1,
+      "variant_id": "19-45352505-C-A",
+      "clinvar_variation_id": "499865",
+      "consequence": "splice_donor_variant",
+      "hgvs": "NC_000019.10:g.45352505C>A"
+    },
+    {
+      "chrom": "18",
+      "pos": 46566256,
+      "ref": "C",
+      "alt": "T",
+      "gene": "LOXHD1",
+      "strand": "-",
+      "anchor_pos": 46566256,
+      "annotation": "donor",
+      "label": 1,
+      "variant_id": "18-46566256-C-T",
+      "clinvar_variation_id": "3583354",
+      "consequence": "splice_donor_variant",
+      "hgvs": "NC_000018.10:g.46566256C>T"
+    },
+    {
+      "chrom": "19",
+      "pos": 13929661,
+      "ref": "G",
+      "alt": "A",
+      "gene": "CC2D1A",
+      "strand": "+",
+      "anchor_pos": 13929661,
+      "annotation": "donor",
+      "label": 1,
+      "variant_id": "19-13929661-G-A",
+      "clinvar_variation_id": "2991173",
+      "consequence": "splice_donor_variant",
+      "hgvs": "NC_000019.10:g.13929661G>A"
+    },
+    {
+      "chrom": "22",
+      "pos": 28695125,
+      "ref": "A",
+      "alt": "G",
+      "gene": "CHEK2",
+      "strand": "-",
+      "anchor_pos": 28695126,
+      "annotation": "donor",
+      "label": 1,
+      "variant_id": "22-28695125-A-G",
+      "clinvar_variation_id": "1066796",
+      "consequence": "splice_donor_variant",
+      "hgvs": "NC_000022.11:g.28695125A>G"
+    },
+    {
+      "chrom": "22",
+      "pos": 20989624,
+      "ref": "G",
+      "alt": "A",
+      "gene": "LZTR1",
+      "strand": "+",
+      "anchor_pos": 20989624,
+      "annotation": "acceptor",
+      "label": 1,
+      "variant_id": "22-20989624-G-A",
+      "clinvar_variation_id": "3238314",
+      "consequence": "splice_acceptor_variant",
+      "hgvs": "NC_000022.11:g.20989624G>A"
+    },
+    {
+      "chrom": "21",
+      "pos": 46116007,
+      "ref": "A",
+      "alt": "C",
+      "gene": "COL6A2",
+      "strand": "+",
+      "anchor_pos": 46116008,
+      "annotation": "acceptor",
+      "label": 1,
+      "variant_id": "21-46116007-A-C",
+      "clinvar_variation_id": "290497",
+      "consequence": "splice_acceptor_variant",
+      "hgvs": "NC_000021.9:g.46116007A>C"
+    },
+    {
+      "chrom": "22",
+      "pos": 38140170,
+      "ref": "C",
+      "alt": "A",
+      "gene": "PLA2G6",
+      "strand": "-",
+      "anchor_pos": 38140170,
+      "annotation": "acceptor",
+      "label": 1,
+      "variant_id": "22-38140170-C-A",
+      "clinvar_variation_id": "929943",
+      "consequence": "intron_variant, splice_acceptor_variant",
+      "hgvs": "NC_000022.11:g.38140170C>A"
+    },
+    {
+      "chrom": "22",
+      "pos": 17190034,
+      "ref": "T",
+      "alt": "C",
+      "gene": "ADA2",
+      "strand": "-",
+      "anchor_pos": 17190033,
+      "annotation": "acceptor",
+      "label": 1,
+      "variant_id": "22-17190034-T-C",
+      "clinvar_variation_id": "1027880",
+      "consequence": "splice_acceptor_variant",
+      "hgvs": "NC_000022.11:g.17190034T>C"
+    },
+    {
+      "chrom": "21",
+      "pos": 42384014,
+      "ref": "C",
+      "alt": "T",
+      "gene": "TMPRSS3",
+      "strand": "-",
+      "anchor_pos": 42384014,
+      "annotation": "acceptor",
+      "label": 1,
+      "variant_id": "21-42384014-C-T",
+      "clinvar_variation_id": "3587682",
+      "consequence": "splice_acceptor_variant",
+      "hgvs": "NC_000021.9:g.42384014C>T"
+    },
+    {
+      "chrom": "19",
+      "pos": 13303615,
+      "ref": "T",
+      "alt": "C",
+      "gene": "CACNA1A",
+      "strand": "-",
+      "anchor_pos": 13303614,
+      "annotation": "acceptor",
+      "label": 1,
+      "variant_id": "19-13303615-T-C",
+      "clinvar_variation_id": "804599",
+      "consequence": "splice_acceptor_variant",
+      "hgvs": "NC_000019.10:g.13303615T>C"
+    }
+  ]
+}

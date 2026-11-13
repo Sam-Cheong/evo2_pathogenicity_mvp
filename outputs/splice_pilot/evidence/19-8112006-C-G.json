@@ -1,0 +1,40 @@
+{
+  "variant": {
+    "variant_id": "19-8112006-C-G",
+    "gene": "FBN3",
+    "clinvar_variation_id": "1598697",
+    "consequence": "missense_variant",
+    "hgvs_g": "NC_000019.10:g.8112006C>G"
+  },
+  "disruptions": [
+    {
+      "annotation": "donor",
+      "position": 8111976,
+      "strand": "-",
+      "ref_score": 0.9998925868359783,
+      "alt_score": 0.9998766756143653,
+      "delta": -1.5911221612929793e-05
+    },
+    {
+      "annotation": "acceptor",
+      "position": 8111976,
+      "strand": "-",
+      "ref_score": 2.4818322059423508e-05,
+      "alt_score": 1.7440090254954127e-05,
+      "delta": -7.3782318044693804e-06
+    }
+  ],
+  "evaluation": {
+    "validated": false
+  },
+  "protocol": {
+    "model": "arc/evo2-7b",
+    "endpoint": "https://health.api.nvidia.com/v1/biology/arc/evo2-7b/forward",
+    "layer": "blocks.27",
+    "window": 256,
+    "scored_token": 192,
+    "anchor_offset_in_transcript_direction": 1,
+    "genome_build": "GRCh38",
+    "revision": "nvidia-hosted-splice-block27-v1"
+  }
+}

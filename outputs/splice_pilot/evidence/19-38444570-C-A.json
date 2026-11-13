@@ -1,0 +1,40 @@
+{
+  "variant": {
+    "variant_id": "19-38444570-C-A",
+    "gene": "RYR1",
+    "clinvar_variation_id": "2723432",
+    "consequence": "intron_variant",
+    "hgvs_g": "NC_000019.10:g.38444570C>A"
+  },
+  "disruptions": [
+    {
+      "annotation": "acceptor",
+      "position": 38444583,
+      "strand": "+",
+      "ref_score": 0.7503913681819507,
+      "alt_score": 0.45348344055314527,
+      "delta": -0.29690792762880547
+    },
+    {
+      "annotation": "donor",
+      "position": 38444583,
+      "strand": "+",
+      "ref_score": 0.01566899287162949,
+      "alt_score": 0.02733427652737386,
+      "delta": 0.01166528365574437
+    }
+  ],
+  "evaluation": {
+    "validated": false
+  },
+  "protocol": {
+    "model": "arc/evo2-7b",
+    "endpoint": "https://health.api.nvidia.com/v1/biology/arc/evo2-7b/forward",
+    "layer": "blocks.27",
+    "window": 256,
+    "scored_token": 192,
+    "anchor_offset_in_transcript_direction": 1,
+    "genome_build": "GRCh38",
+    "revision": "nvidia-hosted-splice-block27-v1"
+  }
+}

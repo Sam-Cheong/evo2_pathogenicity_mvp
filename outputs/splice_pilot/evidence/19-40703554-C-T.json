@@ -1,0 +1,40 @@
+{
+  "variant": {
+    "variant_id": "19-40703554-C-T",
+    "gene": "COQ8B",
+    "clinvar_variation_id": "508413",
+    "consequence": "synonymous_variant",
+    "hgvs_g": "NC_000019.10:g.40703554C>T"
+  },
+  "disruptions": [
+    {
+      "annotation": "donor",
+      "position": 40703540,
+      "strand": "-",
+      "ref_score": 0.7203442805784416,
+      "alt_score": 0.754401926714465,
+      "delta": 0.03405764613602347
+    },
+    {
+      "annotation": "acceptor",
+      "position": 40703540,
+      "strand": "-",
+      "ref_score": 0.020611524764706644,
+      "alt_score": 0.015908789004726073,
+      "delta": -0.004702735759980571
+    }
+  ],
+  "evaluation": {
+    "validated": false
+  },
+  "protocol": {
+    "model": "arc/evo2-7b",
+    "endpoint": "https://health.api.nvidia.com/v1/biology/arc/evo2-7b/forward",
+    "layer": "blocks.27",
+    "window": 256,
+    "scored_token": 192,
+    "anchor_offset_in_transcript_direction": 1,
+    "genome_build": "GRCh38",
+    "revision": "nvidia-hosted-splice-block27-v1"
+  }
+}

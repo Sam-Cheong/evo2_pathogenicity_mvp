@@ -1,0 +1,40 @@
+{
+  "variant": {
+    "variant_id": "18-58333801-T-C",
+    "gene": "NEDD4L",
+    "clinvar_variation_id": "1596243",
+    "consequence": "intron_variant",
+    "hgvs_g": "NC_000018.10:g.58333801T>C"
+  },
+  "disruptions": [
+    {
+      "annotation": "donor",
+      "position": 58333817,
+      "strand": "+",
+      "ref_score": 0.008572549255162655,
+      "alt_score": 0.004581804104727248,
+      "delta": -0.003990745150435408
+    },
+    {
+      "annotation": "acceptor",
+      "position": 58333817,
+      "strand": "+",
+      "ref_score": 0.9404809843870274,
+      "alt_score": 0.9368926354940443,
+      "delta": -0.0035883488929830953
+    }
+  ],
+  "evaluation": {
+    "validated": false
+  },
+  "protocol": {
+    "model": "arc/evo2-7b",
+    "endpoint": "https://health.api.nvidia.com/v1/biology/arc/evo2-7b/forward",
+    "layer": "blocks.27",
+    "window": 256,
+    "scored_token": 192,
+    "anchor_offset_in_transcript_direction": 1,
+    "genome_build": "GRCh38",
+    "revision": "nvidia-hosted-splice-block27-v1"
+  }
+}

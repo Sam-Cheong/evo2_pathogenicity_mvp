@@ -1,0 +1,40 @@
+{
+  "variant": {
+    "variant_id": "22-28695125-A-G",
+    "gene": "CHEK2",
+    "clinvar_variation_id": "1066796",
+    "consequence": "splice_donor_variant",
+    "hgvs_g": "NC_000022.11:g.28695125A>G"
+  },
+  "disruptions": [
+    {
+      "annotation": "donor",
+      "position": 28695126,
+      "strand": "-",
+      "ref_score": 0.9862337193421379,
+      "alt_score": 0.9336869148121033,
+      "delta": -0.052546804530034574
+    },
+    {
+      "annotation": "acceptor",
+      "position": 28695126,
+      "strand": "-",
+      "ref_score": 0.0014569856911898786,
+      "alt_score": 0.009752333816100403,
+      "delta": 0.008295348124910524
+    }
+  ],
+  "evaluation": {
+    "validated": false
+  },
+  "protocol": {
+    "model": "arc/evo2-7b",
+    "endpoint": "https://health.api.nvidia.com/v1/biology/arc/evo2-7b/forward",
+    "layer": "blocks.27",
+    "window": 256,
+    "scored_token": 192,
+    "anchor_offset_in_transcript_direction": 1,
+    "genome_build": "GRCh38",
+    "revision": "nvidia-hosted-splice-block27-v1"
+  }
+}
