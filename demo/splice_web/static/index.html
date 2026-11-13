@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>ClinVar variant chat</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <div class="workspace">
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span>ClinVar variant chat</span>
+      </div>
+      <span class="mode"><span aria-hidden="true"></span>ClinVar research pilot</span>
+    </header>
+    <main class="chat" aria-labelledby="page-title">
+      <div id="transcript" class="transcript">
+        <section id="welcome" class="welcome">
+          <h1 id="page-title">Explore variant evidence</h1>
+          <p>Score a human single-nucleotide variant with Evo 2, or ask about splice evidence for a supported ClinVar case.</p>
+          <details class="format">
+            <summary>DNA input format</summary>
+            <p>Enter the 1-based GRCh38 start coordinate and a forward-strand DNA sequence containing one or more base differences. Add a question on a new line.</p>
+            <pre>GRCh38 chr19:11110700
+DNA: &lt;your sequence&gt;</pre>
+            <p>You can also paste a matching 256 bp window without coordinates for a supported ClinVar case.</p>
+          </details>
+          <section class="prompt-samples" aria-labelledby="samples-title">
+            <h2 id="samples-title">Prompt samples</h2>
+            <div class="sample-grid">
+              <button class="example" type="button" data-sample="case"><span><strong>ClinVar variant ID</strong><small>LDLR · 19-11110772-G-A</small></span><span aria-hidden="true">↗</span></button>
+              <button class="example" type="button" data-sample="single"><span><strong>GRCh38 + DNA</strong><small>One base difference</small></span><span aria-hidden="true">↗</span></button>
+              <button class="example" type="button" data-sample="multiple"><span><strong>GRCh38 + multiple differences</strong><small>Score the first exact ClinVar match</small></span><span aria-hidden="true">↗</span></button>
+              <button class="example" type="button" data-sample="window"><span><strong>Paste a DNA window</strong><small>Exact 256 bp window from a demo case</small></span><span aria-hidden="true">↗</span></button>
+              <button class="example" type="button" data-sample="fasta"><span><strong>Paste FASTA</strong><small>Header and wrapped sequence</small></span><span aria-hidden="true">↗</span></button>
+              <button class="example" type="button" data-sample="pair"><span><strong>REF and ALT together</strong><small>Two labeled 256 bp windows</small></span><span aria-hidden="true">↗</span></button>
+              <button class="example" type="button" data-sample="followup"><span><strong>Ask a follow-up</strong><small>After scoring a case</small></span><span aria-hidden="true">↗</span></button>
+            </div>
+          </section>
+        </section>
+        <ol id="messages" class="messages" aria-label="Conversation"></ol>
+        <p id="pending" class="pending" role="status" hidden><span></span>Checking variant evidence…</p>
+      </div>
+      <form id="composer" class="composer">
+        <label class="sr-only" for="message">DNA sequence, variant ID, or question</label>
+        <textarea id="message" name="message" rows="3" maxlength="6000" placeholder="Enter a GRCh38 coordinate and DNA sequence, or a ClinVar case ID…" aria-describedby="data-use" required></textarea>
+        <label class="nvidia-opt-in">
+          <input id="allow-nvidia" type="checkbox" autocomplete="off">
+          <span>Allow sending reconstructed REF and ALT windows to NVIDIA when uncached</span>
+        </label>
+        <div class="compose-actions">
+          <span>Human GRCh38 · Evo 2 7B block 27</span>
+          <button class="followup-sample" type="button" data-sample="followup" id="followup-sample" hidden>Try a follow-up</button>
+          <button id="send" type="submit">Send <span aria-hidden="true">↑</span></button>
+        </div>
+      </form>
+      <p id="data-use" class="note">Questions may be sent to the chat model. Omit patient and identifying details. Pathogenicity scores are research ranking signals.</p>
+    </main>
+  </div>
+</body>
+</html>
